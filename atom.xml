@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Hugo 活</title>
-  <icon>https://harumi.cc/icon.png</icon>
+  <icon>https://harumi.cc/hugo/icon.png</icon>
   
-  <link href="https://harumi.cc/atom.xml" rel="self"/>
+  <link href="https://harumi.cc/hugo/atom.xml" rel="self"/>
   
-  <link href="https://harumi.cc/"/>
+  <link href="https://harumi.cc/hugo/"/>
   <updated>2025-12-13T02:59:34.178Z</updated>
-  <id>https://harumi.cc/</id>
+  <id>https://harumi.cc/hugo/</id>
   
   <author>
     <name>Sam Xiao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>將 Theme 架構轉移成 Themeless 架構</title>
-    <link href="https://harumi.cc/hugo/themeless/transfer/"/>
-    <id>https://harumi.cc/hugo/themeless/transfer/</id>
+    <link href="https://harumi.cc/hugo/hugo/themeless/transfer/"/>
+    <id>https://harumi.cc/hugo/hugo/themeless/transfer/</id>
     <published>2025-12-13T02:54:24.000Z</published>
     <updated>2025-12-13T02:59:34.178Z</updated>
     
@@ -31,14 +31,14 @@
     
     
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>我的 WebStorm 基本設定</title>
-    <link href="https://harumi.cc/webstorm/general/setup/"/>
-    <id>https://harumi.cc/webstorm/general/setup/</id>
+    <link href="https://harumi.cc/hugo/webstorm/general/setup/"/>
+    <id>https://harumi.cc/hugo/webstorm/general/setup/</id>
     <published>2025-12-04T23:35:53.000Z</published>
     <updated>2025-12-04T23:40:15.432Z</updated>
     
@@ -50,14 +50,14 @@
     
     
     
-    <category term="WebStorm" scheme="https://harumi.cc/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://harumi.cc/hugo/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>使用 IdeaVim 支援 Vim 模式</title>
-    <link href="https://harumi.cc/webstorm/plugin/ideavim/"/>
-    <id>https://harumi.cc/webstorm/plugin/ideavim/</id>
+    <link href="https://harumi.cc/hugo/webstorm/plugin/ideavim/"/>
+    <id>https://harumi.cc/hugo/webstorm/plugin/ideavim/</id>
     <published>2025-08-24T09:49:41.000Z</published>
     <updated>2025-09-20T14:34:22.979Z</updated>
     
@@ -69,14 +69,14 @@
     
     
     
-    <category term="WebStorm" scheme="https://harumi.cc/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://harumi.cc/hugo/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>使用 VS Code 開發 Hugo</title>
-    <link href="https://harumi.cc/vscode/lib/hugo/"/>
-    <id>https://harumi.cc/vscode/lib/hugo/</id>
+    <link href="https://harumi.cc/hugo/vscode/lib/hugo/"/>
+    <id>https://harumi.cc/hugo/vscode/lib/hugo/</id>
     <published>2025-08-19T16:24:32.000Z</published>
     <updated>2025-09-20T14:34:22.976Z</updated>
     
@@ -88,16 +88,16 @@
     
     
     
-    <category term="VS Code" scheme="https://harumi.cc/tags/VS-Code/"/>
+    <category term="VS Code" scheme="https://harumi.cc/hugo/tags/VS-Code/"/>
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>使用 WebStorm 開發 Hugo</title>
-    <link href="https://harumi.cc/webstorm/lib/hugo/"/>
-    <id>https://harumi.cc/webstorm/lib/hugo/</id>
+    <link href="https://harumi.cc/hugo/webstorm/lib/hugo/"/>
+    <id>https://harumi.cc/hugo/webstorm/lib/hugo/</id>
     <published>2025-08-19T15:57:28.000Z</published>
     <updated>2025-09-20T14:34:22.979Z</updated>
     
@@ -109,16 +109,16 @@
     
     
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
-    <category term="WebStorm" scheme="https://harumi.cc/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://harumi.cc/hugo/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>顯示 Hugo 編譯過的網站</title>
-    <link href="https://harumi.cc/hugo/cli/serve/"/>
-    <id>https://harumi.cc/hugo/cli/serve/</id>
+    <link href="https://harumi.cc/hugo/hugo/cli/serve/"/>
+    <id>https://harumi.cc/hugo/hugo/cli/serve/</id>
     <published>2025-08-19T11:19:31.000Z</published>
     <updated>2025-09-20T14:34:22.969Z</updated>
     
@@ -130,14 +130,14 @@
     
     
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>disableFastRender 全站渲染</title>
-    <link href="https://harumi.cc/hugo/cli/disablefastrender/"/>
-    <id>https://harumi.cc/hugo/cli/disablefastrender/</id>
+    <link href="https://harumi.cc/hugo/hugo/cli/disablefastrender/"/>
+    <id>https://harumi.cc/hugo/hugo/cli/disablefastrender/</id>
     <published>2025-08-19T11:16:26.000Z</published>
     <updated>2025-09-20T14:34:22.969Z</updated>
     
@@ -149,14 +149,14 @@
     
     
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>cleanDestinationDir 編譯前先刪除 public 目錄</title>
-    <link href="https://harumi.cc/hugo/cli/cleandestinationdir/"/>
-    <id>https://harumi.cc/hugo/cli/cleandestinationdir/</id>
+    <link href="https://harumi.cc/hugo/hugo/cli/cleandestinationdir/"/>
+    <id>https://harumi.cc/hugo/hugo/cli/cleandestinationdir/</id>
     <published>2025-08-19T10:58:07.000Z</published>
     <updated>2025-09-20T14:34:22.969Z</updated>
     
@@ -168,14 +168,14 @@
     
     
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>renderToMemory 渲染到記憶體</title>
-    <link href="https://harumi.cc/hugo/cli/rendertomemory/"/>
-    <id>https://harumi.cc/hugo/cli/rendertomemory/</id>
+    <link href="https://harumi.cc/hugo/hugo/cli/rendertomemory/"/>
+    <id>https://harumi.cc/hugo/hugo/cli/rendertomemory/</id>
     <published>2025-08-19T02:36:00.000Z</published>
     <updated>2025-09-20T14:34:22.969Z</updated>
     
@@ -187,14 +187,14 @@
     
     
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>Hugo 常用的 NPM Script</title>
-    <link href="https://harumi.cc/hugo/cli/npm/"/>
-    <id>https://harumi.cc/hugo/cli/npm/</id>
+    <link href="https://harumi.cc/hugo/hugo/cli/npm/"/>
+    <id>https://harumi.cc/hugo/hugo/cli/npm/</id>
     <published>2025-08-19T02:17:02.000Z</published>
     <updated>2025-09-20T14:34:22.969Z</updated>
     
@@ -206,14 +206,14 @@
     
     
     
-    <category term="Hugo" scheme="https://harumi.cc/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://harumi.cc/hugo/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>限制 SCSS 巢狀結構只能一層</title>
-    <link href="https://harumi.cc/stylelint/sass/nesting-depth/"/>
-    <id>https://harumi.cc/stylelint/sass/nesting-depth/</id>
+    <link href="https://harumi.cc/hugo/stylelint/sass/nesting-depth/"/>
+    <id>https://harumi.cc/hugo/stylelint/sass/nesting-depth/</id>
     <published>2025-08-19T01:59:12.000Z</published>
     <updated>2025-12-13T03:07:10.326Z</updated>
     
@@ -225,16 +225,16 @@
     
     
     
-    <category term="Sass" scheme="https://harumi.cc/tags/Sass/"/>
+    <category term="Sass" scheme="https://harumi.cc/hugo/tags/Sass/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>限制 CSS 巢狀結構只能一層</title>
-    <link href="https://harumi.cc/stylelint/css/nesting-depth/"/>
-    <id>https://harumi.cc/stylelint/css/nesting-depth/</id>
+    <link href="https://harumi.cc/hugo/stylelint/css/nesting-depth/"/>
+    <id>https://harumi.cc/hugo/stylelint/css/nesting-depth/</id>
     <published>2025-08-19T01:57:11.000Z</published>
     <updated>2025-09-20T14:34:22.975Z</updated>
     
@@ -246,16 +246,16 @@
     
     
     
-    <category term="CSS" scheme="https://harumi.cc/tags/CSS/"/>
+    <category term="CSS" scheme="https://harumi.cc/hugo/tags/CSS/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>統一 SCSS 樣式排序</title>
-    <link href="https://harumi.cc/stylelint/sass/clean-order/"/>
-    <id>https://harumi.cc/stylelint/sass/clean-order/</id>
+    <link href="https://harumi.cc/hugo/stylelint/sass/clean-order/"/>
+    <id>https://harumi.cc/hugo/stylelint/sass/clean-order/</id>
     <published>2025-08-19T01:54:39.000Z</published>
     <updated>2025-12-13T03:07:33.065Z</updated>
     
@@ -267,16 +267,16 @@
     
     
     
-    <category term="Sass" scheme="https://harumi.cc/tags/Sass/"/>
+    <category term="Sass" scheme="https://harumi.cc/hugo/tags/Sass/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>統一 CSS 樣式排序</title>
-    <link href="https://harumi.cc/stylelint/css/clean-order/"/>
-    <id>https://harumi.cc/stylelint/css/clean-order/</id>
+    <link href="https://harumi.cc/hugo/stylelint/css/clean-order/"/>
+    <id>https://harumi.cc/hugo/stylelint/css/clean-order/</id>
     <published>2025-08-19T01:51:31.000Z</published>
     <updated>2025-09-20T14:34:22.975Z</updated>
     
@@ -288,16 +288,16 @@
     
     
     
-    <category term="CSS" scheme="https://harumi.cc/tags/CSS/"/>
+    <category term="CSS" scheme="https://harumi.cc/hugo/tags/CSS/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>檢查 SCSS 符合 BEM 命名規則</title>
-    <link href="https://harumi.cc/stylelint/sass/bem/"/>
-    <id>https://harumi.cc/stylelint/sass/bem/</id>
+    <link href="https://harumi.cc/hugo/stylelint/sass/bem/"/>
+    <id>https://harumi.cc/hugo/stylelint/sass/bem/</id>
     <published>2025-08-19T01:48:10.000Z</published>
     <updated>2025-09-20T14:34:22.975Z</updated>
     
@@ -309,18 +309,18 @@
     
     
     
-    <category term="Sass" scheme="https://harumi.cc/tags/Sass/"/>
+    <category term="Sass" scheme="https://harumi.cc/hugo/tags/Sass/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
-    <category term="BEM" scheme="https://harumi.cc/tags/BEM/"/>
+    <category term="BEM" scheme="https://harumi.cc/hugo/tags/BEM/"/>
     
   </entry>
   
   <entry>
     <title>檢查 CSS 符合 BEM 命名規則</title>
-    <link href="https://harumi.cc/stylelint/css/bem/"/>
-    <id>https://harumi.cc/stylelint/css/bem/</id>
+    <link href="https://harumi.cc/hugo/stylelint/css/bem/"/>
+    <id>https://harumi.cc/hugo/stylelint/css/bem/</id>
     <published>2025-08-19T01:20:54.000Z</published>
     <updated>2025-09-20T14:34:22.975Z</updated>
     
@@ -332,18 +332,18 @@
     
     
     
-    <category term="CSS" scheme="https://harumi.cc/tags/CSS/"/>
+    <category term="CSS" scheme="https://harumi.cc/hugo/tags/CSS/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
-    <category term="BEM" scheme="https://harumi.cc/tags/BEM/"/>
+    <category term="BEM" scheme="https://harumi.cc/hugo/tags/BEM/"/>
     
   </entry>
   
   <entry>
     <title>使用 Stylelint 檢查 CSS</title>
-    <link href="https://harumi.cc/stylelint/css/overview/"/>
-    <id>https://harumi.cc/stylelint/css/overview/</id>
+    <link href="https://harumi.cc/hugo/stylelint/css/overview/"/>
+    <id>https://harumi.cc/hugo/stylelint/css/overview/</id>
     <published>2025-08-19T01:17:24.000Z</published>
     <updated>2025-09-20T14:34:22.975Z</updated>
     
@@ -355,16 +355,16 @@
     
     
     
-    <category term="CSS" scheme="https://harumi.cc/tags/CSS/"/>
+    <category term="CSS" scheme="https://harumi.cc/hugo/tags/CSS/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>使用 Stylelint 檢查 SCSS</title>
-    <link href="https://harumi.cc/stylelint/sass/overview/"/>
-    <id>https://harumi.cc/stylelint/sass/overview/</id>
+    <link href="https://harumi.cc/hugo/stylelint/sass/overview/"/>
+    <id>https://harumi.cc/hugo/stylelint/sass/overview/</id>
     <published>2025-08-19T01:11:43.000Z</published>
     <updated>2025-12-13T03:07:59.205Z</updated>
     
@@ -376,16 +376,16 @@
     
     
     
-    <category term="Sass" scheme="https://harumi.cc/tags/Sass/"/>
+    <category term="Sass" scheme="https://harumi.cc/hugo/tags/Sass/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>Stylelint 檢查 SCSS 懶人包</title>
-    <link href="https://harumi.cc/stylelint/sass/lazy/"/>
-    <id>https://harumi.cc/stylelint/sass/lazy/</id>
+    <link href="https://harumi.cc/hugo/stylelint/sass/lazy/"/>
+    <id>https://harumi.cc/hugo/stylelint/sass/lazy/</id>
     <published>2025-08-19T00:10:28.000Z</published>
     <updated>2025-09-20T14:34:22.975Z</updated>
     
@@ -397,16 +397,16 @@
     
     
     
-    <category term="Sass" scheme="https://harumi.cc/tags/Sass/"/>
+    <category term="Sass" scheme="https://harumi.cc/hugo/tags/Sass/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>Stylelint 檢查 CSS 懶人包</title>
-    <link href="https://harumi.cc/stylelint/css/lazy/"/>
-    <id>https://harumi.cc/stylelint/css/lazy/</id>
+    <link href="https://harumi.cc/hugo/stylelint/css/lazy/"/>
+    <id>https://harumi.cc/hugo/stylelint/css/lazy/</id>
     <published>2025-08-19T00:00:55.000Z</published>
     <updated>2025-09-20T14:34:22.975Z</updated>
     
@@ -418,9 +418,9 @@
     
     
     
-    <category term="CSS" scheme="https://harumi.cc/tags/CSS/"/>
+    <category term="CSS" scheme="https://harumi.cc/hugo/tags/CSS/"/>
     
-    <category term="Stylelint" scheme="https://harumi.cc/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://harumi.cc/hugo/tags/Stylelint/"/>
     
   </entry>
   
