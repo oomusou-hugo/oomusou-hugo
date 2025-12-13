@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/ecmascript/symbol/prop/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/ecmascript/symbol/prop/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2021-11-27</span>
 </div>
@@ -462,7 +462,7 @@ obj<span class="token punctuation">.</span>name <span class="token operator">=</
 obj<span class="token punctuation">.</span>name <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>We want to add <code>name</code> property dynamically, but we will override the original <code>name</code> property if the property exists.</p>
-<p><img src="/images/ecmascript/symbol/prop/prop000.png" alt="prop000"></p>
+<p><img src="/hugo/images/ecmascript/symbol/prop/prop000.png" alt="prop000"></p>
 <h2 id=""><a href="#" class="headerlink" title="[]"></a>[]</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
   name<span class="token punctuation">:</span> <span class="token string">'Tom'</span>
 <span class="token punctuation">}</span>
@@ -477,7 +477,7 @@ obj <span class="token punctuation">[</span>name<span class="token punctuation">
 <li>Since Symbol is an unique value, so we can use Symbol as property name to ensure not to override existing property</li>
 <li>We have to use <code>[]</code> to add Symbol property</li>
 </ul>
-<p><img src="/images/ecmascript/symbol/prop/prop001.png" alt="prop001"></p>
+<p><img src="/hugo/images/ecmascript/symbol/prop/prop001.png" alt="prop001"></p>
 <h2 id="Object-Spread"><a href="#Object-Spread" class="headerlink" title="Object Spread"></a>Object Spread</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
   name<span class="token punctuation">:</span> <span class="token string">'Tom'</span>
 <span class="token punctuation">}</span>
@@ -492,7 +492,7 @@ obj<span class="token punctuation">.</span>name <span class="token comment" spel
 obj <span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>We can also use <code>...</code> to spread original object first and <code>[]</code> to add Symbol property.</p>
-<p><img src="/images/ecmascript/symbol/prop/prop002.png" alt="prop002"></p>
+<p><img src="/hugo/images/ecmascript/symbol/prop/prop002.png" alt="prop002"></p>
 <h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty"></a>Object.defineProperty</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
   name<span class="token punctuation">:</span> <span class="token string">'Tom'</span>
 <span class="token punctuation">}</span>
@@ -515,7 +515,7 @@ obj <span class="token punctuation">[</span>name<span class="token punctuation">
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
+    <a class="post-tags-list-item" href='/hugo/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
     
   </span>
   
@@ -526,7 +526,7 @@ obj <span class="token punctuation">[</span>name<span class="token punctuation">
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/console/css/">
+			<a href="/hugo/ecmascript/console/css/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">Using CSS Inline Style with console.log</div>
 			</a>
@@ -535,7 +535,7 @@ obj <span class="token punctuation">[</span>name<span class="token punctuation">
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/ecmascript/symbol/enum/">
+			<a href="/hugo/ecmascript/symbol/enum/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">Using Object and Symbol to Simulate Enums</div>
 			</a>
@@ -570,7 +570,7 @@ obj <span class="token punctuation">[</span>name<span class="token punctuation">
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

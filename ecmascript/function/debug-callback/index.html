@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/ecmascript/function/debug-callback/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/ecmascript/function/debug-callback/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2019-08-09</span>
 </div>
@@ -468,7 +468,7 @@ a:hover {
 <span class="token function">usrFn</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在 <code>map()</code> 使用 callback，我們想得知 <code>x</code> 到底為多少 ?</p>
-<p><img src="/images/ecmascript/function/callback-debug/log003.png" alt="log003"></p>
+<p><img src="/hugo/images/ecmascript/function/callback-debug/log003.png" alt="log003"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> map <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ramda'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -482,7 +482,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>原本 callback 只有 <code>x =&gt; x + 2</code>，因此不需 <code>{}</code> 與 <code>return</code>，這是 arrow function 特色。</p>
 <p>但為了加上 <code>console.log()</code>，就只能加上 <code>{}</code> 與 <code>return</code> 而打回原形，不能再使用一行的 arrow function。</p>
-<p><img src="/images/ecmascript/function/callback-debug/log004.png" alt="log004"></p>
+<p><img src="/hugo/images/ecmascript/function/callback-debug/log004.png" alt="log004"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> map <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ramda'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -493,7 +493,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可將 <code>console.log()</code> 搭配 <code>||</code>，接上 <code>inc()</code>，如此不需 <code>{}</code>，也不需要 <code>return</code>，還能繼續使用一行的 arrow function。</p>
 <p>因為 <code>console.log()</code> 會回傳 <code>undefined</code>，視為 falsy value，而 <code>||</code> 是 <code>false</code> 才繼續執行，所以一定會繼續執行 <code>x * 2</code>。</p>
-<p><img src="/images/ecmascript/function/callback-debug/log005.png" alt="log005"></p>
+<p><img src="/hugo/images/ecmascript/function/callback-debug/log005.png" alt="log005"></p>
 <h2 id="確認-Callback-是否被執行過"><a href="#確認-Callback-是否被執行過" class="headerlink" title="確認 Callback 是否被執行過"></a>確認 Callback 是否被執行過</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Maybe <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'crocks'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> map <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ramda'</span><span class="token punctuation">;</span>
 
@@ -504,7 +504,7 @@ a:hover {
 <span class="token function">usrFn</span><span class="token punctuation">(</span>Maybe<span class="token punctuation">.</span><span class="token function">Nothing</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>當 <code>usrFn()</code> 傳入 <code>Nothing</code> 時，結果也是 <code>Nothing</code>，此時對於 <code>map()</code> 的 map function 是否被執行過，我們會有疑慮。</p>
-<p><img src="/images/ecmascript/function/callback-debug/log000.png" alt="log000"></p>
+<p><img src="/hugo/images/ecmascript/function/callback-debug/log000.png" alt="log000"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Maybe <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'crocks'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> map <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ramda'</span><span class="token punctuation">;</span>
 
@@ -519,7 +519,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>原本 callback 只有 <code>inc()</code>，因此不需 <code>{}</code> 與 <code>return</code>，這是 arrow function 特色。</p>
 <p>但為了加上 <code>console.log()</code>，就只能加上 <code>{}</code> 與 <code>return</code> 而打回原形，不能再使用一行的 arrow function。</p>
-<p><img src="/images/ecmascript/function/callback-debug/log001.png" alt="log001"></p>
+<p><img src="/hugo/images/ecmascript/function/callback-debug/log001.png" alt="log001"></p>
 <p>證明傳入 <code>Nothing</code> 時，callback 完全沒有執行，因此沒有印出 <code>Calling inc()</code>。</p>
 <blockquote>
 <p>若看不懂 Maybe 沒關係，本文主要是討論 <code>console.log()</code> 寫法</p>
@@ -535,7 +535,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可將 <code>console.log()</code> 搭配 <code>||</code>，接上 <code>inc()</code>，如此不需 <code>{}</code>，也不需要 <code>return</code>，還能繼續使用 arrow function。</p>
 <p>因為 <code>console.log()</code> 會回傳 <code>undefined</code>，視為 falsy value，而 <code>||</code> 是 <code>false</code> 才繼續執行，所以一定會繼續執行 <code>inc()</code>。</p>
-<p><img src="/images/ecmascript/function/callback-debug/log002.png" alt="log002"></p>
+<p><img src="/hugo/images/ecmascript/function/callback-debug/log002.png" alt="log002"></p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>Arrow function 優美之處就是不需要 <code>{}</code> 與 <code>return</code>，卻又能優雅地表現語意，一旦加入 <code>console.log()</code> debug 後，卻又打回原形</li>
 <li>巧妙地善用 <code>console.log()</code> 回傳 <code>undefined</code> 視為 falsy value 特性，搭配 <code>||</code> 就能繼續優雅地使用 arrow function</li>
@@ -549,7 +549,7 @@ a:hover {
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
+    <a class="post-tags-list-item" href='/hugo/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
     
   </span>
   
@@ -560,7 +560,7 @@ a:hover {
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/array/clone/">
+			<a href="/hugo/ecmascript/array/clone/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">如何 Clone Array ?</div>
 			</a>
@@ -569,7 +569,7 @@ a:hover {
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/webstorm/general/soft-link/">
+			<a href="/hugo/webstorm/general/soft-link/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">如何以更簡短 Command 啟動 WebStorm ?</div>
 			</a>
@@ -604,7 +604,7 @@ a:hover {
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/css/box-model/box-sizing/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/css/box-model/box-sizing/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2020-12-15</span>
 </div>
@@ -501,7 +501,7 @@ a:hover {
 <li>使用 <code>border</code> 設定 <code>&lt;div&gt;</code> 的 border 為 <code>20px</code></li>
 <li>指定 <code>box-sizing</code> 為 <code>content-box</code></li>
 </ul>
-<p><img src="/images/css/box-model/box-sizing/sizing000.png" alt="sizing000"></p>
+<p><img src="/hugo/images/css/box-model/box-sizing/sizing000.png" alt="sizing000"></p>
 <p>此時 DevTools 所顯示 <code>&lt;div&gt;</code> 寬度為 <code>240px</code>，因為除了本身寬度 <code>200px</code> 外，又多了左右 border 各 <code>20px</code>，因此 <code>200 + 20 * 2</code> &#x3D; <code>240px</code>。</p>
 <blockquote>
 <p>事實上 <code>box-sizing</code> 預設就是 <code>content-box</code>，因此實務上都省略不寫 <code>box-sizing</code></p>
@@ -544,7 +544,7 @@ a:hover {
 <ul>
 <li>將 <code>box-sizing</code> 設定為 <code>border-box</code></li>
 </ul>
-<p><img src="/images/css/box-model/box-sizing/sizing001.png" alt="sizing001"></p>
+<p><img src="/hugo/images/css/box-model/box-sizing/sizing001.png" alt="sizing001"></p>
 <p>此時 DevTools 所顯示 <code>&lt;div&gt;</code> 寬度為 <code>200px</code>，因為此時 width 是設定在 Border Box 上，因此 <code>&lt;div&gt;</code> 的寬度為 <code>200px</code>。</p>
 <p>那 border 呢 ? border 的 <code>20px</code> 依然成立，只是 context box 內縮到只有 <code>160px</code>，因此才能維持最終寬度為 <code>200px</code>。</p>
 <h3 id="Padding"><a href="#Padding" class="headerlink" title="Padding"></a>Padding</h3><pre class="line-numbers highlight language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
@@ -587,7 +587,7 @@ a:hover {
 <ul>
 <li>使用 <code>padding</code> 設定 <code>&lt;div&gt;</code> 的 padding 為 <code>20px</code></li>
 </ul>
-<p><img src="/images/css/box-model/box-sizing/sizing002.png" alt="sizing002"></p>
+<p><img src="/hugo/images/css/box-model/box-sizing/sizing002.png" alt="sizing002"></p>
 <p>此時 DevTools 所顯示 <code>&lt;div&gt;</code> 寬度仍是 <code>200px</code>，因為此時 width 是設定在 Border Box 上，因此 <code>&lt;div&gt;</code> 的寬度為 <code>200px</code>。</p>
 <p>那 padding 呢 ? padding 的 <code>20px</code> 依然成立，只是 context box 內縮到只有 <code>120px</code>，因此 <code>200 - 20 * 2 - 20 * 2</code> &#x3D; <code>120px</code>。</p>
 <h3 id="Margin"><a href="#Margin" class="headerlink" title="Margin"></a>Margin</h3><pre class="line-numbers highlight language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
@@ -630,7 +630,7 @@ a:hover {
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>使用 <code>margin</code> 設定 <code>&lt;div&gt;</code> 的 margin 為 <code>20px</code>。</p>
-<p><img src="/images/css/box-model/box-sizing/sizing003.png" alt="sizing003"></p>
+<p><img src="/hugo/images/css/box-model/box-sizing/sizing003.png" alt="sizing003"></p>
 <p>儘管設定了 margin，但 <code>&lt;div&gt;</code> 的寬度仍維持 <code>200px</code>，且 content 寬度也不再內縮，仍維持 <code>120px</code>。</p>
 <p>因為寬度計算並不包含 margin，因此無論使用 <code>content-box</code> 或 <code>border-box</code> 結果都相同。</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
@@ -646,7 +646,7 @@ a:hover {
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/CSS/'>#&nbsp;CSS</a>
+    <a class="post-tags-list-item" href='/hugo/tags/CSS/'>#&nbsp;CSS</a>
     
   </span>
   
@@ -657,7 +657,7 @@ a:hover {
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/string/replace/">
+			<a href="/hugo/ecmascript/string/replace/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">使用 replace() 取代 String</div>
 			</a>
@@ -666,7 +666,7 @@ a:hover {
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/css/box-model/overview/">
+			<a href="/hugo/css/box-model/overview/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">CSS 之 Box Model</div>
 			</a>
@@ -701,7 +701,7 @@ a:hover {
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

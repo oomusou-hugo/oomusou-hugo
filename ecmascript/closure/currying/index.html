@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/ecmascript/closure/currying/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/ecmascript/closure/currying/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2021-01-23</span>
 </div>
@@ -468,7 +468,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我們以最簡單的 Hello World 為例，傳統 function 都會有多個 argument，在 <code>greeting()</code> 我們分別有 <code>hi</code>、<code>target</code> 與 <code>name</code> 3 個 argument。</p>
 <p>根據 currying 定義，我們可將一個 3 個 argument 的 function，改寫成只有１個 argument 的 function。</p>
-<p><img src="/images/ecmascript/closure/currying/currying000.png" alt="currying000"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying000.png" alt="currying000"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> greeting <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>hi<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -491,13 +491,13 @@ a:hover {
 <p>因此 <code>greeting(&#39;Hello&#39;)</code> 回傳只有 1 個 argument 的 function，可再傳入 <code>World</code>。</p>
 <p>而 <code>greeting(&#39;Hello&#39;)(&#39;World&#39;)</code> 亦回傳只有 1 個 argument 的 function，可再傳入 <code>Sam</code>。</p>
 <p>所以 <code>greeting(&#39;Hello&#39;)(&#39;World&#39;)(&#39;Sam&#39;)</code> 其實相當於 <code>greeting(&#39;Hello&#39;, &#39;World&#39;, &#39;Sam&#39;)</code>，我們將原本 3 個 argument 的 function，變成各有 1 個 argument 的 3 個 function。</p>
-<p><img src="/images/ecmascript/closure/currying/currying001.png" alt="currying001"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying001.png" alt="currying001"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> greeting <span class="token operator">=</span> hi <span class="token operator">=</span><span class="token operator">></span> target <span class="token operator">=</span><span class="token operator">></span> name <span class="token operator">=</span><span class="token operator">></span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hi<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>target<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
 
 <span class="token function">greeting</span><span class="token punctuation">(</span><span class="token string">'Hello'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'World'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'Sam'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>拜 ES6 之賜，我們有了 arrow function，就不必再使用 <code>巢狀 function</code> 寫法，程式碼更簡潔，可讀性也變高，這也使得 currying 實用性大大提升。</p>
-<p><img src="/images/ecmascript/closure/currying/currying002.png" alt="currying002"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying002.png" alt="currying002"></p>
 <blockquote>
 <p>Q：將傳統 function 改寫成 currying 不難，但為什麼要這樣寫呢 ?</p>
 </blockquote>
@@ -534,7 +534,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>藉由 <code>greeting(&#39;Hello&#39;)(&#39;World&#39;)</code> 輕鬆建立新的 <code>helloWorld()</code> ，將來只接受 1 個  argument。</p>
 <p>Currying 過的 <code>greeting()</code>，因為顆粒變小，因此能被 reuse 機會更高了。</p>
-<p><img src="/images/ecmascript/closure/currying/currying003.png" alt="currying003"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying003.png" alt="currying003"></p>
 <p>回想小時候玩樂高積木，哪一種積木最好用 ?</p>
 <p>就是顆粒最小的積木最好用，可以說是百搭。</p>
 <p>Currying 就是把 function 都切成顆粒最小的單一 argument function，因此可藉由 argument 的組合，由一個 function 不斷地組合出新 function。</p>
@@ -580,7 +580,7 @@ a:hover {
 <span class="token keyword">return</span> <span class="token function">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">10</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>所以想將這部分抽成 higher order function。</p>
-<p><img src="/images/ecmascript/closure/currying/currying004.png" alt="currying004"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying004.png" alt="currying004"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> sum <span class="token operator">=</span> a <span class="token operator">=</span><span class="token operator">></span> a<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> x<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a <span class="token operator">+</span> x<span class="token punctuation">)</span>
@@ -604,7 +604,7 @@ a:hover {
 <span class="token function">price</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> x <span class="token operator">*</span> <span class="token number">0.9</span><span class="token punctuation">)</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>將 <code>不同部分</code> 分別以 <code>x =&gt; x -10</code> 與 <code>x =&gt; x * 0.9</code> 帶入 <code>price()</code> higher order function，正式計算其值。</p>
-<p><img src="/images/ecmascript/closure/currying/currying005.png" alt="currying005"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying005.png" alt="currying005"></p>
 <p>若我們不將 <code>price()</code> currying 過，則無法傳回 function，只能回傳值，如此就無法將 <code>不同部分</code> 以 arrow function 傳入。</p>
 <h2 id="Function-Pipeline"><a href="#Function-Pipeline" class="headerlink" title="Function Pipeline"></a>Function Pipeline</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">]</span>
 
@@ -644,7 +644,7 @@ a:hover {
 <blockquote>
 <p>在純 FP 語言如 Haskell、F#、ReasonML 會自動 currying，所以不是問題，但 ECMAScript 必須手動 currying，或者使用 Ramda 的 <code>curry()</code> 將原本 function 加以 currying</p>
 </blockquote>
-<p><img src="/images/ecmascript/closure/currying/currying008.png" alt="currying008"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying008.png" alt="currying008"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> discount <span class="token operator">=</span> rate <span class="token operator">=</span><span class="token operator">></span> a <span class="token operator">=</span><span class="token operator">></span> a<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> x <span class="token operator">*</span> rate<span class="token punctuation">)</span>
@@ -662,7 +662,7 @@ a:hover {
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> discount <span class="token operator">=</span> rate <span class="token operator">=</span><span class="token operator">></span> a <span class="token operator">=</span><span class="token operator">></span> a<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> x <span class="token operator">*</span> rate<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>將 <code>discount()</code> 改成 currying 寫法後，就可以使用 <code>pipe()</code> 將 <code>sum()</code> 與 <code>discount()</code> 組合成一個新 function。</p>
-<p><img src="/images/ecmascript/closure/currying/currying007.png" alt="currying007"></p>
+<p><img src="/hugo/images/ecmascript/closure/currying/currying007.png" alt="currying007"></p>
 <p>為了使用 function composition，我們會將多個 argument 的 function，currying 成眾多單一 argument 的 function，然後再加以組合。</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>ECMAScript 不像其他 FP 語言支援自動 currying，但所幸支援 first-class function 與 lexical scope，因此仍然可以手動將 function 加以 currying，或者透過 Ramda 的 <code>curry()</code></li>
@@ -677,7 +677,7 @@ a:hover {
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
+    <a class="post-tags-list-item" href='/hugo/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
     
   </span>
   
@@ -688,7 +688,7 @@ a:hover {
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/closure/lexical-scope/">
+			<a href="/hugo/ecmascript/closure/lexical-scope/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">ECMAScript 之 Lexical Scope</div>
 			</a>
@@ -697,7 +697,7 @@ a:hover {
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/ecmascript/prototype/class-free/">
+			<a href="/hugo/ecmascript/prototype/class-free/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">你不一定需要 Class</div>
 			</a>
@@ -732,7 +732,7 @@ a:hover {
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

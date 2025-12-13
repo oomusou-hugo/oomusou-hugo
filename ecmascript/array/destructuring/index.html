@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/ecmascript/array/destructuring/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/ecmascript/array/destructuring/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2019-08-19</span>
 </div>
@@ -474,7 +474,7 @@ y <span class="token comment" spellcheck="true">// ?</span>
 z <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>將 <code>x</code>、<code>y</code> 與 <code>z</code> 直接寫在 <code>[]</code> 內，array 會依照順序直接分解到 variable，ES6 只需 1 行。</p>
-<p><img src="/images/ecmascript/array/destructuring/array000.png" alt="array000"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array000.png" alt="array000"></p>
 <h2 id="Batch-Assignment"><a href="#Batch-Assignment" class="headerlink" title="Batch Assignment"></a>Batch Assignment</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token number">2</span>
 
@@ -488,7 +488,7 @@ x <span class="token comment" spellcheck="true">// ?</span>
 y <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可將所有 variable 與 value 都用 array 整理起來，ES6 只要一行即可搞定。</p>
-<p><img src="/images/ecmascript/array/destructuring/array020.png" alt="array020"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array020.png" alt="array020"></p>
 <h2 id="Swap-Variable"><a href="#Swap-Variable" class="headerlink" title="Swap Variable"></a>Swap Variable</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token keyword">let</span> y <span class="token operator">=</span> <span class="token number">2</span>
 
@@ -509,7 +509,7 @@ x <span class="token comment" spellcheck="true">// ?</span>
 y <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES6 將 variable 寫在 <code>[]</code> 直接交換，只要 1 行，可讀性非常高。</p>
-<p><img src="/images/ecmascript/array/destructuring/array014.png" alt="array014"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array014.png" alt="array014"></p>
 <h2 id="Extract-Array"><a href="#Extract-Array" class="headerlink" title="Extract Array"></a>Extract Array</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Sam'</span>
@@ -526,7 +526,7 @@ name <span class="token comment" spellcheck="true">// ?</span>
 name <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES6 可直接在 array destructuring 時指定 default value，不需再搭配 <code>if</code> 判斷。</p>
-<p><img src="/images/ecmascript/array/destructuring/array015.png" alt="array015"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array015.png" alt="array015"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'Kevin'</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> <span class="token punctuation">[</span>_<span class="token punctuation">,</span> _<span class="token punctuation">,</span> name <span class="token operator">=</span> <span class="token string">'Sam'</span><span class="token punctuation">]</span> <span class="token operator">=</span> data
@@ -534,7 +534,7 @@ name <span class="token comment" spellcheck="true">// ?</span>
 name <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若要分解的 variable 不是第一個 element 也沒關係，只要使用 <code>,</code> 留出空位即可，<code>_</code> 並非必須，但有助於可讀性，亦可同時指定 default value。</p>
-<p><img src="/images/ecmascript/array/destructuring/array016.png" alt="array016"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array016.png" alt="array016"></p>
 <h2 id="Clone-Array"><a href="#Clone-Array" class="headerlink" title="Clone Array"></a>Clone Array</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data0 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token keyword">let</span> data1 <span class="token operator">=</span> data0
 
@@ -542,7 +542,7 @@ data1 <span class="token comment" spellcheck="true">// ?</span>
 data0 <span class="token operator">===</span> data1 <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若要複製 array，直覺會使用 <code>=</code>，但 array 並非 primitive，而是 object，因此只是複製記憶體位置，所以 <code>data0</code> 與 <code>data1</code> 仍然指向同一個 <code>[1, 2, 3]</code>，而不是真的 clone array。</p>
-<p><img src="/images/ecmascript/array/destructuring/array002.png" alt="array002"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array002.png" alt="array002"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data0 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token keyword">let</span> data1 <span class="token operator">=</span> data0<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -550,7 +550,7 @@ data1 <span class="token comment" spellcheck="true">// ?</span>
 data0 <span class="token operator">===</span> data1 <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES5 可使用 <code>Array.prototype.slice()</code> 將 array 加以複製，<code>slice()</code> 是真的回傳一個新 array，而非指向同一個 array。</p>
-<p><img src="/images/ecmascript/array/destructuring/array003.png" alt="array003"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array003.png" alt="array003"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data0 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token keyword">let</span> data1 <span class="token operator">=</span> data0<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -558,7 +558,7 @@ data1 <span class="token comment" spellcheck="true">// ?</span>
 data0 <span class="token operator">===</span> data1 <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES5 也可以使用 <code>Array.prototype.concat()</code> 複製一個新 array，與 <code>slice()</code> 結果相同。</p>
-<p><img src="/images/ecmascript/array/destructuring/array004.png" alt="array004"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array004.png" alt="array004"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data0 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token keyword">let</span> <span class="token punctuation">[</span><span class="token operator">...</span>data1<span class="token punctuation">]</span> <span class="token operator">=</span> data0<span class="token punctuation">;</span>
 
@@ -566,7 +566,7 @@ data1<span class="token punctuation">;</span> <span class="token comment" spellc
 data0 <span class="token operator">===</span> data1<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES6 則有新的寫法，array destructuring 配合 <code>...</code> spread operator，其結果等同於 ES5 的 <code>slice()</code> 與 <code>concat()</code>。</p>
-<p><img src="/images/ecmascript/array/destructuring/array001.png" alt="array001"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array001.png" alt="array001"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data0 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token keyword">let</span> data1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>data0<span class="token punctuation">]</span>
 
@@ -574,28 +574,28 @@ data1 <span class="token comment" spellcheck="true">// ?</span>
 data0 <span class="token operator">===</span> data1 <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>亦可將 <code>...</code> 寫在右側展開亦可。</p>
-<p><img src="/images/ecmascript/array/destructuring/array021.png" alt="array021"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array021.png" alt="array021"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data0 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token keyword">let</span> <span class="token punctuation">[</span>_<span class="token punctuation">,</span><span class="token operator">...</span>data1<span class="token punctuation">]</span> <span class="token operator">=</span> data0
 
 data1 <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若要 clone 的只是部分 array，可使用 <code>,</code> 空出 space 即可。</p>
-<p><img src="/images/ecmascript/array/destructuring/array017.png" alt="array017"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array017.png" alt="array017"></p>
 <h2 id="Extract-Character"><a href="#Extract-Character" class="headerlink" title="Extract Character"></a>Extract Character</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'Chinese'</span>
 <span class="token keyword">let</span> <span class="token punctuation">[</span>firstChar<span class="token punctuation">]</span> <span class="token operator">=</span> str
 
 firstChar <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Destructuring 除了可以用在 array 外，事實上也能用在 iterable，最簡單的 iterable 就是 string，可用來將 string 中特定 char 指定到 variable。</p>
-<p><img src="/images/ecmascript/array/destructuring/array018.png" alt="array018"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array018.png" alt="array018"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">'Chinese'</span>
 <span class="token keyword">let</span> <span class="token punctuation">[</span>_<span class="token punctuation">,</span> secondChar<span class="token punctuation">]</span> <span class="token operator">=</span> str
 
 secondChar <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若要分解的 variable 不是第一個 index 也沒關係，只要使用 <code>,</code> 留出空位即可。</p>
-<p><img src="/images/ecmascript/array/destructuring/array019.png" alt="array019"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array019.png" alt="array019"></p>
 <h2 id="Function-Parameter"><a href="#Function-Parameter" class="headerlink" title="Function Parameter"></a>Function Parameter</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -617,7 +617,7 @@ secondChar <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES6 可在 parameter 使用 array destructuring 直接將 array 分解成 variable。</p>
 <p>雖然只是一個 array，但若使用 arrow function 時，仍須加上 <code>()</code> 將 array 刮起來。</p>
-<p><img src="/images/ecmascript/array/destructuring/array006.png" alt="array006"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array006.png" alt="array006"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">)</span>
@@ -625,7 +625,7 @@ secondChar <span class="token comment" spellcheck="true">// ?</span>
 <span class="token function">fn</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若想提供 default value 也行，使用 <code>=</code> 提供 default value 即可。</p>
-<p><img src="/images/ecmascript/array/destructuring/array007.png" alt="array007"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array007.png" alt="array007"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'RGB'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -647,7 +647,7 @@ secondChar <span class="token comment" spellcheck="true">// ?</span>
 <span class="token function">fn</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES6 也可直接在 parameter 分解 nested array。</p>
-<p><img src="/images/ecmascript/array/destructuring/array012.png" alt="array012"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array012.png" alt="array012"></p>
 <h2 id="Function-Return-Array"><a href="#Function-Return-Array" class="headerlink" title="Function Return Array"></a>Function Return Array</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
@@ -671,7 +671,7 @@ b <span class="token comment" spellcheck="true">// ?</span>
 c <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在 ES6 可使用 array destructuring 接收 function 回傳的 array，並自動分解成 variable，只需 1 行。</p>
-<p><img src="/images/ecmascript/array/destructuring/array009.png" alt="array009"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array009.png" alt="array009"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> _<span class="token punctuation">,</span> c<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -680,7 +680,7 @@ a <span class="token comment" spellcheck="true">// ?</span>
 c <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若並不想分解 function 所傳回所有 array，可以在 <code>,</code> 與 <code>,</code> 之間空著，會自行忽略分解之。</p>
-<p><img src="/images/ecmascript/array/destructuring/array010.png" alt="array010"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array010.png" alt="array010"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 
 <span class="token keyword">let</span> <span class="token punctuation">[</span>a<span class="token punctuation">,</span> <span class="token operator">...</span>c<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -692,7 +692,7 @@ c <span class="token comment" spellcheck="true">// ?</span>
 <blockquote>
 <p>但這種寫法必須寫在 array destructuring 的最後才行</p>
 </blockquote>
-<p><img src="/images/ecmascript/array/destructuring/array011.png" alt="array011"></p>
+<p><img src="/hugo/images/ecmascript/array/destructuring/array011.png" alt="array011"></p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>Array destructuring 的基本精神就是 <code>一個蘿蔔一個坑</code>，ES6 會自動將 array 分解成 variable</li>
 <li>若要同時將多值給不同 variable，可將所有 variable 與 value 都用 array 整理起來，只要一行即可</li>
@@ -711,7 +711,7 @@ c <span class="token comment" spellcheck="true">// ?</span>
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
+    <a class="post-tags-list-item" href='/hugo/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
     
   </span>
   
@@ -722,7 +722,7 @@ c <span class="token comment" spellcheck="true">// ?</span>
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/iterable/destructuring/">
+			<a href="/hugo/ecmascript/iterable/destructuring/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">Iterable 也能使用 Destructuring</div>
 			</a>
@@ -731,7 +731,7 @@ c <span class="token comment" spellcheck="true">// ?</span>
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/ecmascript/object/merge/">
+			<a href="/hugo/ecmascript/object/merge/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">如何 Merge Object ?</div>
 			</a>
@@ -766,7 +766,7 @@ c <span class="token comment" spellcheck="true">// ?</span>
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

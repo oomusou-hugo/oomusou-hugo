@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/ecmascript/promise/then-await/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/ecmascript/promise/then-await/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2019-09-17</span>
 </div>
@@ -466,7 +466,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若 <code>data</code> 是 synchronous，可直接回傳沒問題，但若 <code>data</code> 是 asynchronous，則必須透過 <code>Promise.resolve()</code> 將 <code>data</code> 包成 promise 後回傳。</p>
 <p>若直接讀取 <code>fetchData()</code>，會發現顯示多顯示了 <code>then</code>，表示其資料為 promise。</p>
-<p><img src="/images/ecmascript/promise/then-await/then000.png" alt="then000"></p>
+<p><img src="/hugo/images/ecmascript/promise/then-await/then000.png" alt="then000"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fetchData <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   data<span class="token punctuation">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'FP in JavaScript'</span><span class="token punctuation">,</span> price<span class="token punctuation">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -478,7 +478,7 @@ a:hover {
 <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>也可使用 ES2017 的 <code>async</code> 修飾 arrow function，表示回傳 promise，相當於 <code>Promise.resolve()</code> 的 syntatic sugar。</p>
-<p><img src="/images/ecmascript/promise/then-await/then001.png" alt="then001"></p>
+<p><img src="/hugo/images/ecmascript/promise/then-await/then001.png" alt="then001"></p>
 <h2 id="then"><a href="#then" class="headerlink" title="then()"></a>then()</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fetchData <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   data<span class="token punctuation">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'FP in JavaScript'</span><span class="token punctuation">,</span> price<span class="token punctuation">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -490,7 +490,7 @@ a:hover {
 <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>該如何取得不包含 <code>then</code> 的資料呢 ? 要使用 promise 自帶的 <code>then()</code>，由其 callback 的 <code>x</code> 取得內部 synchronous 資料。</p>
-<p><img src="/images/ecmascript/promise/then-await/then002.png" alt="then002"></p>
+<p><img src="/hugo/images/ecmascript/promise/then-await/then002.png" alt="then002"></p>
 <p>如此資料就不再包含 <code>then</code> 了。</p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fetchData <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   data<span class="token punctuation">:</span> <span class="token punctuation">[</span>
@@ -503,7 +503,7 @@ a:hover {
 <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若要取得 <code>data</code> property 下的資料呢 ? 直覺會使用 <code>x.data</code> 取得。</p>
-<p><img src="/images/ecmascript/promise/then-await/then003.png" alt="then003"></p>
+<p><img src="/hugo/images/ecmascript/promise/then-await/then003.png" alt="then003"></p>
 <p>但其實 <code>x =&gt; console.log(x.data)</code> 包含了兩件事情：</p>
 <ol>
 <li>從 <code>x.data</code> 取得資料</li>
@@ -529,7 +529,7 @@ a:hover {
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>由於之前回傳是 promise，因此可繼續使用 <code>then()</code> 抓到 <code>x.data</code>，最後使用 <code>console.log()</code> 印出。</p>
-<p><img src="/images/ecmascript/promise/then-await/then004.png" alt="then004"></p>
+<p><img src="/hugo/images/ecmascript/promise/then-await/then004.png" alt="then004"></p>
 <h2 id="Await"><a href="#Await" class="headerlink" title="Await"></a>Await</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fetchData <span class="token operator">=</span> <span class="token keyword">async</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   data<span class="token punctuation">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">'FP in JavaScript'</span><span class="token punctuation">,</span> price<span class="token punctuation">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -542,7 +542,7 @@ a:hover {
 console<span class="token punctuation">.</span><span class="token function">dir</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>也可使用 ES2017 的 <code>await</code> 取得 promise 內的 synchronous 資料，這種寫法與傳統 imperative 與 synchronous 相近，只多了 <code>await</code> 修飾而已。</p>
-<p><img src="/images/ecmascript/promise/then-await/then005.png" alt="then005"></p>
+<p><img src="/hugo/images/ecmascript/promise/then-await/then005.png" alt="then005"></p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>使用 Promise 的 <code>then()</code> 時，應謹記每個 callback 只做一件事情，且為 pure function 不應該有 side effect</li>
 <li>Side effect 實務上無法避免，但不應在 <code>then()</code> 的 callback 處理，而是交給 function 的呼叫者處理</li>
@@ -557,7 +557,7 @@ console<span class="token punctuation">.</span><span class="token function">dir<
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
+    <a class="post-tags-list-item" href='/hugo/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
     
   </span>
   
@@ -568,7 +568,7 @@ console<span class="token punctuation">.</span><span class="token function">dir<
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/promise/try-catch/">
+			<a href="/hugo/ecmascript/promise/try-catch/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">Promise 之 catch() 與 Catch</div>
 			</a>
@@ -577,7 +577,7 @@ console<span class="token punctuation">.</span><span class="token function">dir<
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/ecmascript/promise/resolve-async/">
+			<a href="/hugo/ecmascript/promise/resolve-async/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">Promise 之 Promise.resolve() 與 Async</div>
 			</a>
@@ -612,7 +612,7 @@ console<span class="token punctuation">.</span><span class="token function">dir<
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/css/flow/margin-collapse/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/css/flow/margin-collapse/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2021-01-31</span>
 </div>
@@ -454,7 +454,7 @@ a:hover {
 <a id="more"></a>
 
 <h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>CSS 3</p>
-<h2 id="Vertical-Margin"><a href="#Vertical-Margin" class="headerlink" title="Vertical Margin"></a>Vertical Margin</h2><p><img src="/images/css/flow/margin-collapse/margin000.png" alt="margin000"></p>
+<h2 id="Vertical-Margin"><a href="#Vertical-Margin" class="headerlink" title="Vertical Margin"></a>Vertical Margin</h2><p><img src="/hugo/images/css/flow/margin-collapse/margin000.png" alt="margin000"></p>
 <p>同時設定 <code>box1</code> 的 bottom margin 與 <code>box2</code> 的 top magin，此時在 vertical margin 有重疊。</p>
 <pre class="line-numbers highlight language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>box1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -477,7 +477,7 @@ a:hover {
 <ul>
 <li><code>margin-top</code> 與 <code>margin-bottom</code> 均設定 <code>10px</code>，但因為重疊，其 vertical margin 並不是 <code>20px</code>，而是 Margin Collapse 為 <code>10px</code></li>
 </ul>
-<h2 id="Bigger-Margin-Wins"><a href="#Bigger-Margin-Wins" class="headerlink" title="Bigger Margin Wins"></a>Bigger Margin Wins</h2><p><img src="/images/css/flow/margin-collapse/margin001.png" alt="margin001"></p>
+<h2 id="Bigger-Margin-Wins"><a href="#Bigger-Margin-Wins" class="headerlink" title="Bigger Margin Wins"></a>Bigger Margin Wins</h2><p><img src="/hugo/images/css/flow/margin-collapse/margin001.png" alt="margin001"></p>
 <p>Vertical margin 重疊部分有大有小，</p>
 <pre class="line-numbers highlight language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>box1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
@@ -506,7 +506,7 @@ a:hover {
 <ul>
 <li>Vertical margin 大小不同時，Margin Collapse 將以最大 margin 為準</li>
 </ul>
-<h2 id="Nesting-Element"><a href="#Nesting-Element" class="headerlink" title="Nesting Element"></a>Nesting Element</h2><p><img src="/images/css/flow/margin-collapse/margin002.png" alt="margin002"></p>
+<h2 id="Nesting-Element"><a href="#Nesting-Element" class="headerlink" title="Nesting Element"></a>Nesting Element</h2><p><img src="/hugo/images/css/flow/margin-collapse/margin002.png" alt="margin002"></p>
 <p>Nesting element 的 vertical margin 有重疊。</p>
 <pre class="line-numbers highlight language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
@@ -536,7 +536,7 @@ a:hover {
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>儘管是 nesting element，Margin Collapse 依然適用。</p>
-<h2 id="Same-Direction"><a href="#Same-Direction" class="headerlink" title="Same Direction"></a>Same Direction</h2><p><img src="/images/css/flow/margin-collapse/margin003.png" alt="margin003"></p>
+<h2 id="Same-Direction"><a href="#Same-Direction" class="headerlink" title="Same Direction"></a>Same Direction</h2><p><img src="/hugo/images/css/flow/margin-collapse/margin003.png" alt="margin003"></p>
 <p>兩個 <code>&lt;div&gt;</code> 在相同方向 vertical margin 重疊。</p>
 <pre class="line-numbers highlight language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>parent<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -585,7 +585,7 @@ a:hover {
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/CSS/'>#&nbsp;CSS</a>
+    <a class="post-tags-list-item" href='/hugo/tags/CSS/'>#&nbsp;CSS</a>
     
   </span>
   
@@ -596,7 +596,7 @@ a:hover {
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/css/float/overview/">
+			<a href="/hugo/css/float/overview/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">使用 float 設定文繞圖</div>
 			</a>
@@ -605,7 +605,7 @@ a:hover {
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/css/cookbook/rwd/iframe/">
+			<a href="/hugo/css/cookbook/rwd/iframe/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">如何建立自動 RWD 的 iframe ?</div>
 			</a>
@@ -640,7 +640,7 @@ a:hover {
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

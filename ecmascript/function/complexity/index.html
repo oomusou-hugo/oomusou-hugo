@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/ecmascript/function/complexity/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/ecmascript/function/complexity/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2019-11-25</span>
 </div>
@@ -465,14 +465,14 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'iPhone'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若為 <code>true</code> 則直接回傳，否則回傳 <code>false</code>。</p>
-<p><img src="/images/ecmascript/function/complexity/complex015.png" alt="complex015"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex015.png" alt="complex015"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> val <span class="token operator">===</span> <span class="token string">'iPhone'</span> <span class="token operator">&amp;&amp;</span> val
 
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'iPhone'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可使用 <code>&amp;&amp;</code>，若為 <code>false</code> 直接回傳 <code>false</code>，若為 <code>true</code> 才會繼續執行 <code>&amp;&amp;</code> 右側部分。</p>
-<p><img src="/images/ecmascript/function/complexity/complex016.png" alt="complex016"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex016.png" alt="complex016"></p>
 <h2 id=""><a href="#" class="headerlink" title="||"></a>||</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>val <span class="token operator">===</span> <span class="token string">'iPhone'</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
@@ -485,7 +485,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'iPhone'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若需求反過來，只有 <code>false</code> 直接回傳，否則回傳 <code>true</code>。</p>
-<p><img src="/images/ecmascript/function/complexity/complex017.png" alt="complex017"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex017.png" alt="complex017"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> val <span class="token operator">===</span> <span class="token string">'iPhone'</span> <span class="token operator">||</span> val
 
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
@@ -493,7 +493,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'iPhone'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可使用 <code>||</code>，若為 <code>true</code> 直接回傳 <code>true</code>，若為 <code>false</code> 才會繼續執行 <code>||</code> 右側部分。</p>
-<p><img src="/images/ecmascript/function/complexity/complex018.png" alt="complex018"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex018.png" alt="complex018"></p>
 <h2 id="Or"><a href="#Or" class="headerlink" title="Or"></a>Or</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>val <span class="token operator">===</span> <span class="token string">'iPhone'</span> <span class="token operator">||</span> val <span class="token operator">===</span> <span class="token string">'iPad'</span> <span class="token operator">||</span> val <span class="token operator">===</span> <span class="token string">'Apple Watch'</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> <span class="token boolean">true</span>
@@ -505,7 +505,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'Macbook'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>常見的需求，<code>||</code> 若其中一個條件成立就回傳 <code>true</code>，否則回傳 <code>false</code>。</p>
-<p><img src="/images/ecmascript/function/complexity/complex000.png" alt="complex000"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex000.png" alt="complex000"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token string">'iPhone'</span><span class="token punctuation">,</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> <span class="token string">'Apple Watch'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
   
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'Apple Watch'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
@@ -513,14 +513,14 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>Array.prototype.includes()</code> 的原意是判斷 item 是否在 array 中，若有則回傳 <code>true</code>，否則傳回 <code>false</code>。</p>
 <p>利用 <code>includes()</code> 這個特性，可將所有要判斷的項目改寫在 array 中，改用 <code>includes()</code> 判斷，不只清爽且可讀性也很高。</p>
-<p><img src="/images/ecmascript/function/complexity/complex001.png" alt="complex001"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex001.png" alt="complex001"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token string">'iPhone'</span><span class="token punctuation">,</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> <span class="token string">'Apple Watch'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> x <span class="token operator">===</span> val<span class="token punctuation">)</span>
   
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'Apple Watch'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'Macbook'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>也可使用 <code>Array.prototype.some()</code>，<code>includes()</code> 與 <code>some()</code> 的差異是 <code>includes()</code> 的 argument 為 value，而 <code>some()</code> 為 function。</p>
-<p><img src="/images/ecmascript/function/complexity/complex019.png" alt="complex018"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex019.png" alt="complex018"></p>
 <h2 id="Guard-Clause"><a href="#Guard-Clause" class="headerlink" title="Guard Clause"></a>Guard Clause</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span>product<span class="token punctuation">,</span> quantity<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> apples <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'iPhone'</span><span class="token punctuation">,</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> <span class="token string">'Apple Watch'</span><span class="token punctuation">]</span>
   
@@ -540,7 +540,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若都使用 <code>正向判斷</code>，可能會造成 <code>nested if else</code> 而難以維護。</p>
-<p><img src="/images/ecmascript/function/complexity/complex002.png" alt="complex002"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex002.png" alt="complex002"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span>product<span class="token punctuation">,</span> quantity<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> apples <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'iPhone'</span><span class="token punctuation">,</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> <span class="token string">'Apple Watch'</span><span class="token punctuation">]</span>
   
@@ -558,7 +558,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可使用 guard clause 將反向邏輯提早 <code>return</code>，讓所有 <code>if</code> 判斷都扁平化只有一層，這也是為什麼有些 Lint 會警告你不能寫 <code>else</code>，因為使用 guard clause 之後，就不會再出現 <code>else</code> 了。</p>
-<p><img src="/images/ecmascript/function/complexity/complex003.png" alt="complex003"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex003.png" alt="complex003"></p>
 <h2 id="Array-prototype-every"><a href="#Array-prototype-every" class="headerlink" title="Array.prototype.every()"></a>Array.prototype.every()</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPhone'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'white'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'black'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -580,7 +580,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若要 <code>全部條件</code> 都成立，實務上我們也會將資料與條件全部先放在 array 中。</p>
 <p>最直覺方式就是透過 <code>for loop</code> 判斷。</p>
-<p><img src="/images/ecmascript/function/complexity/complex008.png" alt="complex008"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex008.png" alt="complex008"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPhone'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'white'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'black'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -592,7 +592,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'white'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>也可使用 <code>Array.prototype.every()</code>，則所有條件都為 <code>true</code> 才會回傳 <code>true</code>。</p>
-<p><img src="/images/ecmascript/function/complexity/complex009.png" alt="complex009"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex009.png" alt="complex009"></p>
 <h2 id="Array-prototype-some"><a href="#Array-prototype-some" class="headerlink" title="Array.prototype.some()"></a>Array.prototype.some()</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPhone'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'white'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'black'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -614,7 +614,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若只要 <code>有一個條件</code> 成立即可，實務上我們也會將資料與條件全部先放在 array 中。</p>
 <p>最直覺方式就是透過 <code>for loop</code> 判斷。</p>
-<p><img src="/images/ecmascript/function/complexity/complex020.png" alt="complex020"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex020.png" alt="complex020"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPhone'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'white'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPad'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'black'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -627,7 +627,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若只要 <code>有一個條件</code> 成立即可，可使用 <code>Array.prototype.some()</code>。</p>
 <p>也可使用 <code>Array.prototype.some()</code>，只要 <code>有一個條件</code> 成立就回傳 <code>true</code>。</p>
-<p><img src="/images/ecmascript/function/complexity/complex010.png" alt="complex010"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex010.png" alt="complex010"></p>
 <h2 id="Default-Parameter"><a href="#Default-Parameter" class="headerlink" title="Default Parameter"></a>Default Parameter</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span>product<span class="token punctuation">,</span> quantity<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>product<span class="token punctuation">)</span> <span class="token keyword">return</span>
 
@@ -644,7 +644,7 @@ a:hover {
 <blockquote>
 <p>但由於 <code>0</code> 、 <code>&#39;&#39;</code> 與 <code>false</code> 也視為 falsy value，若你的需求是能接受 <code>0</code> 、<code>&#39;&#39;</code> 與 <code>false</code>，就不能使用此技巧</p>
 </blockquote>
-<p><img src="/images/ecmascript/function/complexity/complex004.png" alt="complex004"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex004.png" alt="complex004"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span>product<span class="token punctuation">,</span> quantity <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>product<span class="token punctuation">)</span> <span class="token keyword">return</span>
 
@@ -656,7 +656,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'iPhone'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES6 提供了 default parameter 後，語意更加清楚，也不用判斷 <code>undefined</code> 了。</p>
-<p><img src="/images/ecmascript/function/complexity/complex005.png" alt="complex005"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex005.png" alt="complex005"></p>
 <h2 id="Object-Destructing"><a href="#Object-Destructing" class="headerlink" title="Object Destructing"></a>Object Destructing</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> product <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>product <span class="token operator">&amp;&amp;</span> product<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
     <span class="token keyword">return</span> product<span class="token punctuation">.</span>name
@@ -669,7 +669,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'iPhone'</span><span class="token punctuation">,</span> color<span class="token punctuation">:</span> <span class="token string">'white'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>若 parameter 為 object，在 ES5 為避免 parameter 為 <code>undefined</code> 或 <code>null</code>，又避免根本無 property，必須小心翼翼的判斷 object 與 property。</p>
-<p><img src="/images/ecmascript/function/complexity/complex006.png" alt="complex006"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex006.png" alt="complex006"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> name <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> name <span class="token operator">||</span> <span class="token string">'unknown'</span>
 
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
@@ -682,7 +682,7 @@ a:hover {
 <li>當 object 沒有 property 時， Object Destructing 拆解後為 <code>undefined</code>，都是 <code>unknown</code></li>
 <li>否則會正常取得 property 值</li>
 </ul>
-<p><img src="/images/ecmascript/function/complexity/complex007.png" alt="complex007"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex007.png" alt="complex007"></p>
 <h2 id="If-x2F-else-if-x2F-else"><a href="#If-x2F-else-if-x2F-else" class="headerlink" title="If &#x2F; else if &#x2F; else"></a>If &#x2F; else if &#x2F; else</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> sendLog <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
 
 <span class="token keyword">let</span> jumpTo <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Jump to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>val<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
@@ -703,7 +703,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>實務上常會遇到 <code>if ... else if ... else</code> 都呼叫相同的 function，只是 argument 不相同。</p>
-<p><img src="/images/ecmascript/function/complexity/complex012.png" alt="complex012"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex012.png" alt="complex012"></p>
 <h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> sendLog <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
 
 <span class="token keyword">let</span> jumpTo <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Jump to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>val<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
@@ -728,7 +728,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>整理成 <code>switch()</code> 後 ，可讀性稍可。</p>
-<p><img src="/images/ecmascript/function/complexity/complex013.png" alt="complex013"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex013.png" alt="complex013"></p>
 <h2 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> sendLog <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
 
 <span class="token keyword">let</span> jumpTo <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Jump to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>val<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
@@ -750,7 +750,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可將 <code>switch</code> 的判斷值整理成 object 的 key，function 的 argument 以 array 成為 object 的 value，如此則可使用 object 的 <code>[]</code> 取代 switch，default 值則以 <code>||</code> 實現。</p>
 <p>object 的回傳值還可使用 array destructuring 加以拆解。</p>
-<p><img src="/images/ecmascript/function/complexity/complex014.png" alt="complex014"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex014.png" alt="complex014"></p>
 <h2 id="Nested-If"><a href="#Nested-If" class="headerlink" title="Nested If"></a>Nested If</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> jumpTo <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Jump to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>val<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
 
 <span class="token keyword">let</span> fn <span class="token operator">=</span> <span class="token punctuation">(</span>identity<span class="token punctuation">,</span> status<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
@@ -770,7 +770,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>巢狀 <code>if</code> 也是常見複雜度怪獸。</p>
-<p><img src="/images/ecmascript/function/complexity/complex021.png" alt="complex021"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex021.png" alt="complex021"></p>
 <h2 id="Object-1"><a href="#Object-1" class="headerlink" title="Object"></a>Object</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> jumpTo <span class="token operator">=</span> val <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Jump to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>val<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
 
 <span class="token keyword">let</span> admin_1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token function">jumpTo</span><span class="token punctuation">(</span><span class="token string">'admin_1'</span><span class="token punctuation">)</span> 
@@ -798,7 +798,7 @@ a:hover {
 <span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>可將巢狀 if 判斷條件整理以 <code>_</code> 整理成 function 名稱，以 ES6 的 object shorthand 塞進 object，一樣使用 <code>[]</code> 與 <code>||</code> 取代 <code>switch</code>。</p>
-<p><img src="/images/ecmascript/function/complexity/complex022.png" alt="complex022"></p>
+<p><img src="/hugo/images/ecmascript/function/complexity/complex022.png" alt="complex022"></p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>並不是所有的判斷都只能用 <code>if else</code> 與 <code>switch case</code>，透過一些 ECMAScript 的語言特性與 higher order function，可以有效降低程式碼複雜度</li>
 </ul>
@@ -811,7 +811,7 @@ a:hover {
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
+    <a class="post-tags-list-item" href='/hugo/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
     
   </span>
   
@@ -822,7 +822,7 @@ a:hover {
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/map/get-object/">
+			<a href="/hugo/ecmascript/map/get-object/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">如何取得以 Object 為 Key 的 Map ?</div>
 			</a>
@@ -831,7 +831,7 @@ a:hover {
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/webstorm/general/uninstall/">
+			<a href="/hugo/webstorm/general/uninstall/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">如何徹底移除 WebStorm ?</div>
 			</a>
@@ -866,7 +866,7 @@ a:hover {
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 

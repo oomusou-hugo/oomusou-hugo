@@ -34,19 +34,19 @@
 <!-- favicon -->
 <!-- Favicons -->
 
-<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
 
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
 
 
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
 
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
 <!-- Android Chrome Color -->
 
 <meta name="format-detection" content="telephone=no">
@@ -61,7 +61,7 @@
   
     <!-- spectre.css -->
 
-<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
 
 <style>
 body {
@@ -121,7 +121,7 @@ a:hover {
 
 <!-- style.css -->
 
-<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/hugo/css/style.min.css">
 
 
 <!-- prism.css -->
@@ -129,12 +129,12 @@ a:hover {
     <!-- prism.line_number -->
     
         
-            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
         
     
     <!-- prism.theme -->
     
-        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
     
 
 
@@ -147,7 +147,7 @@ a:hover {
   <!-- ### RSS ### -->
   
 
-<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
 
 
   <!-- ### WebApp ### -->
@@ -189,7 +189,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/hugo/ecmascript/iife/overview/">
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/ecmascript/iife/overview/">
   <!-- ### Structured Data ### -->
   
 
@@ -247,7 +247,7 @@ a:hover {
   <body>
   <header>
   <h1 class="header-title text-center">
-    <a href="/">
+    <a href="/hugo/">
       Hugo 活
     </a>
   </h1>
@@ -415,11 +415,11 @@ a:hover {
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
-      <a href="/" class="navbar-link">ホーム</a>
-      <a href="/series/" class="navbar-link">シリーズ</a>
-      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
+<!--      <a href="/hugo/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
     </div>
     <div class="column col-1 increase-font-size">
       <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
@@ -442,7 +442,7 @@ a:hover {
 
 
 <div class="post-header-info">
-	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
 	<span>2020-11-14</span>
 </div>
@@ -467,7 +467,7 @@ a:hover {
 <blockquote>
 <p><strong>IIFE</strong><br>全名為 Immediately Invoked Function Expression，提供了執行 anonymous function  方法</p>
 </blockquote>
-<p><img src="/images/ecmascript/iife/overview/iife000.png" alt="iife000"></p>
+<p><img src="/hugo/images/ecmascript/iife/overview/iife000.png" alt="iife000"></p>
 <h2 id="Global-Variable"><a href="#Global-Variable" class="headerlink" title="Global Variable"></a>Global Variable</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span>
 
 <span class="token keyword">let</span> inc <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> count<span class="token operator">++</span>
@@ -483,7 +483,7 @@ a:hover {
 <li><code>inc()</code> 為定義在 <code>window</code> object 的 global method</li>
 </ul>
 <p>如此雙雙污染了 global scope 與 <code>window</code> object。</p>
-<p><img src="/images/ecmascript/iife/overview/iife005.png" alt="iife005"></p>
+<p><img src="/hugo/images/ecmascript/iife/overview/iife005.png" alt="iife005"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> inc <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> count <span class="token operator">=</span> x
   <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> count<span class="token operator">++</span>
@@ -494,13 +494,13 @@ a:hover {
 <span class="token function">inc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>比較好的是在 IIFE 以回傳 function，如此 <code>count</code> variable 被鎖在 IIFE 內藉由 closure 鎖住 <code>count</code>，不會污染 global scope。</p>
-<p><img src="/images/ecmascript/iife/overview/iife006.png" alt="iife006"></p>
+<p><img src="/hugo/images/ecmascript/iife/overview/iife006.png" alt="iife006"></p>
 <h2 id="New-Scope"><a href="#New-Scope" class="headerlink" title="New Scope"></a>New Scope</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
   <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>這也是 ECMAScript 很有名題目，若我們希望在 5 秒之內每秒依序印出 <code>0</code>、<code>1</code>、<code>2</code>、<code>3</code>、<code>4</code>。</p>
 <p>直覺會使用 <code>for</code> loop 搭配 <code>setTimeout()</code>。</p>
-<p><img src="/images/ecmascript/iife/overview/iife001.png" alt="iife001"></p>
+<p><img src="/hugo/images/ecmascript/iife/overview/iife001.png" alt="iife001"></p>
 <p>但結果為 <code>同時</code> 印出 <code>5</code>，並不如預期。</p>
 <p>因為 <code>setTimeout()</code> 為 asynchronous function，並非立即執行，而是先註冊到 callback queue，等 synchronous function 都執行完，才再 <code>1000ms</code> 後同時執行，因此時間該改成 <code>1000 * i</code> 才對。</p>
 <p>另外 <code>var</code> 所宣告 variable 為 function scope，當 <code>_ =&gt; console.log(i)</code> 要執行時，<code>i</code> 已經累計到 <code>5</code>，因此我們要對 <code>setTimeout()</code> 建立自己的 scope 能鎖住 <code>i</code>。</p>
@@ -511,12 +511,12 @@ a:hover {
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>ES5 的標準解法就是使用 IIFE 為 <code>setTimeout()</code> 建立新的 scope 鎖住 <code>i</code>，因此建立 parameter 為 <code>i</code> 的 IIFE 將 <code>for</code> loop 的 <code>i</code> 傳入。</p>
-<p><img src="/images/ecmascript/iife/overview/iife002.png" alt="iife002"></p>
+<p><img src="/hugo/images/ecmascript/iife/overview/iife002.png" alt="iife002"></p>
 <pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
   <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1000</span> <span class="token operator">*</span> i<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>ES6 則有更簡單解法，由於 <code>let</code> 是以 <code>{}</code> 的 block scope，因此 <code>for</code> 的 body <code>{}</code> 就自帶 scope，可不必使用 IIFE。</p>
-<p><img src="/images/ecmascript/iife/overview/iife003.png" alt="iife003"></p>
+<p><img src="/hugo/images/ecmascript/iife/overview/iife003.png" alt="iife003"></p>
 <h2 id="Alias"><a href="#Alias" class="headerlink" title="Alias"></a>Alias</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   <span class="token keyword">let</span> z <span class="token operator">=</span> x <span class="token operator">+</span> y
 
@@ -531,7 +531,7 @@ a:hover {
 <span class="token function">f</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// ?</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>可建立 arrow function 以 parameter 取代 variable，定義則改用 IIFE 以 argument 傳入。</p>
-<p><img src="/images/ecmascript/iife/overview/iife004.png" alt="iife004"></p>
+<p><img src="/hugo/images/ecmascript/iife/overview/iife004.png" alt="iife004"></p>
 <h2 id="Lexical-Scope"><a href="#Lexical-Scope" class="headerlink" title="Lexical Scope"></a>Lexical Scope</h2><pre class="line-numbers highlight language-javascript"><code class="language-javascript"><span class="token punctuation">(</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span> d<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
   
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> document<span class="token punctuation">)</span>
@@ -553,7 +553,7 @@ a:hover {
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
+    <a class="post-tags-list-item" href='/hugo/tags/ECMAScript/'>#&nbsp;ECMAScript</a>
     
   </span>
   
@@ -564,7 +564,7 @@ a:hover {
 		<!-- Prev Nav -->
 		
 		<li class="page-item page-prev">
-			<a href="/ecmascript/iife/argument/">
+			<a href="/hugo/ecmascript/iife/argument/">
 				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">使用 IIFE 建立 Local Variable</div>
 			</a>
@@ -573,7 +573,7 @@ a:hover {
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/ecmascript/closure/encapsulation/">
+			<a href="/hugo/ecmascript/closure/encapsulation/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
 				<div class="page-item-subtitle">ECMScript 實現 Encapsulation</div>
 			</a>
@@ -608,7 +608,7 @@ a:hover {
 </script>
 <!-- vanilla-lazyload -->
 
-<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
 
 
 
