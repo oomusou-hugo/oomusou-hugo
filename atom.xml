@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hugo 活</title>
+  <title>次世代 Hugo</title>
   <icon>https://harumi.cc/hugo/icon.png</icon>
   
   <link href="https://harumi.cc/hugo/atom.xml" rel="self"/>
