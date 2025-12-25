@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html 
+>
+  <head>
+  <meta charset="utf-8">
+  <!-- ### DNS Prefetch ### -->
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+<!-- busuanzi -->
+
+<!-- comment -->
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+  <!-- ### Preload ### -->
+  
+
+  <!-- ### Meta & Title & Info ### -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<!-- Title -->
+<title>使用 WebStorm 開發 Hugo (Modern CSS) | 次世代 Hugo</title>
+<!-- favicon -->
+<!-- Favicons -->
+
+<link rel="shortcut icon" type="image/ico" href="/hugo/favicon.ico">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/hugo/apple-touch-icon.png">
+
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/hugo/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/hugo/favicon-16x16.png">
+
+<link rel="mask-icon" href="/hugo/safari-pinned-tab.svg" color="#ff2601">
+<!-- Android Chrome Color -->
+
+<meta name="format-detection" content="telephone=no">
+<!-- Description -->
+<meta name="description" content="WebStorm 目前並沒有原生支援 Hugo，須另外安裝 Smart Hugo plugin，且不再使用 Prettier 與 Stylelint，直接使用 WebStorm 內建功能，打造 Zeno Dependency 與 No Node.js 開發環境。">
+<!-- Keywords -->
+<meta name="keywords" content=", CSS, Hugo, WebStorm">
+<!-- Disable Fucking Bloody Baidu Tranformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!-- ### Import File ### -->
+  
+    <!-- spectre.css -->
+
+<link rel="stylesheet" href="/hugo/lib/spectre/spectre.min.css">
+
+<style>
+body {
+  background-color: #f8f9fa
+}
+
+a,
+a:visited {
+  color: #0070ff
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #0070ff;
+  opacity: .75;
+}
+
+.avatar {
+  background: #444
+}
+
+.navbar-link,
+.navbar-link:visited,
+.timeline .timeline-item .timeline-icon.icon-lg {
+  color: #0070ff
+}
+
+.navbar-link:hover {
+  color: #0070ff;
+  opacity: .8;
+}
+
+#search-input .btn,
+#disqus_click_btn,
+#disqus-switch-to-direct,
+#disqus-loadmore-button {
+  background: #727e96;
+  border-color: #727e96;
+  color: #fff;
+}
+
+#post-toc a.post-toc-link,
+#post-toc a.post-toc-link:visited,
+.share-menu.menu .menu-item > a {
+  color: #727e96
+}
+
+.share-menu.menu .menu-item > a:hover,
+.share-menu.menu .menu-item > a:focus,
+.share-menu.menu .menu-item > a:visited {
+  color: #50596c;
+  background: #f8f9fa;
+  opacity: .85;
+}
+</style>
+
+<!-- style.css -->
+
+<link rel="stylesheet" href="/hugo/css/style.min.css">
+
+
+<!-- prism.css -->
+
+    <!-- prism.line_number -->
+    
+        
+            <link rel="stylesheet" href="/hugo/lib/prism/prism-line-numbers.min.css">
+        
+    
+    <!-- prism.theme -->
+    
+        <link rel="stylesheet" href="/hugo/lib/prism/prism-darcula.min.css">
+    
+
+
+
+
+  
+  <!-- ### Site Verification ### -->
+  
+
+  <!-- ### RSS ### -->
+  
+
+<link rel="alternate" type="application/atom+xml" href="/hugo/atom.xml">
+
+
+  <!-- ### WebApp ### -->
+  <meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="次世代 Hugo">
+<meta name="msapplication-starturl" content="https://harumi.cc/hugo">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="次世代 Hugo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Manifest Import -->
+
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Search -->
+
+  <!-- ### The Open Graph & Twitter Card Protocol ### -->
+  <meta property="og:title" content="使用 WebStorm 開發 Hugo (Modern CSS) | 次世代 Hugo">
+<meta property="og:site_name" content="次世代 Hugo">
+
+<meta property="og:url" content="https://harumi.cc/hugo/webstorm/lib/hugo-neo/">
+<meta property="og:image"
+	content="https://harumi.cc/hugo/apple-touch-icon.png">
+<meta property="og:description" content="WebStorm 目前並沒有原生支援 Hugo，須另外安裝 Smart Hugo plugin，且不再使用 Prettier 與 Stylelint，直接使用 WebStorm 內建功能，打造 Zeno Dependency 與 No Node.js 開發環境。">
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2025-12-25T18:03:26.000Z">
+<meta property="article:modified_time" content="2025-12-25T18:03:26.000Z">
+<meta property="article:author" content="Sam Xiao">
+<meta property="og:article:tag" content=", CSS, Hugo, WebStorm">
+
+
+  <!-- ### Analytics ### -->
+  
+
+
+
+
+
+  <!-- ### Canonical link ### -->
+  <link rel="canonical" href="https://harumi.cc/hugo/hugo/webstorm/lib/hugo-neo/">
+  <!-- ### Structured Data ### -->
+  
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://harumi.cc/hugo/webstorm/lib/hugo-neo/",
+    "@type": "BlogPosting",
+    "logo": "https://harumi.cc/hugo/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://harumi.cc/hugo/webstorm/lib/hugo-neo/"
+    },
+    "headline": "使用 WebStorm 開發 Hugo (Modern CSS) | 次世代 Hugo",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://harumi.cc/hugo/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2025-12-25T18:03:26.000Z",
+    "dateModified": "2025-12-25T18:07:17.615Z",
+    "author": {
+        "@type": "Person",
+        "name": "Sam Xiao",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://harumi.cc/hugo/img/default_avatar.png"
+        },
+        "description": "自分を見つける、静かな活"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "次世代 Hugo",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://harumi.cc/hugo/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://harumi.cc/hugo/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": ", CSS, Hugo, WebStorm",
+    "description": "WebStorm 目前並沒有原生支援 Hugo，須另外安裝 Smart Hugo plugin，且不再使用 Prettier 與 Stylelint，直接使用 WebStorm 內建功能，打造 Zeno Dependency 與 No Node.js 開發環境。"
+}
+</script>
+
+  <!-- ### Custom Head ### -->
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+  <header>
+  <h1 class="header-title text-center">
+    <a href="/hugo/">
+      次世代 Hugo
+    </a>
+  </h1>
+  <div class="text-center header-slogan">
+    自分を見つける、静かな活
+  </div>
+  <nav class="navbar-section text-center">
+  <div class="columns">
+    <div class="column col-1"></div>
+    <div class="column col-10 col-sm-12 align-content-center">
+      <a href="/hugo/" class="navbar-link">ホーム</a>
+      <a href="/hugo/series/" class="navbar-link">シリーズ</a>
+      <a href="/hugo/tags/" class="navbar-link">タグ</a>
+      <a href="/search" class="navbar-link">検索</a>
+    </div>
+  </div>
+</nav>
+</header>
+  
+<!-- ## Post ## -->
+<div class="post-container">
+  <div id="post-card" class="card">
+    <div class="card-item-container">
+      <div class="card-inner-cell">
+        <div class="card-header">
+          
+<h1 class="card-title h3 mb-2">使用 WebStorm 開發 Hugo (Modern CSS)</h1>
+
+
+<div class="post-header-info">
+	<img class="author-thumb lazyload" data-src="/hugo/img/default_avatar.png" src="/hugo/img/suka-lazyload.gif"
+		alt="Sam Xiao's Avatar">
+	<span>2025-12-26</span>
+</div>
+
+        </div>
+        <div class="card-body">
+          <article id="post-content">
+            <p>WebStorm 目前並沒有原生支援 Hugo，須另外安裝 <code>Smart Hugo</code> plugin，且不再使用 Prettier 與 Stylelint，直接使用 WebStorm 內建功能，打造 Zeno Dependency 與 No Node.js 開發環境。</p>
+<a id="more"></a>
+
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2025.3</p>
+<h2 id="Smart-Hugo"><a href="#Smart-Hugo" class="headerlink" title="Smart Hugo"></a>Smart Hugo</h2><p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo01.webp" alt="hugo01"></p>
+<p><em><strong>Settings -&gt; Plugins</strong></em></p>
+<ul>
+<li>安裝 <code>Smart Hugo</code> plugin</li>
+</ul>
+<blockquote>
+<p>Smart Hugo 付費版有更完整功能，這裏主要是讓 WebStorm 認識 Go template 語法</p>
+</blockquote>
+<h2 id="Resource-Root"><a href="#Resource-Root" class="headerlink" title="Resource Root"></a>Resource Root</h2><p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo02.webp" alt="hugo04"></p>
+<p><em><strong>Settings -&gt; Directories</strong></em></p>
+<ul>
+<li>將 <code>assets</code> <code>目錄</code> 指定成 <code>Resource Root</code></li>
+</ul>
+<h2 id="Disable-Prettier"><a href="#Disable-Prettier" class="headerlink" title="Disable Prettier"></a>Disable Prettier</h2><p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo03.webp" alt="hugo03"></p>
+<p><em><strong>Settings -&gt; Languages &amp; Frameworks -&gt; JavaScript -&gt; Prettier</strong></em></p>
+<ul>
+<li><code>Disable Prettier</code>：<code>On</code></li>
+</ul>
+<h2 id="Disable-Stylelint"><a href="#Disable-Stylelint" class="headerlink" title="Disable Stylelint"></a>Disable Stylelint</h2><p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo04.webp" alt="hugo04"></p>
+<p><em><strong>Settings -&gt; Languages &amp; Frameworks -&gt; Style Sheets -&gt; Stylelint</strong></em></p>
+<ul>
+<li><code>Enable</code>：<code>Off</code></li>
+</ul>
+<h2 id="HTML-Style"><a href="#HTML-Style" class="headerlink" title="HTML Style"></a>HTML Style</h2><p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo06.webp" alt="hugo06"></p>
+<p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; HTML -&gt; Tabs and Indent</strong></em></p>
+<ul>
+<li><code>Tab size</code>：<code>2</code></li>
+<li><code>Indent</code>：<code>2</code></li>
+<li><code>Continuation indent</code>：<code>2</code></li>
+</ul>
+<p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo07.webp" alt="hugo07"></p>
+<p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; HTML -&gt; Other</strong></em></p>
+<ul>
+<li><code>Do not indent children of</code>：<code>head</code>, <code>tbody</code>, <code>tfoot</code></li>
+<li><code>Keep white spaces inside</code>：<code>span</code>, <code>pre</code>, <code>textarea</code></li>
+</ul>
+<h2 id="CSS-Style"><a href="#CSS-Style" class="headerlink" title="CSS Style"></a>CSS Style</h2><p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo10.webp" alt="hugo10"></p>
+<p><em><strong>Settings -&gt; Languages &amp; Frameworks -&gt; Style Sheets -&gt; Dialects</strong></em></p>
+<ul>
+<li><code>Project CSS Dialect</code>：<code>W3C</code></li>
+</ul>
+<p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo08.webp" alt="hugo08"></p>
+<p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; Style Sheets -&gt; CSS -&gt; Tabs and Indent</strong></em></p>
+<ul>
+<li><code>Tab size</code>：<code>2</code></li>
+<li><code>Indent</code>：<code>2</code></li>
+<li><code>Continuation indent</code>：<code>2</code></li>
+</ul>
+<p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo09.webp" alt="hugo09"></p>
+<p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; Style Sheets -&gt; CSS -&gt; Arrangement</strong></em></p>
+<ul>
+<li><code>Custom order</code></li>
+</ul>
+<p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo11.webp" alt="hugo11"></p>
+<p><em><strong>Settings -&gt; Editor -&gt; Inspections -&gt; CSS</strong></em></p>
+<ul>
+<li><code>Property is incompatible with selected browsers</code>：<code>On</code></li>
+<li><code>Unused selector</code>：<code>On</code></li>
+</ul>
+<h2 id="Editor-Config"><a href="#Editor-Config" class="headerlink" title="Editor Config"></a>Editor Config</h2><pre class="line-numbers highlight language-toml"><code class="language-toml">root = true
+
+# 針對所有檔案的預設設定
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# 強制針對 HTML 和 Go Template 檔案使用 2 空格
+[*.{html,htm,tmpl}]
+indent_style = space
+indent_size = 2
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>強制 Go Template 語法 indent 為 <code>2</code></li>
+</ul>
+<h2 id="Actions-on-Save"><a href="#Actions-on-Save" class="headerlink" title="Actions on Save"></a>Actions on Save</h2><p><img src="/hugo/images/webstorm/lib/hugo-neo/hugo05.webp" alt="hugo05"></p>
+<p><em><strong>Settings -&gt; Tools -&gt; Actions on Save</strong></em></p>
+<ul>
+<li><code>Reformat code</code>：<code>Changed lines</code></li>
+</ul>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><strong>.gitignore</strong></p>
+<pre class="line-numbers highlight language-git"><code class="language-git"><span class="token comment" spellcheck="true"># Hugo</span>
+public
+resources
+.hugo_build.lock
+
+<span class="token comment" spellcheck="true"># Editor</span>
+.idea
+
+<span class="token comment" spellcheck="true"># macOS</span>
+.DS_Store
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>將 <code>.gitignore</code> 建立在 Hugo 專案的 <code>根目錄</code> 下。</p>
+<ul>
+<li><code>public</code> : final HTML&#x2F;CSS&#x2F;JavaScript for production</li>
+<li><code>resources</code>：<code>hugo server</code> 時所建立的暫存目錄</li>
+<li><code>.hugo_build.lock</code> : Hugo build 所建立的 lock 檔</li>
+<li><code>.idea</code> : WebStorm 的暫存檔存放目錄</li>
+<li><code>.DS_Store</code> : macOS 的資源檔</li>
+</ul>
+<h2 id="Shell-Script"><a href="#Shell-Script" class="headerlink" title="Shell Script"></a>Shell Script</h2><pre class="line-numbers highlight language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+
+COMMAND<span class="token operator">=</span><span class="token variable">$1</span>
+
+<span class="token keyword">case</span> <span class="token string">"<span class="token variable">$COMMAND</span>"</span> <span class="token keyword">in</span>
+  <span class="token string">"dev"</span><span class="token punctuation">)</span>
+    <span class="token keyword">echo</span> <span class="token string">"🚀 Starting Hugo Development Server..."</span>
+    hugo server --disableFastRender --renderToMemory
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+
+  <span class="token string">"build"</span><span class="token punctuation">)</span>
+    <span class="token keyword">echo</span> <span class="token string">"📦 Building Static Site..."</span>
+    hugo --cleanDestinationDir --minify
+    <span class="token keyword">echo</span> <span class="token string">"✅ Build complete in ./public"</span>
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+
+  <span class="token string">"serve"</span><span class="token punctuation">)</span>
+    <span class="token keyword">echo</span> <span class="token string">"🌐 Serving ./public folder via Python..."</span>
+    <span class="token function">cd</span> public <span class="token operator">&amp;&amp;</span> python3 -m http.server
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+
+  *<span class="token punctuation">)</span>
+    <span class="token keyword">echo</span> <span class="token string">"❌ 使用方式錯誤。請輸入以下指令之一："</span>
+    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh dev    - 啟動開發預覽"</span>
+    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh build  - 建置生產版本"</span>
+    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh serve  - 預覽 public 資料夾 (Python)"</span>
+    <span class="token keyword">exit</span> 1
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+esac
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>使用 Shell Script 取代 NPM Script</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
+<li>Smart Hugo 雖非 JetBrains 官方 Plugin，但其表現比 Go Template Plugin 好，是專為 Hugo 所設計，免費版已經非常好用</li>
+<li>WebStorm 可以設定出比 Prettier 更細膩的 HTML 與 CSS 格式</li>
+<li>WebStorm 對 CSS 的檢查不輸給 Stylelint，也可以對 </li>
+<li>原本因為 VS Code 對於 Node.js 生態系的 Prettier 與 Stylelint 支援完整，WebStorm 在 Hugo 主題開發上日漸式微，但若使用 Vanilla CSS 搭配 Zero Dependency 與 No Node.js，則必須靠 WebStorm 內建功能彌補 Prettier 與 Stylelint 缺憾，VS Code 在這點無法與 WebStorm 抗衡</li>
+</ul>
+
+          </article>
+          <p class="post-footer-info mb-0 pt-2">
+  
+  
+  <span class="post-tags-list mt-2">
+    
+    
+    <a class="post-tags-list-item" href='/hugo/tags/CSS/'>#&nbsp;CSS</a>
+    
+    <a class="post-tags-list-item" href='/hugo/tags/Hugo/'>#&nbsp;Hugo</a>
+    
+    <a class="post-tags-list-item" href='/hugo/tags/WebStorm/'>#&nbsp;WebStorm</a>
+    
+  </span>
+  
+</p>
+        </div>
+        <div class="post-nav px-2 bg-gray">
+	<ul class="pagination">
+		<!-- Prev Nav -->
+		
+		<!-- Next Nav -->
+		
+		<li class="page-item page-next">
+			<a href="/hugo/hugo/themeless/transfer/">
+				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+				<div class="page-item-subtitle">將 Theme 架構轉移成 Themeless 架構</div>
+			</a>
+		</li>
+		
+	</ul>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="text-center">
+  <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span data-year></span>
+    <a href="mailto:oomusou@gmail.com" class="footer-copyright-a" href="https://harumi.cc/hugo">次世代 Hugo</a>
+  </p>
+</footer>
+
+  <!-- ### Footer JS Import ### -->
+<script>
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+  };
+
+  /* Copyright */
+  var copyrightNow = new Date().getFullYear();
+  var copyrightContent = document.querySelector('span[data-year]')
+  copyrightSince = 2015;
+  copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+</script>
+<!-- vanilla-lazyload -->
+
+<script src="/hugo/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+
+<!-- gallery.js -->
+
+<!-- Comment -->
+
+<!-- ### Custom Footer ### -->
+
+  </body>
+</html>

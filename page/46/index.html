@@ -254,6 +254,45 @@ a:hover {
           
             <article class="post-entry container px-0 card">
   <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/hugo/ecmascript/function/pure/'">
+      <a href="/hugo/ecmascript/function/pure/">
+        <img class="post-thumbnail" src="images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/hugo/ecmascript/function/pure/">
+      如何實現 Pure Function ?
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    FP 三部曲 (Declarative、Pure Function 與 Immutable) 中的第二部曲就是 Pure Function，但也由於 ECMAScript 對於 Argument 有 Pass by Value 與 Pass by Reference 兩種，且型別並沒有完整支援 Immutable，因此實現 Pure Function 時有些 Tricky。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/hugo/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2019-10-18</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/hugo/ecmascript/function/pure/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
     <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/hugo/ecmascript/this/call-apply-bind/'">
       <a href="/hugo/ecmascript/this/call-apply-bind/">
         <img class="post-thumbnail" src="images/feature/ecmascript.png" loading="lazy">
@@ -591,45 +630,6 @@ a:hover {
       </div>
       <div class="column column-6 read-more">
         <a href="/hugo/ecmascript/promise/reject-throw/">もっと読む</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </div>
-</article>
-
-          
-        
-          
-            <article class="post-entry container px-0 card">
-  <div class="columns col-gapless">
-    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/hugo/ecmascript/promise/finally/'">
-      <a href="/hugo/ecmascript/promise/finally/">
-        <img class="post-thumbnail" src="images/feature/ecmascript.png" loading="lazy">
-      </a>
-    </div>
-    <div class="column column-body col-9 col-md-12 bg-color">
-      <div class="home-box">
-  <h2 class="h5 mb-0 card-header home-box-item">
-    <a class="card-title" href="/hugo/ecmascript/promise/finally/">
-      Promise 之 finally() 與 Finally
-    </a>
-  </h2>
-  <p class="mb-0 card-body home-box-item">
-    實務上有些邏輯在 Fulfilled Promise 與 Rejected Promise 都需被執行，導致 Fulfilled Handler 與 Rejected Handler 都寫了一份，此時可使用 ECMAScript 2018 的 <code>finally()</code> 與 <code>try catch finally</code>，只需寫一份邏輯即可。
-  </p>
-  <div class="home-box-empty"></div>
-  <!-- Date & Category -->
-  <div class="card-footer post-entry-info home-box-item">
-    <div class="columns col-gapless">
-      <div class="column column-6 text-gray">
-        <img class="author-thumb lazyload" src="/hugo/img/default_avatar.png" alt="Sam Xiao's Avatar">
-        <time>2019-09-19</time>
-      </div>
-      <div class="column column-6 read-more">
-        <a href="/hugo/ecmascript/promise/finally/">もっと読む</a>
       </div>
     </div>
   </div>
