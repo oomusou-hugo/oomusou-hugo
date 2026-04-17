@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html 
+>
+  <head>
+  <meta charset="utf-8">
+  <!-- ### DNS Prefetch ### -->
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+<!-- busuanzi -->
+
+<!-- comment -->
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+  <!-- ### Preload ### -->
+  
+
+  <!-- ### Meta & Title & Info ### -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<!-- Title -->
+<title>次世代 Hugo</title>
+<!-- favicon -->
+<!-- Favicons -->
+
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<!-- Android Chrome Color -->
+
+<meta name="format-detection" content="telephone=no">
+<!-- Description -->
+<meta name="description" content="">
+<!-- Keywords -->
+<meta name="keywords" content="">
+<!-- Disable Fucking Bloody Baidu Tranformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!-- ### Import File ### -->
+  
+    <!-- spectre.css -->
+
+<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+
+<style>
+body {
+  background-color: #f8f9fa
+}
+
+a,
+a:visited {
+  color: #0070ff
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #0070ff;
+  opacity: .75;
+}
+
+.avatar {
+  background: #444
+}
+
+.navbar-link,
+.navbar-link:visited,
+.timeline .timeline-item .timeline-icon.icon-lg {
+  color: #0070ff
+}
+
+.navbar-link:hover {
+  color: #0070ff;
+  opacity: .8;
+}
+
+#search-input .btn,
+#disqus_click_btn,
+#disqus-switch-to-direct,
+#disqus-loadmore-button {
+  background: #727e96;
+  border-color: #727e96;
+  color: #fff;
+}
+
+#post-toc a.post-toc-link,
+#post-toc a.post-toc-link:visited,
+.share-menu.menu .menu-item > a {
+  color: #727e96
+}
+
+.share-menu.menu .menu-item > a:hover,
+.share-menu.menu .menu-item > a:focus,
+.share-menu.menu .menu-item > a:visited {
+  color: #50596c;
+  background: #f8f9fa;
+  opacity: .85;
+}
+</style>
+
+<!-- style.css -->
+
+<link rel="stylesheet" href="/css/style.min.css">
+
+
+<!-- prism.css -->
+
+
+
+
+  
+  <!-- ### Site Verification ### -->
+  
+
+  <!-- ### RSS ### -->
+  
+
+<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+
+
+  <!-- ### WebApp ### -->
+  <meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="次世代 Hugo">
+<meta name="msapplication-starturl" content="https://negohugo.com">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="次世代 Hugo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Manifest Import -->
+
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Search -->
+
+  <!-- ### The Open Graph & Twitter Card Protocol ### -->
+  <meta property="og:title" content="次世代 Hugo">
+<meta property="og:site_name" content="次世代 Hugo">
+
+<meta property="og:url" content="https://negohugo.com/page/40/">
+<meta property="og:image"
+	content="https://negohugo.com/apple-touch-icon.png">
+<meta property="og:description" content="">
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="blog">
+
+
+  <!-- ### Analytics ### -->
+  
+
+
+
+
+
+  <!-- ### Canonical link ### -->
+  <link rel="canonical" href="https://negohugo.com/page/40/">
+  <!-- ### Structured Data ### -->
+  
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Blog",
+    "author": {
+        "@type": "Person",
+        "name": "Sam Xiao",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://negohugo.com/img/default_avatar.png"
+        },
+        "description": "無駄を削ぎ、本質を研ぐ"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "次世代 Hugo",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://negohugo.com/apple-touch-icon.png"
+        }
+    },
+    "url": "https://negohugo.com",
+    "logo": "https://negohugo.com/apple-touch-icon.png",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://negohugo.com/apple-touch-icon.png"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://negohugo.com"
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://negohugo.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "",
+    "description": ""
+}
+</script>
+
+
+  <!-- ### Custom Head ### -->
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+  <header>
+  <h1 class="header-title text-center">
+    <a href="/">
+      次世代 Hugo
+    </a>
+  </h1>
+  <div class="text-center header-slogan">
+    無駄を削ぎ、本質を研ぐ
+  </div>
+  <nav class="navbar-section text-center">
+  <div class="columns">
+    <div class="column col-1"></div>
+    <div class="column col-10 col-sm-12 align-content-center">
+      <a href="/" class="navbar-link">ホーム</a>
+      <a href="/series/" class="navbar-link">シリーズ</a>
+      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/search" class="navbar-link">検索</a>
+    </div>
+  </div>
+</nav>
+</header>
+  <div class="container">
+  <div class="main-container">
+    <main>
+      <div class="post-stream-container">
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/promise/all/'">
+      <a href="/ecmascript/promise/all/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/promise/all/">
+      使用 Promise.all() 將多個 Promise 包成單一 Promise
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    Promise 由於是 Asynchronous 產生速度有快有慢，可使用 <code>Promise.all()</code> 等所有 Promise 都 Fulfilled 後包成單一 Promise。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-04-04</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/promise/all/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/function/bind/'">
+      <a href="/ecmascript/function/bind/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/function/bind/">
+      使用 bind() 實現 Partial Application
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    Partial Application 是當 Function 提供不足 Argument 時，會回傳以剩下 Argument 所構成的新 Function，這種看似神奇的概念，事實上 <code>bind()</code> 就能實現。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-04-04</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/function/bind/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/array/fill/'">
+      <a href="/ecmascript/array/fill/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/array/fill/">
+      使用 fill() 一次改變 Array 內多個 Element
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    <code>Array.prototype.fill()</code> 為 ECMAScript 2015 才新增的 Method，可一次改變 Array 內多個 Element，也因此特殊功能，因而推導出一些獨特應用。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-31</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/array/fill/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/recursion/reduce/'">
+      <a href="/ecmascript/recursion/reduce/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/recursion/reduce/">
+      使用 Recursion 實現 reduce()
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    Recursion 為 FP 中重要的一支，亦可使用其實現 <code>reduce()</code>。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-30</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/recursion/reduce/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/recursion/filter/'">
+      <a href="/ecmascript/recursion/filter/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/recursion/filter/">
+      使用 Recursion 實現 filter()
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    Recursion 為 FP 中重要的一支，亦可使用其實現 <code>filter()</code>。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-30</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/recursion/filter/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/recursion/map/'">
+      <a href="/ecmascript/recursion/map/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/recursion/map/">
+      使用 Recursion 實現 map()
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    Recursion 為 FP 中重要的一支，亦可使用其實現 <code>map()</code>。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-30</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/recursion/map/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/json/parse/'">
+      <a href="/ecmascript/json/parse/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/json/parse/">
+      使用 JSON.parse() 將 JSON String 轉成 Object
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    <code>JSON.stringify()</code> 可將 object 轉成 JSON String，若要將 JSON String 轉成 Object，則可使用 <code>JSON.parse()</code>。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-28</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/json/parse/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/object/set-property/'">
+      <a href="/ecmascript/object/set-property/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/object/set-property/">
+      ECMAScript 之寫入 Property
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    寫入 Object 的 Property 為處理 Object 必備功能，本文整理出 5 種寫入 Property 方式。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-27</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/object/set-property/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/object/get-property/'">
+      <a href="/ecmascript/object/get-property/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/object/get-property/">
+      ECMAScript 之讀取 Property
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    讀取 Object 的 Property 為處理 Object 必備功能，本文整理出 5 種讀取 Property 方式。
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-27</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/object/get-property/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+          
+            <article class="post-entry container px-0 card">
+  <div class="columns col-gapless">
+    <div class="column column-thumbnail col-3 col-md-12" onclick="window.location='/ecmascript/json/format/'">
+      <a href="/ecmascript/json/format/">
+        <img class="post-thumbnail" src="/images/feature/ecmascript.png" loading="lazy">
+      </a>
+    </div>
+    <div class="column column-body col-9 col-md-12 bg-color">
+      <div class="home-box">
+  <h2 class="h5 mb-0 card-header home-box-item">
+    <a class="card-title" href="/ecmascript/json/format/">
+      如何美化 JSON String ?
+    </a>
+  </h2>
+  <p class="mb-0 card-body home-box-item">
+    <code>JSON.stringify()</code> 能將 Object Literal 轉成 JSON String，但單純 String 並不容易閱讀，是否能讓 Property 間也有縮排呢 ?
+  </p>
+  <div class="home-box-empty"></div>
+  <!-- Date & Category -->
+  <div class="card-footer post-entry-info home-box-item">
+    <div class="columns col-gapless">
+      <div class="column column-6 text-gray">
+        <img class="author-thumb lazyload" src="/img/default_avatar.png" alt="Sam Xiao's Avatar">
+        <time>2020-03-25</time>
+      </div>
+      <div class="column column-6 read-more">
+        <a href="/ecmascript/json/format/">もっと読む</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</article>
+
+          
+        
+      </div>
+    </main>
+    
+<nav>
+  <ul class="pagination">
+    
+    <li class="page-item page-prev">
+      <a href="/page/39/">
+        <span class="page-item-subtitle"><i class="icon icon-back" aria-hidden="true"></i></span>
+        <span class="page-item-title">前へ</span>
+      </a>
+    </li>
+    
+    
+    <li class="page-item page-next">
+      <a href="/page/41/">
+        <span class="page-item-title">次へ</span>
+        <span class="page-item-subtitle"><i class="icon icon-forward" aria-hidden="true"></i></span>
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+
+  </div>
+</div>
+
+  <footer class="text-center">
+  <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span data-year></span>
+    <a href="mailto:oomusou@gmail.com" class="footer-copyright-a" href="https://negohugo.com">次世代 Hugo</a>
+  </p>
+</footer>
+
+  <!-- ### Footer JS Import ### -->
+<script>
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+  };
+
+  /* Copyright */
+  var copyrightNow = new Date().getFullYear();
+  var copyrightContent = document.querySelector('span[data-year]')
+  copyrightSince = 2015;
+  copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+</script>
+<!-- vanilla-lazyload -->
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+
+<!-- gallery.js -->
+
+<!-- Comment -->
+
+<!-- ### Custom Footer ### -->
+
+  </body>
+</html>

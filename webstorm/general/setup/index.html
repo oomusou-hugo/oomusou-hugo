@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html 
+>
+  <head>
+  <meta charset="utf-8">
+  <!-- ### DNS Prefetch ### -->
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+<!-- busuanzi -->
+
+<!-- comment -->
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+  <!-- ### Preload ### -->
+  
+
+  <!-- ### Meta & Title & Info ### -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<!-- Title -->
+<title>我的 WebStorm 基本設定 | 次世代 Hugo</title>
+<!-- favicon -->
+<!-- Favicons -->
+
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<!-- Android Chrome Color -->
+
+<meta name="format-detection" content="telephone=no">
+<!-- Description -->
+<meta name="description" content="本文記錄我的 WebStorm 基本設定。">
+<!-- Keywords -->
+<meta name="keywords" content=", WebStorm">
+<!-- Disable Fucking Bloody Baidu Tranformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!-- ### Import File ### -->
+  
+    <!-- spectre.css -->
+
+<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+
+<style>
+body {
+  background-color: #f8f9fa
+}
+
+a,
+a:visited {
+  color: #0070ff
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #0070ff;
+  opacity: .75;
+}
+
+.avatar {
+  background: #444
+}
+
+.navbar-link,
+.navbar-link:visited,
+.timeline .timeline-item .timeline-icon.icon-lg {
+  color: #0070ff
+}
+
+.navbar-link:hover {
+  color: #0070ff;
+  opacity: .8;
+}
+
+#search-input .btn,
+#disqus_click_btn,
+#disqus-switch-to-direct,
+#disqus-loadmore-button {
+  background: #727e96;
+  border-color: #727e96;
+  color: #fff;
+}
+
+#post-toc a.post-toc-link,
+#post-toc a.post-toc-link:visited,
+.share-menu.menu .menu-item > a {
+  color: #727e96
+}
+
+.share-menu.menu .menu-item > a:hover,
+.share-menu.menu .menu-item > a:focus,
+.share-menu.menu .menu-item > a:visited {
+  color: #50596c;
+  background: #f8f9fa;
+  opacity: .85;
+}
+</style>
+
+<!-- style.css -->
+
+<link rel="stylesheet" href="/css/style.min.css">
+
+
+<!-- prism.css -->
+
+    <!-- prism.line_number -->
+    
+        
+            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+        
+    
+    <!-- prism.theme -->
+    
+        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+    
+
+
+
+
+  
+  <!-- ### Site Verification ### -->
+  
+
+  <!-- ### RSS ### -->
+  
+
+<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+
+
+  <!-- ### WebApp ### -->
+  <meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="次世代 Hugo">
+<meta name="msapplication-starturl" content="https://negohugo.com">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="次世代 Hugo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Manifest Import -->
+
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Search -->
+
+  <!-- ### The Open Graph & Twitter Card Protocol ### -->
+  <meta property="og:title" content="我的 WebStorm 基本設定 | 次世代 Hugo">
+<meta property="og:site_name" content="次世代 Hugo">
+
+<meta property="og:url" content="https://negohugo.com/webstorm/general/setup/">
+<meta property="og:image"
+	content="https://negohugo.com/apple-touch-icon.png">
+<meta property="og:description" content="本文記錄我的 WebStorm 基本設定。">
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2025-12-04T23:35:53.000Z">
+<meta property="article:modified_time" content="2025-12-04T23:35:53.000Z">
+<meta property="article:author" content="Sam Xiao">
+<meta property="og:article:tag" content=", WebStorm">
+
+
+  <!-- ### Analytics ### -->
+  
+
+
+
+
+
+  <!-- ### Canonical link ### -->
+  <link rel="canonical" href="https://negohugo.com/webstorm/general/setup/">
+  <!-- ### Structured Data ### -->
+  
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://negohugo.com/webstorm/general/setup/",
+    "@type": "BlogPosting",
+    "logo": "https://negohugo.com/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://negohugo.com/webstorm/general/setup/"
+    },
+    "headline": "我的 WebStorm 基本設定 | 次世代 Hugo",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://negohugo.com/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2025-12-04T23:35:53.000Z",
+    "dateModified": "2026-04-16T09:16:20.205Z",
+    "author": {
+        "@type": "Person",
+        "name": "Sam Xiao",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://negohugo.com/img/default_avatar.png"
+        },
+        "description": "無駄を削ぎ、本質を研ぐ"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "次世代 Hugo",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://negohugo.com/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://negohugo.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": ", WebStorm",
+    "description": "本文記錄我的 WebStorm 基本設定。"
+}
+</script>
+
+  <!-- ### Custom Head ### -->
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+  <header>
+  <h1 class="header-title text-center">
+    <a href="/">
+      次世代 Hugo
+    </a>
+  </h1>
+  <div class="text-center header-slogan">
+    無駄を削ぎ、本質を研ぐ
+  </div>
+  <nav class="navbar-section text-center">
+  <div class="columns">
+    <div class="column col-1"></div>
+    <div class="column col-10 col-sm-12 align-content-center">
+      <a href="/" class="navbar-link">ホーム</a>
+      <a href="/series/" class="navbar-link">シリーズ</a>
+      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/search" class="navbar-link">検索</a>
+    </div>
+  </div>
+</nav>
+</header>
+  
+<!-- ## Post ## -->
+<div class="post-container">
+  <div id="post-card" class="card">
+    <div class="card-item-container">
+      <div class="card-inner-cell">
+        <div class="card-header">
+          
+<h1 class="card-title h3 mb-2">我的 WebStorm 基本設定</h1>
+
+
+<div class="post-header-info">
+	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+		alt="Sam Xiao's Avatar">
+	<span>2025-12-05</span>
+</div>
+
+        </div>
+        <div class="card-body">
+          <article id="post-content">
+            <p>本文記錄我的 WebStorm 基本設定。</p>
+<a id="more"></a>
+
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>ＷebStorm 2026.1</p>
+<h2 id="Shell-Script-Name"><a href="#Shell-Script-Name" class="headerlink" title="Shell Script Name"></a>Shell Script Name</h2><p><img src="/images/webstorm/general/setup/ws04.webp" alt="ws04"></p>
+<ul>
+<li><code>Update the tool automatically</code>：<code>On</code></li>
+<li><code>Shell script name</code>：<code>ws</code></li>
+</ul>
+<h2 id="Appearance"><a href="#Appearance" class="headerlink" title="Appearance"></a>Appearance</h2><p><img src="/images/webstorm/general/setup/ws01.webp" alt="ws01"></p>
+<ul>
+<li><code>Theme</code>：<code>Darcula</code></li>
+<li><code>Use custom font</code><ul>
+<li><code>13</code>：<code>Dialog 16</code></li>
+<li><code>15</code>：<code>Dialog 17</code></li>
+<li><code>16</code>：<code>Dialog 18</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="Compact-Mode"><a href="#Compact-Mode" class="headerlink" title="Compact Mode"></a>Compact Mode</h2><p><img src="/images/webstorm/general/setup/ws09.webp" alt="ws09"></p>
+<ul>
+<li><code>Compact mode</code>：<code>On</code></li>
+</ul>
+<h2 id="Editor-Font"><a href="#Editor-Font" class="headerlink" title="Editor Font"></a>Editor Font</h2><p><img src="/images/webstorm/general/setup/ws02.webp" alt="ws02"></p>
+<ul>
+<li><code>Font</code>：<code>Fira Code</code></li>
+<li><code>Size</code>：<ul>
+<li><code>13</code>：<code>22.0</code></li>
+<li><code>15</code>： <code>21.0</code></li>
+<li><code>16</code>：<code>23.0</code></li>
+</ul>
+</li>
+<li><code>Line height</code>：<code>1.2</code></li>
+<li><code>Main weight</code>：<code>Medium</code></li>
+<li><code>Fallback font</code>：<code>Menlo</code></li>
+</ul>
+<h2 id="Backgroud-Color"><a href="#Backgroud-Color" class="headerlink" title="Backgroud Color"></a>Backgroud Color</h2><p><img src="/images/webstorm/general/setup/ws14.webp" alt="ws14"></p>
+<ul>
+<li><code>Background</code>：<code>#2B2B2B</code></li>
+</ul>
+<h2 id="Console-Font"><a href="#Console-Font" class="headerlink" title="Console Font"></a>Console Font</h2><p><img src="/images/webstorm/general/setup/ws03.webp" alt="ws03"></p>
+<ul>
+<li><code>Use console font instead of the default</code>：<code>On</code></li>
+<li><code>Font</code>：<code>Menlo</code></li>
+<li><code>Size</code>：<ul>
+<li><code>13&quot;</code>：<code>20</code> </li>
+<li><code>16&quot;</code>：<code>23</code></li>
+</ul>
+</li>
+<li><code>Line height</code>：<code>1.0</code></li>
+</ul>
+<h2 id="Code-Folding"><a href="#Code-Folding" class="headerlink" title="Code Folding"></a>Code Folding</h2><p><img src="/images/webstorm/general/setup/ws16.webp" alt="ws16"></p>
+<ul>
+<li><code>General</code><ul>
+<li><code>File header</code>：<code>On</code></li>
+<li><code>Imports</code>：<code>On</code></li>
+<li><code>Documentation comments</code>：<code>On</code></li>
+<li><code>Method bodies</code>：<code>Off</code></li>
+<li><code>Custom folding regions</code>：<code>On</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="Appearance-1"><a href="#Appearance-1" class="headerlink" title="Appearance"></a>Appearance</h2><p><img src="/images/webstorm/general/setup/ws12.webp" alt="ws12"></p>
+<ul>
+<li><code>Show line numbers</code>：<code>Relative</code></li>
+<li><code>Show method separators</code>：<code>On</code></li>
+<li><code>Show whitespaces</code>：<code>On</code><ul>
+<li><code>Leading</code>：<code>On</code></li>
+<li><code>Inner</code>：<code>On</code></li>
+<li><code>Trailing</code>：<code>On</code></li>
+<li><code>Selection</code>：<code>On</code></li>
+</ul>
+</li>
+<li><code>Show indent guides</code>：<code>Off</code></li>
+<li><code>Show CSS color preview as background</code>：<code>On</code></li>
+</ul>
+<h2 id="Breadcrumbs"><a href="#Breadcrumbs" class="headerlink" title="Breadcrumbs"></a>Breadcrumbs</h2><p><img src="/images/webstorm/general/setup/ws15.webp" alt="ws15"></p>
+<ul>
+<li><code>Show breadcrumbs</code>：<code>On</code><ul>
+<li><code>Placement</code>：<code>Bottom</code></li>
+</ul>
+</li>
+<li>Languages<ul>
+<li>CSS</li>
+<li>HTML</li>
+<li>JavaScript</li>
+<li>JSON</li>
+<li>Sass</li>
+<li>SCSS</li>
+<li>YAML</li>
+</ul>
+</li>
+</ul>
+<h2 id="Editor-Tabs"><a href="#Editor-Tabs" class="headerlink" title="Editor Tabs"></a>Editor Tabs</h2><p><img src="/images/webstorm/general/setup/ws05.webp" alt="ws05"></p>
+<ul>
+<li><code>Tab placement</code>：<code>None</code></li>
+</ul>
+<h2 id="Gutter-Icons"><a href="#Gutter-Icons" class="headerlink" title="Gutter Icons"></a>Gutter Icons</h2><p><img src="/images/webstorm/general/setup/ws13.webp" alt="ws13"></p>
+<ul>
+<li><code>Show gutter icons</code>：<code>Off</code></li>
+</ul>
+<h2 id="Sticky-Lines"><a href="#Sticky-Lines" class="headerlink" title="Sticky Lines"></a>Sticky Lines</h2><p><img src="/images/webstorm/general/setup/ws20.webp" alt="ws20"></p>
+<ul>
+<li><code>Show sticky lines while scrolling</code>：<code>Off</code></li>
+</ul>
+<h2 id="Appearance-2"><a href="#Appearance-2" class="headerlink" title="Appearance"></a>Appearance</h2><p><img src="/images/webstorm/general/setup/ws06.webp" alt="ws06"></p>
+<ul>
+<li><code>Compact Mode</code>：<code>On</code></li>
+<li><code>Toolbar</code>：<code>Off</code></li>
+<li><code>Navigation Bar</code>：<code>Top</code></li>
+<li><code>Tool Window Bars</code>：<code>Off</code></li>
+<li><code>Status Bar</code>：<code>Off</code></li>
+</ul>
+<h2 id="Active-Editor"><a href="#Active-Editor" class="headerlink" title="Active Editor"></a>Active Editor</h2><p><img src="/images/webstorm/general/setup/ws07.webp" alt="ws07"></p>
+<ul>
+<li><code>Show Whitespace</code>：<code>On</code></li>
+<li><code>Show Line Numbers</code>：<code>On</code></li>
+<li><code>Show Import Popups</code>：<code>On</code></li>
+<li><code>Show Breadcrumbs</code>：<code>On</code></li>
+</ul>
+<h2 id="Project-Options"><a href="#Project-Options" class="headerlink" title="Project Options"></a>Project Options</h2><p><img src="/images/webstorm/general/setup/ws08.webp" alt="ws08"></p>
+<ul>
+<li>Behavior：<ul>
+<li><code>Enable Preview Tab</code>：<code>On</code></li>
+<li><code>Open Files with Single Click</code>：<code>On</code></li>
+<li><code>Open Directories with Single Click</code>：<code>On</code></li>
+<li><code>Always Select Openned File</code>：<code>On</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws18.webp" alt="ws18"></p>
+<p><strong>Appearance</strong>：</p>
+<ul>
+<li><code>Excluded Files</code>：<code>Off</code></li>
+<li><code>Scratches and Consoles</code>：<code>Off</code></li>
+</ul>
+<h2 id="Inlay-Hints"><a href="#Inlay-Hints" class="headerlink" title="Inlay Hints"></a>Inlay Hints</h2><p><img src="/images/webstorm/general/setup/ws10.webp" alt="ws10"></p>
+<ul>
+<li><code>Code vision</code>：<code>Off</code></li>
+<li><code>Parameter names</code>：<code>Off</code></li>
+<li><code>Types</code>：<code>Off</code></li>
+<li><code>Values</code>：<code>Off</code></li>
+<li><code>Method chains</code>：<code>Off</code></li>
+<li><code>Other</code>：<code>Off</code></li>
+</ul>
+<h2 id="Tool-Windows"><a href="#Tool-Windows" class="headerlink" title="Tool Windows"></a>Tool Windows</h2><p><img src="/images/webstorm/general/setup/ws11.webp" alt="ws11"></p>
+<ul>
+<li><code>Commit</code>：⌘ 0</li>
+<li><code>Project</code>：⌘ 1</li>
+<li><code>Bookmarks</code>：⌘ 2</li>
+<li><code>npm</code>：⌘ 3</li>
+<li><code>Run</code>：⌘ 4</li>
+<li><code>Debug</code>：⌘ 5</li>
+<li><code>Problems</code>：⌘ 6</li>
+<li><code>Structure</code>：⌘ 7</li>
+<li><code>Terminal</code>：⌘ 8</li>
+<li><code>Git</code>：⌘ 9</li>
+</ul>
+<h2 id="Keymap"><a href="#Keymap" class="headerlink" title="Keymap"></a>Keymap</h2><ul>
+<li><code>Go to File</code>：⌘ P</li>
+</ul>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p><img src="/images/webstorm/general/setup/ws19.webp" alt="ws19"></p>
+<ul>
+<li>GitHub Copilot</li>
+<li>IdeaVim</li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws17.webp" alt="ws18"></p>
+<ul>
+<li><code>Deployment</code>：<code>Disable all</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws22.webp" alt="ws22"></p>
+<ul>
+<li><code>IDE Localization</code>：<code>Disable all</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws23.webp" alt="ws23"></p>
+<ul>
+<li><code>JavaScript Debugger</code>：<code>On</code></li>
+<li><code>JavaScript Intention Power Pack</code>：<code>On</code></li>
+<li><code>Node.js</code>：<code>On</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws24.webp" alt="ws24"></p>
+<ul>
+<li><code>Keymap</code>：<code>Disable all</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws25.webp" alt="ws25"></p>
+<ul>
+<li><code>Gherkin</code>：<code>Off</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws26.webp" alt="ws26"></p>
+<ul>
+<li><code>Remote Development</code>：<code>Disable all</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws27.webp" alt="ws27"></p>
+<ul>
+<li><code>CSS</code>：<code>On</code></li>
+<li><code>Sass</code>：<code>On</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws28.webp" alt="ws28"></p>
+<ul>
+<li><code>EJS</code>：<code>On</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws29.webp" alt="ws29"></p>
+<ul>
+<li><code>UI</code>：<code>Disable all</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws30.webp" alt="ws30"></p>
+<ul>
+<li><code>Git</code>：<code>On</code></li>
+<li><code>GitHub</code>：<code>On</code></li>
+</ul>
+<p><img src="/images/webstorm/general/setup/ws31.webp" alt="ws31"></p>
+<ul>
+<li><code>File Watchers</code>：<code>Off</code></li>
+<li><code>IDE Features Trainer</code>：<code>Off</code></li>
+<li><code>Qodana</code>：<code>Off</code></li>
+</ul>
+<h2 id="Custom-Menu"><a href="#Custom-Menu" class="headerlink" title="Custom Menu"></a>Custom Menu</h2><p><img src="/images/webstorm/general/setup/ws21.webp" alt="ws21"></p>
+<ul>
+<li>移除 Refactor、Help</li>
+<li>剩下 File、Edit、View、Navigate、Code、Run、Tools、Git、Window</li>
+</ul>
+
+          </article>
+          <p class="post-footer-info mb-0 pt-2">
+  
+  
+  <span class="post-tags-list mt-2">
+    
+    
+    <a class="post-tags-list-item" href='/tags/WebStorm/'>#&nbsp;WebStorm</a>
+    
+  </span>
+  
+</p>
+        </div>
+        <div class="post-nav px-2 bg-gray">
+	<ul class="pagination">
+		<!-- Prev Nav -->
+		
+		<li class="page-item page-prev">
+			<a href="/hugo/themeless/transfer/">
+				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+				<div class="page-item-subtitle">將 Theme 架構轉移成 Themeless 架構</div>
+			</a>
+		</li>
+		
+		<!-- Next Nav -->
+		
+		<li class="page-item page-next">
+			<a href="/webstorm/plugin/ideavim/">
+				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+				<div class="page-item-subtitle">使用 IdeaVim 支援 Vim 模式</div>
+			</a>
+		</li>
+		
+	</ul>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="text-center">
+  <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span data-year></span>
+    <a href="mailto:oomusou@gmail.com" class="footer-copyright-a" href="https://negohugo.com">次世代 Hugo</a>
+  </p>
+</footer>
+
+  <!-- ### Footer JS Import ### -->
+<script>
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+  };
+
+  /* Copyright */
+  var copyrightNow = new Date().getFullYear();
+  var copyrightContent = document.querySelector('span[data-year]')
+  copyrightSince = 2015;
+  copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+</script>
+<!-- vanilla-lazyload -->
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+
+<!-- gallery.js -->
+
+<!-- Comment -->
+
+<!-- ### Custom Footer ### -->
+
+  </body>
+</html>
