@@ -53,7 +53,7 @@
 <!-- Description -->
 <meta name="description" content="WebStorm 目前並沒有原生支援 Hugo，須另外安裝 Smart Hugo plugin，且不再使用 Prettier 與 Stylelint，直接使用 WebStorm 內建功能，打造 Zero Dependency 與 No Node.js 開發環境。">
 <!-- Keywords -->
-<meta name="keywords" content=", CSS, Hugo, WebStorm">
+<meta name="keywords" content=", Hugo, WebStorm">
 <!-- Disable Fucking Bloody Baidu Tranformation -->
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -175,10 +175,10 @@ a:hover {
 <meta name="twitter:card" content="summary">
 
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2025-12-25T18:03:26.000Z">
-<meta property="article:modified_time" content="2025-12-25T18:03:26.000Z">
+<meta property="article:published_time" content="2026-04-21T23:56:13.000Z">
+<meta property="article:modified_time" content="2026-04-21T23:56:13.000Z">
 <meta property="article:author" content="Sam Xiao">
-<meta property="og:article:tag" content=", CSS, Hugo, WebStorm">
+<meta property="og:article:tag" content=", Hugo, WebStorm">
 
 
   <!-- ### Analytics ### -->
@@ -210,8 +210,8 @@ a:hover {
         "url": "https://negohugo.com/apple-touch-icon.png"
     },
     
-    "datePublished": "2025-12-25T18:03:26.000Z",
-    "dateModified": "2026-04-14T10:52:20.392Z",
+    "datePublished": "2026-04-21T23:56:13.000Z",
+    "dateModified": "2026-04-21T23:59:54.466Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -236,7 +236,7 @@ a:hover {
         "query-input": "required name=search_term_string"
     },
     
-    "keywords": ", CSS, Hugo, WebStorm",
+    "keywords": ", Hugo, WebStorm",
     "description": "WebStorm 目前並沒有原生支援 Hugo，須另外安裝 Smart Hugo plugin，且不再使用 Prettier 與 Stylelint，直接使用 WebStorm 內建功能，打造 Zero Dependency 與 No Node.js 開發環境。"
 }
 </script>
@@ -280,7 +280,7 @@ a:hover {
 <div class="post-header-info">
 	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
 		alt="Sam Xiao's Avatar">
-	<span>2025-12-26</span>
+	<span>2026-04-22</span>
 </div>
 
         </div>
@@ -290,64 +290,77 @@ a:hover {
 <a id="more"></a>
 
 <h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2026.1</p>
-<h2 id="Smart-Hugo"><a href="#Smart-Hugo" class="headerlink" title="Smart Hugo"></a>Smart Hugo</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo01.webp" alt="hugo01"></p>
+<h2 id="Smart-Hugo"><a href="#Smart-Hugo" class="headerlink" title="Smart Hugo"></a>Smart Hugo</h2><p><img src="/images/webstorm/lib/hugo-neo/neo01.webp" alt="hugo01"></p>
 <p><em><strong>Settings -&gt; Plugins</strong></em></p>
 <ul>
 <li><code>Smart Hugo</code>：支援 Go Template</li>
 </ul>
-<blockquote>
-<p>Smart Hugo 付費版有更完整功能，這裏主要是讓 WebStorm 認識 Go template 語法</p>
-</blockquote>
-<p><img src="/images/webstorm/lib/hugo-neo/hugo13.webp" alt="hugo13"></p>
+<p><img src="/images/webstorm/lib/hugo-neo/neo13.webp" alt="hugo13"></p>
 <ul>
 <li><code>TOML</code>：支援 Hugo 設定檔格式</li>
 </ul>
-<h2 id="Resource-Root"><a href="#Resource-Root" class="headerlink" title="Resource Root"></a>Resource Root</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo02.webp" alt="hugo04"></p>
+<h2 id="Project-Directories"><a href="#Project-Directories" class="headerlink" title="Project Directories"></a>Project Directories</h2><p><img src="/images/webstorm/lib/hugo-neo/neo02.webp" alt="hugo04"></p>
 <p><em><strong>Settings -&gt; Directories</strong></em></p>
 <ul>
-<li>將 <code>assets</code> <code>目錄</code> 指定成 <code>Resource Root</code></li>
+<li><code>Resource Root</code>：<ul>
+<li><code>assets</code>：放置 CSS、JavaScript 與 JSON</li>
 </ul>
-<h2 id="Disable-Prettier"><a href="#Disable-Prettier" class="headerlink" title="Disable Prettier"></a>Disable Prettier</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo03.webp" alt="hugo03"></p>
+</li>
+<li><code>Excluded</code>：<ul>
+<li><code>.idea</code>：WebStorm 的暫存檔存放目錄</li>
+<li><code>public</code>：hugo build 之後的 HTML&#x2F;CSS&#x2F;JavaScript</li>
+</ul>
+</li>
+<li><code>Exclude Files</code>：<ul>
+<li><code>.hugo_build.lock</code>：Hugo build 所建立的 lock 檔</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/webstorm/lib/hugo-neo/neo14.webp" alt="neo14"></p>
+<ul>
+<li>Project 不顯示 Excluded</li>
+</ul>
+<h2 id="Disable-Prettier"><a href="#Disable-Prettier" class="headerlink" title="Disable Prettier"></a>Disable Prettier</h2><p><img src="/images/webstorm/lib/hugo-neo/neo03.webp" alt="hugo03"></p>
 <p><em><strong>Settings -&gt; Languages &amp; Frameworks -&gt; JavaScript -&gt; Prettier</strong></em></p>
 <ul>
 <li><code>Disable Prettier</code>：<code>On</code></li>
 </ul>
-<h2 id="Disable-Stylelint"><a href="#Disable-Stylelint" class="headerlink" title="Disable Stylelint"></a>Disable Stylelint</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo04.webp" alt="hugo04"></p>
+<h2 id="Disable-Stylelint"><a href="#Disable-Stylelint" class="headerlink" title="Disable Stylelint"></a>Disable Stylelint</h2><p><img src="/images/webstorm/lib/hugo-neo/neo04.webp" alt="hugo04"></p>
 <p><em><strong>Settings -&gt; Languages &amp; Frameworks -&gt; Style Sheets -&gt; Stylelint</strong></em></p>
 <ul>
 <li><code>Enable</code>：<code>Off</code></li>
 </ul>
-<h2 id="Enable-EditorConfig"><a href="#Enable-EditorConfig" class="headerlink" title="Enable EditorConfig"></a>Enable EditorConfig</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo12.webp" alt="hugo12"></p>
+<h2 id="Enable-EditorConfig"><a href="#Enable-EditorConfig" class="headerlink" title="Enable EditorConfig"></a>Enable EditorConfig</h2><p><img src="/images/webstorm/lib/hugo-neo/neo12.webp" alt="hugo12"></p>
 <p><em><strong>System -&gt; Editor -&gt; Code Style</strong></em></p>
 <ul>
 <li><code>Enable EditorConfig support</code>：<code>On</code></li>
 </ul>
-<h2 id="HTML-Style"><a href="#HTML-Style" class="headerlink" title="HTML Style"></a>HTML Style</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo06.webp" alt="hugo06"></p>
+<h2 id="HTML-Style"><a href="#HTML-Style" class="headerlink" title="HTML Style"></a>HTML Style</h2><p><img src="/images/webstorm/lib/hugo-neo/neo06.webp" alt="hugo06"></p>
 <p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; HTML -&gt; Tabs and Indent</strong></em></p>
 <ul>
 <li><code>Tab size</code>：<code>2</code></li>
 <li><code>Indent</code>：<code>2</code></li>
 <li><code>Continuation indent</code>：<code>2</code></li>
 </ul>
-<p><img src="/images/webstorm/lib/hugo-neo/hugo07.webp" alt="hugo07"></p>
+<p><img src="/images/webstorm/lib/hugo-neo/neo07.webp" alt="hugo07"></p>
 <p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; HTML -&gt; Other</strong></em></p>
 <ul>
 <li><code>Do not indent children of</code>：<code>head</code>, <code>tbody</code>, <code>tfoot</code></li>
 <li><code>Keep white spaces inside</code>：<code>span</code>, <code>pre</code>, <code>textarea</code></li>
 </ul>
-<h2 id="CSS-Style"><a href="#CSS-Style" class="headerlink" title="CSS Style"></a>CSS Style</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo08.webp" alt="hugo08"></p>
+<h2 id="CSS-Style"><a href="#CSS-Style" class="headerlink" title="CSS Style"></a>CSS Style</h2><p><img src="/images/webstorm/lib/hugo-neo/neo08.webp" alt="hugo08"></p>
 <p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; Style Sheets -&gt; CSS -&gt; Tabs and Indent</strong></em></p>
 <ul>
 <li><code>Tab size</code>：<code>2</code></li>
 <li><code>Indent</code>：<code>2</code></li>
 <li><code>Continuation indent</code>：<code>2</code></li>
 </ul>
-<p><img src="/images/webstorm/lib/hugo-neo/hugo09.webp" alt="hugo09"></p>
+<p><img src="/images/webstorm/lib/hugo-neo/neo09.webp" alt="hugo09"></p>
 <p><em><strong>Settings -&gt; Editor -&gt; Code Style -&gt; Style Sheets -&gt; CSS -&gt; Arrangement</strong></em></p>
 <ul>
 <li><code>Custom order</code></li>
 </ul>
-<p><img src="/images/webstorm/lib/hugo-neo/hugo11.webp" alt="hugo11"></p>
+<p><img src="/images/webstorm/lib/hugo-neo/neo11.webp" alt="hugo11"></p>
 <p><em><strong>Settings -&gt; Editor -&gt; Inspections -&gt; CSS</strong></em></p>
 <ul>
 <li><code>Property is incompatible with selected browsers</code>：<code>On</code></li>
@@ -372,7 +385,7 @@ indent_size = 2
 <ul>
 <li>強制 Go Template 語法 indent 為 <code>2</code></li>
 </ul>
-<h2 id="Actions-on-Save"><a href="#Actions-on-Save" class="headerlink" title="Actions on Save"></a>Actions on Save</h2><p><img src="/images/webstorm/lib/hugo-neo/hugo05.webp" alt="hugo05"></p>
+<h2 id="Actions-on-Save"><a href="#Actions-on-Save" class="headerlink" title="Actions on Save"></a>Actions on Save</h2><p><img src="/images/webstorm/lib/hugo-neo/neo05.webp" alt="hugo05"></p>
 <p><em><strong>Settings -&gt; Tools -&gt; Actions on Save</strong></em></p>
 <ul>
 <li><code>Reformat code</code>：<code>Changed lines</code></li>
@@ -444,8 +457,6 @@ esac
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/CSS/'>#&nbsp;CSS</a>
-    
     <a class="post-tags-list-item" href='/tags/Hugo/'>#&nbsp;Hugo</a>
     
     <a class="post-tags-list-item" href='/tags/WebStorm/'>#&nbsp;WebStorm</a>
@@ -458,19 +469,12 @@ esac
 	<ul class="pagination">
 		<!-- Prev Nav -->
 		
-		<li class="page-item page-prev">
-			<a href="/webstorm/project/exclude/">
-				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
-				<div class="page-item-subtitle">使用 Excluded 隱藏檔案目錄與停止索引</div>
-			</a>
-		</li>
-		
 		<!-- Next Nav -->
 		
 		<li class="page-item page-next">
-			<a href="/hugo/themeless/transfer/">
+			<a href="/webstorm/project/exclude/">
 				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
-				<div class="page-item-subtitle">將 Theme 架構轉移成 Themeless 架構</div>
+				<div class="page-item-subtitle">使用 Excluded 隱藏檔案目錄與停止索引</div>
 			</a>
 		</li>
 		
