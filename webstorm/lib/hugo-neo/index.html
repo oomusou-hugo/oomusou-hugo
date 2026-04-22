@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-04-21T23:56:13.000Z",
-    "dateModified": "2026-04-21T23:59:54.466Z",
+    "dateModified": "2026-04-22T03:47:03.945Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -308,7 +308,8 @@ a:hover {
 </li>
 <li><code>Excluded</code>：<ul>
 <li><code>.idea</code>：WebStorm 的暫存檔存放目錄</li>
-<li><code>public</code>：hugo build 之後的 HTML&#x2F;CSS&#x2F;JavaScript</li>
+<li><code>public</code>：<code>hugo build</code> 之後的 HTML&#x2F;CSS&#x2F;JavaScript</li>
+<li><code>resources</code>：<code>hugo server</code> 時所建立的暫存目錄</li>
 </ul>
 </li>
 <li><code>Exclude Files</code>：<ul>
@@ -410,14 +411,15 @@ resources
 <li><code>.idea</code> : WebStorm 的暫存檔存放目錄</li>
 <li><code>.DS_Store</code> : macOS 的資源檔</li>
 </ul>
-<h2 id="Shell-Script"><a href="#Shell-Script" class="headerlink" title="Shell Script"></a>Shell Script</h2><pre class="line-numbers highlight language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<h2 id="Shell-Script"><a href="#Shell-Script" class="headerlink" title="Shell Script"></a>Shell Script</h2><p><strong>run.sh</strong></p>
+<pre class="line-numbers highlight language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
 
 COMMAND<span class="token operator">=</span><span class="token variable">$1</span>
 
 <span class="token keyword">case</span> <span class="token string">"<span class="token variable">$COMMAND</span>"</span> <span class="token keyword">in</span>
   <span class="token string">"dev"</span><span class="token punctuation">)</span>
     <span class="token keyword">echo</span> <span class="token string">"🚀 Starting Hugo Development Server..."</span>
-    hugo server --disableFastRender --renderToMemory
+    hugo server --disableFastRender
     <span class="token punctuation">;</span><span class="token punctuation">;</span>
 
   <span class="token string">"build"</span><span class="token punctuation">)</span>
@@ -432,10 +434,10 @@ COMMAND<span class="token operator">=</span><span class="token variable">$1</spa
     <span class="token punctuation">;</span><span class="token punctuation">;</span>
 
   *<span class="token punctuation">)</span>
-    <span class="token keyword">echo</span> <span class="token string">"❌ 使用方式錯誤。請輸入以下指令之一："</span>
-    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh dev    - 啟動開發預覽"</span>
-    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh build  - 建置生產版本"</span>
-    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh serve  - 預覽 public 資料夾 (Python)"</span>
+    <span class="token keyword">echo</span> <span class="token string">"❌ Incorrect usage. Please enter one of the following commands:"</span>
+    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh dev    - Start development preview"</span>
+    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh build  - Build production version"</span>
+    <span class="token keyword">echo</span> <span class="token string">"   ./run.sh serve  - Preview the public folder"</span>
     <span class="token keyword">exit</span> 1
     <span class="token punctuation">;</span><span class="token punctuation">;</span>
 esac
@@ -468,6 +470,13 @@ esac
         <div class="post-nav px-2 bg-gray">
 	<ul class="pagination">
 		<!-- Prev Nav -->
+		
+		<li class="page-item page-prev">
+			<a href="/webstorm/general/setup/">
+				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+				<div class="page-item-subtitle">我的 WebStorm 基本設定</div>
+			</a>
+		</li>
 		
 		<!-- Next Nav -->
 		
