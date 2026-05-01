@@ -282,9 +282,9 @@
     
     
     
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
-    
     <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
+    
+    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
     
   </entry>
   
@@ -324,9 +324,9 @@
     
     
     
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
-    
     <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
+    
+    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
     
   </entry>
   
@@ -366,11 +366,11 @@
     
     
     
+    <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
+    
     <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
     
     <category term="BEM" scheme="https://negohugo.com/tags/BEM/"/>
-    
-    <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
     
   </entry>
   
