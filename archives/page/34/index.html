@@ -30,7 +30,7 @@
 <meta name="viewport"
   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <!-- Title -->
-<title>Archives | 日本語の晴見</title>
+<title>Archives | 次世代 Hugo</title>
 <!-- favicon -->
 <!-- Favicons -->
 
@@ -141,11 +141,11 @@ a:hover {
 
   <!-- ### WebApp ### -->
   <meta name="mobile-web-app-capable" content="yes">
-<meta name="application-name" content="日本語の晴見">
-<meta name="msapplication-starturl" content="https://harumi.cc">
+<meta name="application-name" content="次世代 Hugo">
+<meta name="msapplication-starturl" content="https://negohugo.com">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="日本語の晴見">
+<meta name="apple-mobile-web-app-title" content="次世代 Hugo">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <!-- Manifest Import -->
 
@@ -154,12 +154,12 @@ a:hover {
 <!-- Open Search -->
 
   <!-- ### The Open Graph & Twitter Card Protocol ### -->
-  <meta property="og:title" content="Archives | 日本語の晴見">
-<meta property="og:site_name" content="日本語の晴見">
+  <meta property="og:title" content="Archives | 次世代 Hugo">
+<meta property="og:site_name" content="次世代 Hugo">
 
-<meta property="og:url" content="https://harumi.cc/archives/page/34/">
+<meta property="og:url" content="https://negohugo.com/archives/page/34/">
 <meta property="og:image"
-	content="https://harumi.cc/apple-touch-icon.png">
+	content="https://negohugo.com/apple-touch-icon.png">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://harumi.cc/archives/page/34/">
+  <link rel="canonical" href="https://negohugo.com/archives/page/34/">
   <!-- ### Structured Data ### -->
   
 
@@ -185,157 +185,13 @@ a:hover {
   <header>
   <h1 class="header-title text-center">
     <a href="/">
-      日本語の晴見
+      次世代 Hugo
     </a>
   </h1>
   <div class="text-center header-slogan">
-    日本語は学べば学ぶほど面白い
+    無駄を削ぎ、本質を研ぐ
   </div>
-  <script>
-  let titleFontSizes;
-  let bodyFontSizes;
-  let contentFontSizes;
-  let archiveFontSizes;
-  let searchTitleFontSizes;
-  let searchBodyFontSizes;
-
-  let getFontSize = ({ selector }) => {
-    let element = document.querySelector(selector);
-
-    if (element !== null) {
-      let oriFontSize = window.getComputedStyle(element).fontSize;
-      let incFontSize = parseInt(oriFontSize) * 1.2 + 'px';
-
-      return [
-        oriFontSize,
-        incFontSize
-      ];
-    }
-
-    return [0, 0];
-  };
-
-  let setFontSize = ({ selector, fontSize }) => document.querySelectorAll(selector).forEach(
-    x => x.style['font-size'] = fontSize
-  );
-
-  let readFontSize = ({ key, value }) => {
-    if (localStorage.getItem(key) !== null) {
-      return localStorage.getItem(key);
-    }
-    else {
-      return value;
-    }
-  };
-
-  let writeFontSize = ({ key, fontSize }) => localStorage.setItem(key, fontSize);
-
-  let loadFontSize = () => {
-    // home
-    setFontSize({
-      selector: '.post-entry a.card-title',
-      fontSize: readFontSize({ key: 'title', value: titleFontSizes[0] })
-    });
-
-    setFontSize({
-      selector: '.post-entry .card-body' ,
-      fontSize: readFontSize({ key: 'body', value: bodyFontSizes[0] })
-    });
-
-    // post
-    setFontSize({
-      selector: '#post-content',
-      fontSize: readFontSize({ key: 'content', value: contentFontSizes[0] })
-    });
-
-    // archive
-    setFontSize({
-      selector: '.tile-title',
-      fontSize: readFontSize({ key: 'archive', value: archiveFontSizes[0] })
-    });
-
-    // search
-    setFontSize({
-      selector: '.search-title',
-      fontSize: readFontSize({ key: 'search-title', value: searchTitleFontSizes[0] })
-    });
-
-    setFontSize({
-      selector: '.search-result-summary',
-      fontSize: readFontSize({ key: 'search-body', value: searchBodyFontSizes[0] })
-    });
-  }
-
-  let toggleFontSize = ({ selector, key, fontSizes }) => {
-    let element = document.querySelector(selector);
-
-    if (element !== null) {
-      let fontSize = window.getComputedStyle(element).fontSize;
-
-      if (fontSize === fontSizes[0]) {
-        setFontSize({ selector, fontSize: fontSizes[1] });
-        writeFontSize({ key, fontSize: fontSizes[1]})
-      } else {
-        setFontSize({ selector, fontSize: fontSizes[0] });
-        writeFontSize({ key, fontSize: fontSizes[0] });
-      }
-    }
-  };
-
-  let increaseFontSize = () => {
-    // home
-    toggleFontSize({
-      selector: '.post-entry a.card-title',
-      key: 'title',
-      fontSizes: titleFontSizes
-    });
-
-    toggleFontSize({
-      selector: '.post-entry .card-body',
-      key: 'body',
-      fontSizes: bodyFontSizes
-    });
-
-    // post
-    toggleFontSize({
-      selector: '#post-content',
-      key: 'content',
-      fontSizes: contentFontSizes
-    });
-
-    // archive
-    toggleFontSize({
-      selector: '.tile-title',
-      key: 'archive',
-      fontSizes: archiveFontSizes
-    });
-
-    // search
-    toggleFontSize({
-      selector: '.search-title',
-      key: 'search-title',
-      fontSizes: searchTitleFontSizes
-    });
-
-    toggleFontSize({
-      selector: '.search-result-summary',
-      key: 'search-body',
-      fontSizes: searchBodyFontSizes
-    });
-  };
-
-  window.onload = function () {
-    titleFontSizes = getFontSize({ selector: '.post-entry a.card-title' });
-    bodyFontSizes = getFontSize({ selector: '.post-entry .card-body' });
-    contentFontSizes = getFontSize({ selector: '#post-content' });
-    archiveFontSizes = getFontSize({ selector: '.tile-title' });
-    searchTitleFontSizes = getFontSize({ selector: '.search-title'});
-    searchBodyFontSizes = getFontSize({ selector: '.search-result-summary'});
-
-    loadFontSize();
-  };
-</script>
-<nav class="navbar-section text-center">
+  <nav class="navbar-section text-center">
   <div class="columns">
     <div class="column col-1"></div>
     <div class="column col-10 col-sm-12 align-content-center">
@@ -343,16 +199,9 @@ a:hover {
       <a href="/series/" class="navbar-link">シリーズ</a>
       <a href="/tags/" class="navbar-link">タグ</a>
       <a href="/search" class="navbar-link">検索</a>
-<!--      <a href="/atom.xml" target="_blank" class="navbar-link">RSS</a>-->
-    </div>
-    <div class="column col-1 increase-font-size">
-      <a class="hide-sm" style="cursor: pointer;" onclick="increaseFontSize()"><img
-          src="/images/svg/font-size.svg"
-          alt="font size" class="font-size"></a>
     </div>
   </div>
 </nav>
-
 </header>
   <div class="container">
 	<div class="main-container">
@@ -366,7 +215,7 @@ a:hover {
 						<div class="tile">
 							<div class="tile-content">
 								<p class="tile-title">
-									5445 posts in total
+									486 posts in total
 								</p>
 							</div>
 						</div>
@@ -387,7 +236,7 @@ a:hover {
 						<div class="tile">
 							<div class="tile-content">
 								<p class="tile-title mb-0 h4">
-									2024
+									2020
 								</p>
 							</div>
 						</div>
@@ -400,9 +249,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-07</span>
-								<a href="/grammar/futsuu/mitai/mitai01/" class="timeline-tile-title ml-1"><span
-										class="tile-title">みたい (比喻)</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-31</span>
+								<a href="/html/form/validation/" class="timeline-tile-title ml-1"><span
+										class="tile-title">使用 HTML Form Validation</span></a>
 							</div>
 						</div>
 					</div>
@@ -418,9 +267,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-07</span>
-								<a href="/grammar/futsuu/mitai/mitai03/" class="timeline-tile-title ml-1"><span
-										class="tile-title">みたいに (比喻)</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-31</span>
+								<a href="/html/notification/" class="timeline-tile-title ml-1"><span
+										class="tile-title">使用 Notification 提供通知</span></a>
 							</div>
 						</div>
 					</div>
@@ -436,9 +285,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-07</span>
-								<a href="/vocabulary/he/hennji/" class="timeline-tile-title ml-1"><span
-										class="tile-title">返事</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-30</span>
+								<a href="/ecmascript/array/every/" class="timeline-tile-title ml-1"><span
+										class="tile-title">使用 every() 判斷 Array 是否全部符合條件</span></a>
 							</div>
 						</div>
 					</div>
@@ -454,9 +303,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-07</span>
-								<a href="/grammar/futsuu/mitai/mitai02/" class="timeline-tile-title ml-1"><span
-										class="tile-title">みたいな (比喻)</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-26</span>
+								<a href="/css/cookbook/layout/margin-auto/" class="timeline-tile-title ml-1"><span
+										class="tile-title">為什麼只有 Block 能使用 Margin Auto 水平置中 ?</span></a>
 							</div>
 						</div>
 					</div>
@@ -472,9 +321,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-06</span>
-								<a href="/vocabulary/mi/mitame/" class="timeline-tile-title ml-1"><span
-										class="tile-title">見た目</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-22</span>
+								<a href="/css/cookbook/misc/horizontal-li/" class="timeline-tile-title ml-1"><span
+										class="tile-title">如何使 UL + LI 水平顯示 ?</span></a>
 							</div>
 						</div>
 					</div>
@@ -490,9 +339,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-06</span>
-								<a href="/vocabulary/mo/moritsukeru/" class="timeline-tile-title ml-1"><span
-										class="tile-title">盛り付ける</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-22</span>
+								<a href="/ecmascript/variable/scope-chain/" class="timeline-tile-title ml-1"><span
+										class="tile-title">ECMAScript 之 Scope Chain</span></a>
 							</div>
 						</div>
 					</div>
@@ -508,9 +357,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-06</span>
-								<a href="/grammar/adv/ko/kouyatte/" class="timeline-tile-title ml-1"><span
-										class="tile-title">こうやって (像這樣)</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-22</span>
+								<a href="/ecmascript/operator/comma/" class="timeline-tile-title ml-1"><span
+										class="tile-title">在 Promise Chain 使用 Comma Operator</span></a>
 							</div>
 						</div>
 					</div>
@@ -526,9 +375,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-06</span>
-								<a href="/vocabulary/wa/warui/" class="timeline-tile-title ml-1"><span
-										class="tile-title">悪い</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-22</span>
+								<a href="/ecmascript/operator/optional-chaining/" class="timeline-tile-title ml-1"><span
+										class="tile-title">使用 Optional Chaining Operator 判斷 Property 是否存在</span></a>
 							</div>
 						</div>
 					</div>
@@ -544,9 +393,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-06</span>
-								<a href="/jita/ku/kurumaru-tsutsumu/" class="timeline-tile-title ml-1"><span
-										class="tile-title">包まる、包む</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-21</span>
+								<a href="/ecmascript/operator/nullish/" class="timeline-tile-title ml-1"><span
+										class="tile-title">使用 Nullish Coalescing Operator 判斷 Nill</span></a>
 							</div>
 						</div>
 					</div>
@@ -562,549 +411,9 @@ a:hover {
 					<div class="timeline-content">
 						<div class="tile">
 							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-06</span>
-								<a href="/vocabulary/ku/kurumaru/" class="timeline-tile-title ml-1"><span
-										class="tile-title">包まる</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-06</span>
-								<a href="/vocabulary/tsu/tsutsumu/" class="timeline-tile-title ml-1"><span
-										class="tile-title">包む</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-05</span>
-								<a href="/vocabulary/ma/mannkai/" class="timeline-tile-title ml-1"><span
-										class="tile-title">満開</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-05</span>
-								<a href="/vocabulary/su/suku2/" class="timeline-tile-title ml-1"><span
-										class="tile-title">好く</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-05</span>
-								<a href="/vocabulary/o/odayaka/" class="timeline-tile-title ml-1"><span
-										class="tile-title">穏やか</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-05</span>
-								<a href="/grammar/conj/so/sorede/" class="timeline-tile-title ml-1"><span
-										class="tile-title">それで (因此)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-05</span>
-								<a href="/vocabulary/tsu/tsureru/" class="timeline-tile-title ml-1"><span
-										class="tile-title">連れる</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-04</span>
-								<a href="/grammar/adv/gu/guzukuzu/" class="timeline-tile-title ml-1"><span
-										class="tile-title">ぐずぐず (慢吞吞地)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-04</span>
-								<a href="/grammar/verb/te/teirarenai/" class="timeline-tile-title ml-1"><span
-										class="tile-title">ていられない (無法繼續)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-02</span>
-								<a href="/grammar/adv/na/nanimo/" class="timeline-tile-title ml-1"><span
-										class="tile-title">何も (什麼都不)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-02</span>
-								<a href="/grammar/kanndou/oya/" class="timeline-tile-title ml-1"><span
-										class="tile-title">おや (哎呀)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">11-02</span>
-								<a href="/comparison/verb/sou-you-mitai-rashii/" class="timeline-tile-title ml-1"><span
-										class="tile-title">そうだ、ようだ、みたい、らしい</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-28</span>
-								<a href="/jita/tsu/tsumoru-tsumu/" class="timeline-tile-title ml-1"><span
-										class="tile-title">積もる、積む</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-28</span>
-								<a href="/vocabulary/tsu/tsumoru/" class="timeline-tile-title ml-1"><span
-										class="tile-title">積もる</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-28</span>
-								<a href="/vocabulary/tsu/tsumu/" class="timeline-tile-title ml-1"><span
-										class="tile-title">積む</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/jita/tsu/tsuduku-tsudukeru/" class="timeline-tile-title ml-1"><span
-										class="tile-title">続く、続ける</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/vocabulary/tsu/tsudukeru/" class="timeline-tile-title ml-1"><span
-										class="tile-title">続ける</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/vocabulary/tsu/tsuduku/" class="timeline-tile-title ml-1"><span
-										class="tile-title">続く</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/comparison/jyoshi/niteuite-nikannshite/" class="timeline-tile-title ml-1"><span
-										class="tile-title">について、に関して</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/vocabulary/ko/konngo/" class="timeline-tile-title ml-1"><span
-										class="tile-title">今後</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/grammar/particle/toshite/toshite06/" class="timeline-tile-title ml-1"><span
-										class="tile-title">ようとして (想做)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/grammar/particle/toshite/toshite05/" class="timeline-tile-title ml-1"><span
-										class="tile-title">として (視為)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/grammar/particle/toshite/toshite04/" class="timeline-tile-title ml-1"><span
-										class="tile-title">として (假設)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/grammar/particle/toshite/toshite07/" class="timeline-tile-title ml-1"><span
-										class="tile-title">として (判斷)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/grammar/particle/toshite/toshite03/" class="timeline-tile-title ml-1"><span
-										class="tile-title">としてない (全面否定)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-27</span>
-								<a href="/grammar/particle/toshite/toshite02/" class="timeline-tile-title ml-1"><span
-										class="tile-title">として (說明)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-26</span>
-								<a href="/grammar/particle/toshite/toshite01/" class="timeline-tile-title ml-1"><span
-										class="tile-title">として (作為)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-26</span>
-								<a href="/vocabulary/a/ataru/" class="timeline-tile-title ml-1"><span
-										class="tile-title">当たる</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-26</span>
-								<a href="/grammar/futsuu/nndesu/nndesu04/" class="timeline-tile-title ml-1"><span
-										class="tile-title">んじゃないの？ (我以為應該)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-26</span>
-								<a href="/grammar/futsuu/nndesu/nndesu03/" class="timeline-tile-title ml-1"><span
-										class="tile-title">んですか (關心好奇)</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				<div class="timeline-item">
-					<div class="timeline-left">
-						<div class="timeline-icon"></div>
-					</div>
-					<div class="timeline-content">
-						<div class="tile">
-							<div class="tile-content">
-								<span class="tile-subtitle text-gray mb-1">10-26</span>
-								<a href="/grammar/futsuu/nndesu/nndesu02/" class="timeline-tile-title ml-1"><span
-										class="tile-title">んです (解釋)</span></a>
+								<span class="tile-subtitle text-gray mb-1">12-19</span>
+								<a href="/ecmascript/string/replace/" class="timeline-tile-title ml-1"><span
+										class="tile-title">使用 replace() 取代 String</span></a>
 							</div>
 						</div>
 					</div>
@@ -1141,7 +450,7 @@ a:hover {
 
   <footer class="text-center">
   <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span data-year></span>
-    <a href="mailto:oomusou@gmail.com" class="footer-copyright-a" href="https://harumi.cc">日本語の晴見</a>
+    <a href="mailto:oomusou@gmail.com" class="footer-copyright-a" href="https://negohugo.com">次世代 Hugo</a>
   </p>
 </footer>
 
