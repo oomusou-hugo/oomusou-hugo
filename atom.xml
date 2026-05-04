@@ -6,7 +6,7 @@
   <link href="https://negohugo.com/atom.xml" rel="self"/>
   
   <link href="https://negohugo.com/"/>
-  <updated>2026-05-03T08:08:43.298Z</updated>
+  <updated>2026-05-03T08:25:57.206Z</updated>
   <id>https://negohugo.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://negohugo.com/claude/general/setup/code/"/>
     <id>https://negohugo.com/claude/general/setup/code/</id>
     <published>2026-05-03T08:05:37.000Z</published>
-    <updated>2026-05-03T08:08:43.298Z</updated>
+    <updated>2026-05-03T08:25:57.206Z</updated>
     
     <content type="html"><![CDATA[<p>以 CLI 方式使用 Claude Code。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Claude Code 2.1.118</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install --cask claude-code<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Claude Code</li></ul><h2 id="Claude-Code"><a href="#Claude-Code" class="headerlink" title="Claude Code"></a>Claude Code</h2><p><img src="/images/claude/general/setup/code/code01.webp" alt="code01"></p><pre class="line-numbers highlight language-shell"><code class="language-shell">$ claude<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>進入專案目錄，輸入 <code>claude</code> 執行 Claude Code</li></ul><h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p><img src="/images/claude/general/setup/code/code02.webp" alt="code02"></p><ul><li>選擇 <code>Dark mode</code></li></ul><h2 id="Claude-Account"><a href="#Claude-Account" class="headerlink" title="Claude Account"></a>Claude Account</h2><p><img src="/images/claude/general/setup/code/code03.webp" alt="code03"></p><ul><li>選擇 <code>Claude account with subscription</code></li></ul><p><img src="/images/claude/general/setup/code/code04.webp" alt="code04"></p><ul><li><code>Continue with Google</code>：以 Google ID 登入</li></ul><p><img src="/images/claude/general/setup/code/code05.webp" alt="code05"></p><ul><li>登入 Claude 帳號成功</li></ul><h2 id="Trust-Folder"><a href="#Trust-Folder" class="headerlink" title="Trust Folder"></a>Trust Folder</h2><p><img src="/images/claude/general/setup/code/code06.webp" alt="code06"></p><ul><li><code>Yes, I trust this folder</code>：讓 Claude Code 管理此專案目錄</li></ul><h2 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h2><p><img src="/images/claude/general/setup/code/code07.webp" alt="code07"></p><ul><li>Claude Code 設定成功</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>CLI 為 Claude Code 的基礎，可在此學到 Claude Code 核心技術</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://code.claude.com/docs/zh-TW" target="_blank" rel="noopener">Claude Code Docs</a>, <a href="https://code.claude.com/docs/zh-TW/overview#homebrew" target="_blank" rel="noopener">Claude Code 概述</a></p>]]></content>
     
