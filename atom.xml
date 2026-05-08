@@ -6,7 +6,7 @@
   <link href="https://negohugo.com/atom.xml" rel="self"/>
   
   <link href="https://negohugo.com/"/>
-  <updated>2026-05-03T08:25:57.206Z</updated>
+  <updated>2026-05-08T15:48:27.178Z</updated>
   <id>https://negohugo.com/</id>
   
   <author>
@@ -17,13 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Claude Code 初體驗</title>
-    <link href="https://negohugo.com/claude/general/setup/code/"/>
-    <id>https://negohugo.com/claude/general/setup/code/</id>
-    <published>2026-05-03T08:05:37.000Z</published>
-    <updated>2026-05-03T08:25:57.206Z</updated>
+    <title>Claude Desktop 初體驗</title>
+    <link href="https://negohugo.com/claude/general/setup/desktop/"/>
+    <id>https://negohugo.com/claude/general/setup/desktop/</id>
+    <published>2026-05-08T15:46:36.000Z</published>
+    <updated>2026-05-08T15:48:27.178Z</updated>
     
-    <content type="html"><![CDATA[<p>以 CLI 方式使用 Claude Code。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Claude Code 2.1.118</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install --cask claude-code<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Claude Code</li></ul><h2 id="Claude-Code"><a href="#Claude-Code" class="headerlink" title="Claude Code"></a>Claude Code</h2><p><img src="/images/claude/general/setup/code/code01.webp" alt="code01"></p><pre class="line-numbers highlight language-shell"><code class="language-shell">$ claude<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>進入專案目錄，輸入 <code>claude</code> 執行 Claude Code</li></ul><h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p><img src="/images/claude/general/setup/code/code02.webp" alt="code02"></p><ul><li>選擇 <code>Dark mode</code></li></ul><h2 id="Claude-Account"><a href="#Claude-Account" class="headerlink" title="Claude Account"></a>Claude Account</h2><p><img src="/images/claude/general/setup/code/code03.webp" alt="code03"></p><ul><li>選擇 <code>Claude account with subscription</code></li></ul><p><img src="/images/claude/general/setup/code/code04.webp" alt="code04"></p><ul><li><code>Continue with Google</code>：以 Google ID 登入</li></ul><p><img src="/images/claude/general/setup/code/code05.webp" alt="code05"></p><ul><li>登入 Claude 帳號成功</li></ul><h2 id="Trust-Folder"><a href="#Trust-Folder" class="headerlink" title="Trust Folder"></a>Trust Folder</h2><p><img src="/images/claude/general/setup/code/code06.webp" alt="code06"></p><ul><li><code>Yes, I trust this folder</code>：讓 Claude Code 管理此專案目錄</li></ul><h2 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h2><p><img src="/images/claude/general/setup/code/code07.webp" alt="code07"></p><ul><li>Claude Code 設定成功</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>CLI 為 Claude Code 的基礎，可在此學到 Claude Code 核心技術</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://code.claude.com/docs/zh-TW" target="_blank" rel="noopener">Claude Code Docs</a>, <a href="https://code.claude.com/docs/zh-TW/overview#homebrew" target="_blank" rel="noopener">Claude Code 概述</a></p>]]></content>
+    <content type="html"><![CDATA[<p>以 Desktop 方式使用 Claude Code。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Claude Desktop 1.6</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install --cask claude<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Claude Desktop</li></ul><h2 id="Claude-Desktop"><a href="#Claude-Desktop" class="headerlink" title="Claude Desktop"></a>Claude Desktop</h2><p><img src="/images/claude/general/setup/desktop/desktop01.webp" alt="desktop01"></p><ul><li>執行 Claude Desktop</li></ul><h2 id="Sign-In"><a href="#Sign-In" class="headerlink" title="Sign In"></a>Sign In</h2><p><img src="/images/claude/general/setup/desktop/desktop02.webp" alt="desktop02"></p><ul><li>以 Google Account 登入 Claude</li></ul><h2 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h2><p><img src="/images/claude/general/setup/desktop/desktop03.webp" alt="desktop03"></p><ul><li>Claude Desktop 設定成功</li></ul><h2 id="Preference"><a href="#Preference" class="headerlink" title="Preference"></a>Preference</h2><p><img src="/images/claude/general/setup/desktop/desktop04.webp" alt="desktop04"></p><ul><li><code>Appearance</code>：<code>System</code></li><li><code>Chat font</code>：<code>System</code></li><li><code>Response completions</code>：<code>On</code></li><li><code>Code notifications</code>：<code>On</code></li><li><code>Code permission requests</code>：<code>On</code></li><li><code>Emails from Claude Code on the web</code>：<code>On</code></li><li><code>Dispatch messages</code>：<code>On</code></li></ul><h2 id="General-Desktop-Settings"><a href="#General-Desktop-Settings" class="headerlink" title="General Desktop Settings"></a>General Desktop Settings</h2><p><img src="/images/claude/general/setup/desktop/desktop05.webp" alt="desktop05"></p><ul><li><code>Run on startup</code>：<code>On</code></li><li><code>Quick access shortcut</code>：<code>No shortcut</code></li><li><code>Voice shortcut</code>：<code>No shortcut</code></li><li><code>Menu bar</code>：<code>Off</code></li><li><code>Keep computer awake</code>：<code>Off</code></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;以 Desktop 方式使用 Claude Code。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Claude" scheme="https://negohugo.com/tags/Claude/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Claude CLI 初體驗</title>
+    <link href="https://negohugo.com/claude/general/setup/cli/"/>
+    <id>https://negohugo.com/claude/general/setup/cli/</id>
+    <published>2026-05-03T08:05:37.000Z</published>
+    <updated>2026-05-08T15:27:06.349Z</updated>
+    
+    <content type="html"><![CDATA[<p>以 CLI 方式使用 Claude Code。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Claude CLI 2.1.118</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install --cask claude-code<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Claude CLI</li></ul><h2 id="Claude-CLI"><a href="#Claude-CLI" class="headerlink" title="Claude CLI"></a>Claude CLI</h2><p><img src="/images/claude/general/setup/cli/cli01.webp" alt="code01"></p><pre class="line-numbers highlight language-shell"><code class="language-shell">$ claude<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>進入專案目錄，輸入 <code>claude</code> 執行 Claude CLI</li></ul><h2 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h2><p><img src="/images/claude/general/setup/cli/cli02.webp" alt="code02"></p><ul><li>選擇 <code>Dark mode</code></li></ul><h2 id="Claude-Account"><a href="#Claude-Account" class="headerlink" title="Claude Account"></a>Claude Account</h2><p><img src="/images/claude/general/setup/cli/cli03.webp" alt="code03"></p><ul><li>選擇 <code>Claude account with subscription</code></li></ul><p><img src="/images/claude/general/setup/cli/cli04.webp" alt="code04"></p><ul><li><code>Continue with Google</code>：以 Google ID 登入</li></ul><p><img src="/images/claude/general/setup/cli/cli05.webp" alt="code05"></p><ul><li>登入 Claude 帳號成功</li></ul><h2 id="Trust-Folder"><a href="#Trust-Folder" class="headerlink" title="Trust Folder"></a>Trust Folder</h2><p><img src="/images/claude/general/setup/cli/cli06.webp" alt="code06"></p><ul><li><code>Yes, I trust this folder</code>：讓 Claude CLI 管理此專案目錄</li></ul><h2 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h2><p><img src="/images/claude/general/setup/cli/cli07.webp" alt="code07"></p><ul><li>Claude CLI 設定成功</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>CLI 為 Claude Code 的基礎，可在此學到 Claude Code 核心技術</li></ul>]]></content>
     
     
     <summary type="html">&lt;p&gt;以 CLI 方式使用 Claude Code。&lt;/p&gt;</summary>
@@ -386,29 +405,6 @@
     
     
     <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
-    
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
-    
-    <category term="BEM" scheme="https://negohugo.com/tags/BEM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>檢查 CSS 符合 BEM 命名規則</title>
-    <link href="https://negohugo.com/stylelint/css/bem/"/>
-    <id>https://negohugo.com/stylelint/css/bem/</id>
-    <published>2025-08-19T01:20:54.000Z</published>
-    <updated>2026-02-14T00:59:37.646Z</updated>
-    
-    <content type="html"><![CDATA[<p>BEM 命名規則在 CSS 開發為必備，透過 Stylelint 也可加以檢查。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Stylelint 16.23.1</p><h2 id="Stylelint"><a href="#Stylelint" class="headerlink" title="Stylelint"></a>Stylelint</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ npm install -D stylelint <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>stylelint</code>：檢查 CSS</li></ul><p><strong>.stylelintrc</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token string">"stylelint-config-standard"</span><span class="token punctuation">,</span>  <span class="token property">"rules"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"selector-class-pattern"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"^[a-z]+(?:__[a-z0-9]+)?(?:--[a-z0-9]+)?$"</span><span class="token punctuation">,</span>      <span class="token punctuation">{</span>        <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Expected class selector to follow BEM"</span>      <span class="token punctuation">}</span>    <span class="token punctuation">]</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>Stylelint 設定檔</li></ul><p><strong>Line 3</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"rules"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"selector-class-pattern"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"^[a-z]+(?:__[a-z0-9]+)?(?:--[a-z0-9]+)?$"</span><span class="token punctuation">,</span>      <span class="token punctuation">{</span>        <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Expected class selector to follow BEM"</span>      <span class="token punctuation">}</span>    <span class="token punctuation">]</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><code>rules</code>：<ul><li><code>selector-class-pattern</code>：以 regex 定義 BEM 命名規則</li></ul></li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>Stylelint 不用安裝其他 plugin，只要設定 <code>selector-class-pattern</code> 即可檢查 BEM 命名規則</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;BEM 命名規則在 CSS 開發為必備，透過 Stylelint 也可加以檢查。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="CSS" scheme="https://negohugo.com/tags/CSS/"/>
     
     <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
     
