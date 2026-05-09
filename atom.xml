@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>次世代 Hugo</title>
-  <icon>https://negohugo.com/icon.png</icon>
+  <icon>https://hugoneo.ai/icon.png</icon>
   
-  <link href="https://negohugo.com/atom.xml" rel="self"/>
+  <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
-  <link href="https://negohugo.com/"/>
+  <link href="https://hugoneo.ai/"/>
   <updated>2026-05-09T06:24:32.745Z</updated>
-  <id>https://negohugo.com/</id>
+  <id>https://hugoneo.ai/</id>
   
   <author>
     <name>Sam Xiao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Claude Code for WebStorm 初體驗</title>
-    <link href="https://negohugo.com/claude/general/setup/webstorm/"/>
-    <id>https://negohugo.com/claude/general/setup/webstorm/</id>
+    <link href="https://hugoneo.ai/claude/general/setup/webstorm/"/>
+    <id>https://hugoneo.ai/claude/general/setup/webstorm/</id>
     <published>2026-05-08T23:59:13.000Z</published>
     <updated>2026-05-09T06:24:32.745Z</updated>
     
@@ -31,14 +31,14 @@
     
     
     
-    <category term="Claude" scheme="https://negohugo.com/tags/Claude/"/>
+    <category term="Claude" scheme="https://hugoneo.ai/tags/Claude/"/>
     
   </entry>
   
   <entry>
     <title>Claude Desktop 初體驗</title>
-    <link href="https://negohugo.com/claude/general/setup/desktop/"/>
-    <id>https://negohugo.com/claude/general/setup/desktop/</id>
+    <link href="https://hugoneo.ai/claude/general/setup/desktop/"/>
+    <id>https://hugoneo.ai/claude/general/setup/desktop/</id>
     <published>2026-05-08T15:46:36.000Z</published>
     <updated>2026-05-09T12:58:44.592Z</updated>
     
@@ -50,14 +50,14 @@
     
     
     
-    <category term="Claude" scheme="https://negohugo.com/tags/Claude/"/>
+    <category term="Claude" scheme="https://hugoneo.ai/tags/Claude/"/>
     
   </entry>
   
   <entry>
     <title>Claude CLI 初體驗</title>
-    <link href="https://negohugo.com/claude/general/setup/cli/"/>
-    <id>https://negohugo.com/claude/general/setup/cli/</id>
+    <link href="https://hugoneo.ai/claude/general/setup/cli/"/>
+    <id>https://hugoneo.ai/claude/general/setup/cli/</id>
     <published>2026-05-03T08:05:37.000Z</published>
     <updated>2026-05-09T06:24:32.745Z</updated>
     
@@ -69,14 +69,14 @@
     
     
     
-    <category term="Claude" scheme="https://negohugo.com/tags/Claude/"/>
+    <category term="Claude" scheme="https://hugoneo.ai/tags/Claude/"/>
     
   </entry>
   
   <entry>
     <title>支援 Pointfree 的 Function</title>
-    <link href="https://negohugo.com/hugo/general/pointfree/"/>
-    <id>https://negohugo.com/hugo/general/pointfree/</id>
+    <link href="https://hugoneo.ai/hugo/general/pointfree/"/>
+    <id>https://hugoneo.ai/hugo/general/pointfree/</id>
     <published>2026-05-01T15:51:44.000Z</published>
     <updated>2026-05-01T15:53:37.755Z</updated>
     
@@ -88,14 +88,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>Hugo 之 4 大特色</title>
-    <link href="https://negohugo.com/hugo/general/feature/"/>
-    <id>https://negohugo.com/hugo/general/feature/</id>
+    <link href="https://hugoneo.ai/hugo/general/feature/"/>
+    <id>https://hugoneo.ai/hugo/general/feature/</id>
     <published>2026-05-01T15:12:01.000Z</published>
     <updated>2026-05-01T15:18:06.187Z</updated>
     
@@ -107,14 +107,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>我的 WebStorm 基本設定</title>
-    <link href="https://negohugo.com/webstorm/general/setup/"/>
-    <id>https://negohugo.com/webstorm/general/setup/</id>
+    <link href="https://hugoneo.ai/webstorm/general/setup/"/>
+    <id>https://hugoneo.ai/webstorm/general/setup/</id>
     <published>2026-04-22T03:08:58.000Z</published>
     <updated>2026-05-09T08:02:36.733Z</updated>
     
@@ -126,14 +126,14 @@
     
     
     
-    <category term="WebStorm" scheme="https://negohugo.com/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>使用 WebStorm 開發 Hugo (Modern CSS)</title>
-    <link href="https://negohugo.com/webstorm/lib/hugo-neo/"/>
-    <id>https://negohugo.com/webstorm/lib/hugo-neo/</id>
+    <link href="https://hugoneo.ai/webstorm/lib/hugo-neo/"/>
+    <id>https://hugoneo.ai/webstorm/lib/hugo-neo/</id>
     <published>2026-04-21T23:56:13.000Z</published>
     <updated>2026-04-26T15:13:10.557Z</updated>
     
@@ -145,16 +145,16 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
-    <category term="WebStorm" scheme="https://negohugo.com/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>使用 Excluded 隱藏檔案目錄與停止索引</title>
-    <link href="https://negohugo.com/webstorm/project/exclude/"/>
-    <id>https://negohugo.com/webstorm/project/exclude/</id>
+    <link href="https://hugoneo.ai/webstorm/project/exclude/"/>
+    <id>https://hugoneo.ai/webstorm/project/exclude/</id>
     <published>2026-04-17T16:13:27.000Z</published>
     <updated>2026-04-26T15:13:10.558Z</updated>
     
@@ -166,14 +166,14 @@
     
     
     
-    <category term="WebStorm" scheme="https://negohugo.com/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>將 Theme 架構轉移成 Themeless 架構</title>
-    <link href="https://negohugo.com/hugo/themeless/transfer/"/>
-    <id>https://negohugo.com/hugo/themeless/transfer/</id>
+    <link href="https://hugoneo.ai/hugo/themeless/transfer/"/>
+    <id>https://hugoneo.ai/hugo/themeless/transfer/</id>
     <published>2025-12-13T02:54:24.000Z</published>
     <updated>2026-02-08T08:26:49.569Z</updated>
     
@@ -185,14 +185,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>使用 IdeaVim 支援 Vim 模式</title>
-    <link href="https://negohugo.com/webstorm/plugin/ideavim/"/>
-    <id>https://negohugo.com/webstorm/plugin/ideavim/</id>
+    <link href="https://hugoneo.ai/webstorm/plugin/ideavim/"/>
+    <id>https://hugoneo.ai/webstorm/plugin/ideavim/</id>
     <published>2025-08-24T09:49:41.000Z</published>
     <updated>2025-08-24T09:52:39.535Z</updated>
     
@@ -204,14 +204,14 @@
     
     
     
-    <category term="WebStorm" scheme="https://negohugo.com/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>使用 WebStorm 開發 Hugo</title>
-    <link href="https://negohugo.com/webstorm/lib/hugo/"/>
-    <id>https://negohugo.com/webstorm/lib/hugo/</id>
+    <link href="https://hugoneo.ai/webstorm/lib/hugo/"/>
+    <id>https://hugoneo.ai/webstorm/lib/hugo/</id>
     <published>2025-08-19T15:57:28.000Z</published>
     <updated>2025-08-19T16:00:42.941Z</updated>
     
@@ -223,16 +223,16 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
-    <category term="WebStorm" scheme="https://negohugo.com/tags/WebStorm/"/>
+    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
     
   </entry>
   
   <entry>
     <title>顯示 Hugo 編譯過的網站</title>
-    <link href="https://negohugo.com/hugo/cli/serve/"/>
-    <id>https://negohugo.com/hugo/cli/serve/</id>
+    <link href="https://hugoneo.ai/hugo/cli/serve/"/>
+    <id>https://hugoneo.ai/hugo/cli/serve/</id>
     <published>2025-08-19T11:19:31.000Z</published>
     <updated>2025-08-19T11:19:54.368Z</updated>
     
@@ -244,14 +244,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>disableFastRender 全站渲染</title>
-    <link href="https://negohugo.com/hugo/cli/disablefastrender/"/>
-    <id>https://negohugo.com/hugo/cli/disablefastrender/</id>
+    <link href="https://hugoneo.ai/hugo/cli/disablefastrender/"/>
+    <id>https://hugoneo.ai/hugo/cli/disablefastrender/</id>
     <published>2025-08-19T11:16:26.000Z</published>
     <updated>2025-08-19T11:17:13.843Z</updated>
     
@@ -263,14 +263,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>cleanDestinationDir 編譯前先刪除 public 目錄</title>
-    <link href="https://negohugo.com/hugo/cli/cleandestinationdir/"/>
-    <id>https://negohugo.com/hugo/cli/cleandestinationdir/</id>
+    <link href="https://hugoneo.ai/hugo/cli/cleandestinationdir/"/>
+    <id>https://hugoneo.ai/hugo/cli/cleandestinationdir/</id>
     <published>2025-08-19T10:58:07.000Z</published>
     <updated>2025-08-19T11:07:49.177Z</updated>
     
@@ -282,14 +282,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>renderToMemory 渲染到記憶體</title>
-    <link href="https://negohugo.com/hugo/cli/rendertomemory/"/>
-    <id>https://negohugo.com/hugo/cli/rendertomemory/</id>
+    <link href="https://hugoneo.ai/hugo/cli/rendertomemory/"/>
+    <id>https://hugoneo.ai/hugo/cli/rendertomemory/</id>
     <published>2025-08-19T02:36:00.000Z</published>
     <updated>2025-08-19T11:03:50.488Z</updated>
     
@@ -301,14 +301,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>Hugo 常用的 NPM Script</title>
-    <link href="https://negohugo.com/hugo/cli/npm/"/>
-    <id>https://negohugo.com/hugo/cli/npm/</id>
+    <link href="https://hugoneo.ai/hugo/cli/npm/"/>
+    <id>https://hugoneo.ai/hugo/cli/npm/</id>
     <published>2025-08-19T02:17:02.000Z</published>
     <updated>2025-08-19T02:17:59.002Z</updated>
     
@@ -320,14 +320,14 @@
     
     
     
-    <category term="Hugo" scheme="https://negohugo.com/tags/Hugo/"/>
+    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
   <entry>
     <title>限制 SCSS 巢狀結構只能一層</title>
-    <link href="https://negohugo.com/stylelint/sass/nesting-depth/"/>
-    <id>https://negohugo.com/stylelint/sass/nesting-depth/</id>
+    <link href="https://hugoneo.ai/stylelint/sass/nesting-depth/"/>
+    <id>https://hugoneo.ai/stylelint/sass/nesting-depth/</id>
     <published>2025-08-19T01:59:12.000Z</published>
     <updated>2025-08-19T01:59:53.011Z</updated>
     
@@ -339,16 +339,16 @@
     
     
     
-    <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
+    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
     
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
+    <category term="Sass" scheme="https://hugoneo.ai/tags/Sass/"/>
     
   </entry>
   
   <entry>
     <title>限制 CSS 巢狀結構只能一層</title>
-    <link href="https://negohugo.com/stylelint/css/nesting-depth/"/>
-    <id>https://negohugo.com/stylelint/css/nesting-depth/</id>
+    <link href="https://hugoneo.ai/stylelint/css/nesting-depth/"/>
+    <id>https://hugoneo.ai/stylelint/css/nesting-depth/</id>
     <published>2025-08-19T01:57:11.000Z</published>
     <updated>2025-08-19T01:57:51.371Z</updated>
     
@@ -360,16 +360,16 @@
     
     
     
-    <category term="CSS" scheme="https://negohugo.com/tags/CSS/"/>
+    <category term="CSS" scheme="https://hugoneo.ai/tags/CSS/"/>
     
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
     
   </entry>
   
   <entry>
     <title>統一 SCSS 樣式排序</title>
-    <link href="https://negohugo.com/stylelint/sass/clean-order/"/>
-    <id>https://negohugo.com/stylelint/sass/clean-order/</id>
+    <link href="https://hugoneo.ai/stylelint/sass/clean-order/"/>
+    <id>https://hugoneo.ai/stylelint/sass/clean-order/</id>
     <published>2025-08-19T01:54:39.000Z</published>
     <updated>2026-02-08T08:26:49.569Z</updated>
     
@@ -381,16 +381,16 @@
     
     
     
-    <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
+    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
     
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
+    <category term="Sass" scheme="https://hugoneo.ai/tags/Sass/"/>
     
   </entry>
   
   <entry>
     <title>統一 CSS 樣式排序</title>
-    <link href="https://negohugo.com/stylelint/css/clean-order/"/>
-    <id>https://negohugo.com/stylelint/css/clean-order/</id>
+    <link href="https://hugoneo.ai/stylelint/css/clean-order/"/>
+    <id>https://hugoneo.ai/stylelint/css/clean-order/</id>
     <published>2025-08-19T01:51:31.000Z</published>
     <updated>2025-08-19T01:52:25.704Z</updated>
     
@@ -402,9 +402,9 @@
     
     
     
-    <category term="CSS" scheme="https://negohugo.com/tags/CSS/"/>
+    <category term="CSS" scheme="https://hugoneo.ai/tags/CSS/"/>
     
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
+    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
     
   </entry>
   
