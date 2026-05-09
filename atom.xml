@@ -6,7 +6,7 @@
   <link href="https://negohugo.com/atom.xml" rel="self"/>
   
   <link href="https://negohugo.com/"/>
-  <updated>2026-05-08T15:48:27.178Z</updated>
+  <updated>2026-05-09T00:01:18.131Z</updated>
   <id>https://negohugo.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Claude Code for WebStorm 初體驗</title>
+    <link href="https://negohugo.com/claude/general/setup/webstorm/"/>
+    <id>https://negohugo.com/claude/general/setup/webstorm/</id>
+    <published>2026-05-08T23:59:13.000Z</published>
+    <updated>2026-05-09T00:01:18.131Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 WebStorm 內使用 Claude Code。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2026.1.1<br>Claude Code [Bete]</p><h2 id="Claude-Code-Plugin"><a href="#Claude-Code-Plugin" class="headerlink" title="Claude Code Plugin"></a>Claude Code Plugin</h2><p><img src="/images/claude/general/setup/webstorm/ws01.webp" alt="ws01"></p><ul><li>安裝 Anthropic 官方的 plugin</li></ul><p><img src="/images/claude/general/setup/webstorm/ws02.webp" alt="ws02"></p><ul><li>開啟 terminal，輸入 <code>claude</code></li><li>Claude Code 順利與 WebStorm 接上</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>安裝 Plugin 之前必須先安裝 Claude CLI</li><li>Claude Code 尚未以 GUI 支援 WebStorm，目前僅提供 WebStorm 與 Cluade CLI 整合</li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://moksaweb.com/" target="_blank" rel="noopener">Moska</a>, <a href="https://moksaweb.com/claude-code-jetbrains-integration/" target="_blank" rel="noopener">Claude Code JetBrains Integration</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在 WebStorm 內使用 Claude Code。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Claude" scheme="https://negohugo.com/tags/Claude/"/>
+    
+  </entry>
   
   <entry>
     <title>Claude Desktop 初體驗</title>
@@ -386,29 +405,6 @@
     <category term="CSS" scheme="https://negohugo.com/tags/CSS/"/>
     
     <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>檢查 SCSS 符合 BEM 命名規則</title>
-    <link href="https://negohugo.com/stylelint/sass/bem/"/>
-    <id>https://negohugo.com/stylelint/sass/bem/</id>
-    <published>2025-08-19T01:48:10.000Z</published>
-    <updated>2026-02-14T00:59:37.646Z</updated>
-    
-    <content type="html"><![CDATA[<p>BEM 命名規則在 SCSS 開發為必備，透過 Stylelint 也可加以檢查，且支援 SCSS 的 <code>&amp;</code>。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Stylelint 16.23.1</p><h2 id="Stylelint"><a href="#Stylelint" class="headerlink" title="Stylelint"></a>Stylelint</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ npm install -D stylelint <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>stylelint</code>：檢查 SCSS</li></ul><p><strong>.stylelintrc</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token string">"stylelint-config-standard-scss"</span><span class="token punctuation">,</span>  <span class="token property">"rules"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"selector-class-pattern"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"^[a-z]+(?:__[a-z0-9]+)?(?:--[a-z0-9]+)?$"</span><span class="token punctuation">,</span>      <span class="token punctuation">{</span>        <span class="token property">"resolveNestedSelectors"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>        <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Expected class selector to follow BEM"</span>      <span class="token punctuation">}</span>    <span class="token punctuation">]</span><span class="token punctuation">,</span>       <span class="token punctuation">]</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>Stylelint 設定檔</li></ul><p><strong>Line 3</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"rules"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"selector-class-pattern"</span><span class="token operator">:</span> <span class="token punctuation">[</span>      <span class="token string">"^[a-z]+(?:__[a-z0-9]+)?(?:--[a-z0-9]+)?$"</span><span class="token punctuation">,</span>      <span class="token punctuation">{</span>        <span class="token property">"resolveNestedSelectors"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>        <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"Expected class selector to follow BEM"</span>      <span class="token punctuation">}</span>    <span class="token punctuation">]</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><code>rules</code>：<ul><li><code>selector-class-pattern</code>：以 regex 定義 BEM 命名規則</li><li><code>resolveNestedSelectors</code>：SCSS 必須加這行才能看懂 <code>&amp;</code></li></ul></li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>Stylelint 不用安裝其他 plugin，只要設定 <code>selector-class-pattern</code> 即可檢查 BEM 命名規則</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;BEM 命名規則在 SCSS 開發為必備，透過 Stylelint 也可加以檢查，且支援 SCSS 的 &lt;code&gt;&amp;amp;&lt;/code&gt;。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Sass" scheme="https://negohugo.com/tags/Sass/"/>
-    
-    <category term="Stylelint" scheme="https://negohugo.com/tags/Stylelint/"/>
-    
-    <category term="BEM" scheme="https://negohugo.com/tags/BEM/"/>
     
   </entry>
   
