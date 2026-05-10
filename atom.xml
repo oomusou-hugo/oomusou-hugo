@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-05-10T02:48:08.131Z</updated>
+  <updated>2026-05-10T15:43:51.825Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cmux 執行 Claude Code 錯誤</title>
+    <link href="https://hugoneo.ai/claude/issues/cmux/native/"/>
+    <id>https://hugoneo.ai/claude/issues/cmux/native/</id>
+    <published>2026-05-10T15:39:38.000Z</published>
+    <updated>2026-05-10T15:43:51.825Z</updated>
+    
+    <content type="html"><![CDATA[<p>iTerm2 直下 <code>claude</code> 沒有錯誤，但在 cmux 執行卻有錯誤。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>cmux 0.64.3</p><h2 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h2><p><img src="/images/claude/issues/cmux/native/native01.webp" alt="native01"></p><ul><li>執行 <code>claude</code> 抱怨 <code>installMethod</code> 是 <code>native</code>，但在 <code>~/.local/bin</code> 卻找不到 <code>claude</code></li></ul><p><img src="/images/claude/issues/cmux/native/native02.webp" alt="native02"></p><ul><li>Claude Code 建議你將 <code>~/.local/bin</code> 加入 PATH，但這卻是錯誤的建議，且加了也沒用，因為 <code>~./.local/bin</code> 下根本沒有 <code>cluade</code>，Homebrew 並不是將 <code>claude</code> 安裝在此目錄下</li></ul><p><em><strong>~&#x2F;.claude.json</strong></em></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"numStartups"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>  <span class="token property">"installMethod"</span><span class="token operator">:</span> <span class="token string">"homebrew"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ul><li>將 <code>installMethod</code> 從 <code>native</code> 改成 <code>homebrew</code>，如此 Claude Code 就不會去 <code>~/.local/bin</code> 找 <code>claude</code></li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>正常使用 cmux 與 Cluade Code 不會出現這個問題，至少我其他兩台 MacBook 都沒問題，推測是安裝了 ACP Adapter 後，對根目錄的 <code>.claude.json</code> 加了 <code>&quot;installMethod&quot;: &quot;native&quot;</code> 後，導致 Claude Code 會因為是 <code>native</code> 而去檢查 <code>.local/bin</code>，進而導致建議你將此目錄加入 <code>path</code>，但事實上這也是錯誤的建議</li><li>將 <code>installMethod</code> 改成 <code>homebrew</code> 後，經實測 WebStorm + ACP 使用 Claude Code 並不會受影響</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;iTerm2 直下 &lt;code&gt;claude&lt;/code&gt; 沒有錯誤，但在 cmux 執行卻有錯誤。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Claude" scheme="https://hugoneo.ai/tags/Claude/"/>
+    
+    <category term="cmux" scheme="https://hugoneo.ai/tags/cmux/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub Pages 使用 Cloudflare Domain</title>
@@ -364,9 +385,9 @@
     
     
     
-    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
-    
     <category term="Sass" scheme="https://hugoneo.ai/tags/Sass/"/>
+    
+    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
     
   </entry>
   
@@ -388,27 +409,6 @@
     <category term="CSS" scheme="https://hugoneo.ai/tags/CSS/"/>
     
     <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>統一 SCSS 樣式排序</title>
-    <link href="https://hugoneo.ai/stylelint/sass/clean-order/"/>
-    <id>https://hugoneo.ai/stylelint/sass/clean-order/</id>
-    <published>2025-08-19T01:54:39.000Z</published>
-    <updated>2026-02-08T08:26:49.569Z</updated>
-    
-    <content type="html"><![CDATA[<p>若由多人共同開發 SCSS，不同的樣式排序將造成困擾，可透過 Stylelint 將樣式統一排序。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Stylelint 16.23.1<br>Stylelint-config-clean-order 7.0.0</p><h2 id="Stylelint"><a href="#Stylelint" class="headerlink" title="Stylelint"></a>Stylelint</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ npm install -D stylelint $ npm install -D stylelint-config-clean-order<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li><code>stylelint</code>：檢查 SCSS</li><li><code>stylelint-config-clean-order</code>：Stylelint plugin：SCSS 樣式排序規則</li></ul><p><strong>.stylelintrc</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"stylelint-config-standard-scss"</span><span class="token punctuation">,</span>    <span class="token string">"stylelint-config-clean-order"</span>  <span class="token punctuation">]</span><span class="token punctuation">,</span>  <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"stylelint-scss"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>Stylelint 設定檔</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li><code>stylelint-config-clean-order</code> 已經幫我們設定好排序的規則，因此不用再設定任何 rule</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;若由多人共同開發 SCSS，不同的樣式排序將造成困擾，可透過 Stylelint 將樣式統一排序。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
-    
-    <category term="Sass" scheme="https://hugoneo.ai/tags/Sass/"/>
     
   </entry>
   
