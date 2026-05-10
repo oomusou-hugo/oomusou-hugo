@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-05-09T06:24:32.745Z</updated>
+  <updated>2026-05-10T02:48:08.131Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub Pages 使用 Cloudflare Domain</title>
+    <link href="https://hugoneo.ai/cloudflare/github-pages/"/>
+    <id>https://hugoneo.ai/cloudflare/github-pages/</id>
+    <published>2026-05-10T02:19:41.000Z</published>
+    <updated>2026-05-10T02:48:08.131Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hexo 同時使用 GitHub Pages 與 Claudflare Domain。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Hugo 0.154</p><h2 id="Cloudflare-DNS"><a href="#Cloudflare-DNS" class="headerlink" title="Cloudflare DNS"></a>Cloudflare DNS</h2><p><img src="/images/cloudflare/github-pages/github01.webp" alt="cloudflare01"></p><p>首先，你需要告訴 Cloudflare 將網域指向 GitHub 的伺服器。</p><ul><li>登入 Cloudflare，選擇你的網域</li><li>點擊左側選單的 <em><strong>DNS -&gt; Records</strong></em></li><li>新增 A 紀錄 (Apex Domain)：如果你想直接用 <code>example.com</code>（不含 www），請新增 4 筆 A 紀錄，名稱填寫 <code>@</code>，內容分別填入 GitHub 的官方 IP：<ul><li><code>185.199.108.153</code></li><li><code>185.199.109.153</code></li><li><code>185.199.110.153</code></li><li><code>185.199.111.153</code></li></ul></li><li>新增 CNAME 紀錄 (www)：如果你想用 <code>www.example.com</code>，新增一筆 CNAME，名稱填 <code>www</code>，內容填入你的 GitHub 使用者網址 (例如 <code>oomusou-hugo.github.io</code>)</li><li><code>Proxy Status</code>：<code>DNS only</code></li></ul><blockquote><p>GitHub Pages <code>不能</code> 選擇 <code>橘色的 Proxied</code></p></blockquote><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p><img src="/images/cloudflare/github-pages/github03.webp" alt="cloudflare03"></p><p>由於 Hexo 每次 <code>hexo d</code> 都會覆蓋掉 GitHub 上的檔案，如果你只在 GitHub 網頁版設定 Custom Domain，下次部署時就會消失。</p><ul><li>建立 CNAME 檔案<ul><li>在你的本地 Hexo 資料夾中，進入 <code>source</code> 目錄，新增一個檔名為 <code>CNAME</code> 的檔案 (無副檔名)</li><li>寫入網域</li><li>檔案內容只需要寫入你的網域，例如：<code>hugoneo.ai</code></li></ul></li></ul><p><img src="/images/cloudflare/github-pages/github04.webp" alt="cloudflare04"></p><ul><li>修改 <code>_config.yml</code><ul><li>打開 Hexo 根目錄的 <code>_config.yml</code>，修改 url 欄位 <code>url: https://hugoneo.ai</code></li></ul></li><li>部署<ul><li>執行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li></ul></li></ul><h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><p><img src="/images/cloudflare/github-pages/github02.webp" alt="cloudflare02"></p><p>最後，去 GitHub 確認設定是否生效。</p><ul><li>進入該專案的 <em><strong>Settings -&gt; Pages</strong></em></li><li>檢查 <code>Custom domain</code> 是否正確顯示你的網域</li><li><code>Enforce HTTPS</code>：稍等一下就可打勾</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Hexo 同時使用 GitHub Pages 與 Claudflare Domain。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="GitHub Pages" scheme="https://hugoneo.ai/tags/GitHub-Pages/"/>
+    
+    <category term="Cloudflare" scheme="https://hugoneo.ai/tags/Cloudflare/"/>
+    
+    <category term="Hexo" scheme="https://hugoneo.ai/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Claude Code for WebStorm 初體驗</title>
@@ -339,9 +362,9 @@
     
     
     
-    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
-    
     <category term="Sass" scheme="https://hugoneo.ai/tags/Sass/"/>
+    
+    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
     
   </entry>
   
@@ -381,28 +404,7 @@
     
     
     
-    <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
-    
     <category term="Sass" scheme="https://hugoneo.ai/tags/Sass/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>統一 CSS 樣式排序</title>
-    <link href="https://hugoneo.ai/stylelint/css/clean-order/"/>
-    <id>https://hugoneo.ai/stylelint/css/clean-order/</id>
-    <published>2025-08-19T01:51:31.000Z</published>
-    <updated>2025-08-19T01:52:25.704Z</updated>
-    
-    <content type="html"><![CDATA[<p>若由多人共同開發 CSS，不同的樣式排序將造成困擾，可透過 Stylelint 將樣式統一排序。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Stylelint 16.23.1<br>Stylelint-config-clean-order 7.0.0</p><h2 id="Stylelint"><a href="#Stylelint" class="headerlink" title="Stylelint"></a>Stylelint</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ npm install -D stylelint $ npm install -D stylelint-config-clean-order<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li><code>stylelint</code>：檢查 CSS</li><li><code>stylelint-config-clean-order</code>：Stylelint plugin：CSS 樣式排序規則</li></ul><p><strong>.stylelintrc</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"stylelint-config-standard"</span><span class="token punctuation">,</span>    <span class="token string">"stylelint-config-clean-order"</span>  <span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>Stylelint 設定檔</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li><code>stylelint-config-clean-order</code> 已經幫我們設定好排序的規則，因此不用再設定任何 rule</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;若由多人共同開發 CSS，不同的樣式排序將造成困擾，可透過 Stylelint 將樣式統一排序。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="CSS" scheme="https://hugoneo.ai/tags/CSS/"/>
     
     <category term="Stylelint" scheme="https://hugoneo.ai/tags/Stylelint/"/>
     
