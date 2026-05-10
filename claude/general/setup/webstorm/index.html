@@ -51,9 +51,9 @@
 
 <meta name="format-detection" content="telephone=no">
 <!-- Description -->
-<meta name="description" content="在 WebStorm 內使用 Claude Code。">
+<meta name="description" content="在 WebStorm 內使用 Claude Code 共有 4 種方式，各有各的優缺點，可自行選擇適合的方式。">
 <!-- Keywords -->
-<meta name="keywords" content=", Claude">
+<meta name="keywords" content=", WebStorm, Claude">
 <!-- Disable Fucking Bloody Baidu Tranformation -->
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -171,14 +171,14 @@ a:hover {
 <meta property="og:url" content="https://hugoneo.ai/claude/general/setup/webstorm/">
 <meta property="og:image"
 	content="https://hugoneo.ai/apple-touch-icon.png">
-<meta property="og:description" content="在 WebStorm 內使用 Claude Code。">
+<meta property="og:description" content="在 WebStorm 內使用 Claude Code 共有 4 種方式，各有各的優缺點，可自行選擇適合的方式。">
 <meta name="twitter:card" content="summary">
 
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2026-05-08T23:59:13.000Z">
 <meta property="article:modified_time" content="2026-05-08T23:59:13.000Z">
 <meta property="article:author" content="Sam Xiao">
-<meta property="og:article:tag" content=", Claude">
+<meta property="og:article:tag" content=", WebStorm, Claude">
 
 
   <!-- ### Analytics ### -->
@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-08T23:59:13.000Z",
-    "dateModified": "2026-05-09T06:24:32.745Z",
+    "dateModified": "2026-05-10T06:57:09.350Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -236,8 +236,8 @@ a:hover {
         "query-input": "required name=search_term_string"
     },
     
-    "keywords": ", Claude",
-    "description": "在 WebStorm 內使用 Claude Code。"
+    "keywords": ", WebStorm, Claude",
+    "description": "在 WebStorm 內使用 Claude Code 共有 4 種方式，各有各的優缺點，可自行選擇適合的方式。"
 }
 </script>
 
@@ -286,11 +286,30 @@ a:hover {
         </div>
         <div class="card-body">
           <article id="post-content">
-            <p>在 WebStorm 內使用 Claude Code。</p>
+            <p>在 WebStorm 內使用 Claude Code 共有 4 種方式，各有各的優缺點，可自行選擇適合的方式。</p>
 <a id="more"></a>
 
-<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2026.1.1<br>Claude Code [Bete]</p>
-<h2 id="Claude-Code-Plugin"><a href="#Claude-Code-Plugin" class="headerlink" title="Claude Code Plugin"></a>Claude Code Plugin</h2><p><img src="/images/claude/general/setup/webstorm/ws01.webp" alt="ws01"></p>
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2026.1.1<br>Claude Code [Beta]<br>Claude Agent ACP 0.33.1</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>在 WebStorm 內使用 Claude Code 有 4 種方式：</p>
+<ul>
+<li>Claude Code Plugin</li>
+<li>AI Assistant + Claude Agent</li>
+<li>AI Assistant + API Key</li>
+<li>AI Assistant + ACP</li>
+</ul>
+<p>無論使用哪種方法，都是以 Agent 方式，而不是單純 Chat 而已。</p>
+<h2 id="Claude-Code-Plugin"><a href="#Claude-Code-Plugin" class="headerlink" title="Claude Code Plugin"></a>Claude Code Plugin</h2><ul>
+<li>Claude Code Plugin 為 Anthropic 官方所出</li>
+<li>優點：<ul>
+<li>直接整合 Claude Pro 帳號</li>
+</ul>
+</li>
+<li>缺點：<ul>
+<li>以 CLI 使用 Claude Code</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws01.webp" alt="ws01"></p>
 <ul>
 <li>安裝 Anthropic 官方的 plugin</li>
 </ul>
@@ -299,9 +318,104 @@ a:hover {
 <li>開啟 terminal，輸入 <code>claude</code></li>
 <li>Claude Code 順利與 WebStorm 接上</li>
 </ul>
+<h2 id="AI-Assistant-Claude-Agent"><a href="#AI-Assistant-Claude-Agent" class="headerlink" title="AI Assistant + Claude Agent"></a>AI Assistant + Claude Agent</h2><ul>
+<li>在 WebStorm 內建的 AI Assistant 去使用 Claude Code</li>
+<li>優點：</li>
+<li>以 GUI 方式</li>
+<li>缺點：<ul>
+<li>需對 AI Assistant 付費使用 Claude Code，無法使用 Claude Pro 帳號</li>
+<li>WebStorm 會使用自己的 Claude Code，與全域的 Claude Code 不同</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws03.webp" alt="ws03"></p>
+<ul>
+<li>安裝 AI Assistant Plugin，為 JetBrains 官方 Plugin</li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws04.webp" alt="ws04"></p>
+<ul>
+<li><em><strong>View -&gt; Tools -&gt; AI Assistant</strong></em> 顯示 AI Assistant</li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws05.webp" alt="ws05"></p>
+<ul>
+<li>AI Assistant 內建已經整合 3 個 Agent：<ul>
+<li>Claude Agent：Antrophic 的 Code Code</li>
+<li>Codex：OpenAI 的 Codex</li>
+<li>Junie：JetBrains 的 Junie</li>
+</ul>
+</li>
+</ul>
+<h2 id="AI-Assistant-API-Key"><a href="#AI-Assistant-API-Key" class="headerlink" title="AI Assistant + API Key"></a>AI Assistant + API Key</h2><p>若你不想被 AI Assistant 扒一層皮，可直接使用 Claude Code 的 API Key。</p>
+<ul>
+<li>優點：<ul>
+<li>以 GUI 方式</li>
+<li>不必付錢給 JetBrains，只需付錢給 Anthropic 即可</li>
+</ul>
+</li>
+<li>缺點：<ul>
+<li>Claude API Key 付費方式不同，與 Claude Pro 帳號分開計</li>
+<li>WebStorm 會使用自己的 Claude Code，與全域的 Claude Code 不同</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws06.webp" alt="ws06"></p>
+<ul>
+<li>以 API Key 使用 Claude Code</li>
+</ul>
+<h2 id="AI-Assistant-ACP"><a href="#AI-Assistant-ACP" class="headerlink" title="AI Assistant + ACP"></a>AI Assistant + ACP</h2><p>ACP 全名為 Agent Client Protocol，為 JetBrains、Zed、Anthropic 所制定，主要用於 JetBrains IDE 與 Zed，讓 AI Agent 可以控制 IDE。</p>
+<ul>
+<li>優點：<ul>
+<li>以 GUI 方式</li>
+<li>不必付錢給 JetBrains</li>
+<li>直接整合 Claude Pro 帳號</li>
+<li>直接使用全域的 Claude Code</li>
+</ul>
+</li>
+<li>缺點：<ul>
+<li>安裝較複雜，需另外安裝 ACP Adapter 與手動修改設定檔</li>
+</ul>
+</li>
+</ul>
+<pre class="line-numbers highlight language-shell"><code class="language-shell">$ npm i -g @agentclientprotocol/claude-agent-acp
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>安裝 ACP Adapter，無法使用 Homebrew 安裝，目前只能用 NPM 安裝</li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws07.webp" alt="ws07"></p>
+<ul>
+<li>以 <code>Add Custom Agent</code> 新增自訂 Agent</li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws08.webp" alt="ws08"></p>
+<ul>
+<li>手動加入 ACP Agent</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"agent_servers"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"Claude Code"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"npx"</span><span class="token punctuation">,</span>
+      <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"@agentclientprotocol/claude-agent-acp"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"env"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"ACP_PERMISSION_MODE"</span><span class="token operator">:</span> <span class="token string">"bypassPermissions"</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">"use_idea_mcp"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">"use_custom_mcp"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/images/claude/general/setup/webstorm/ws09.webp" alt="ws09"></p>
+<ul>
+<li><code>Chat</code> 會多了 <code>Claude Code</code> 模型可選，有別於內建的 <code>Claude Agent</code></li>
+</ul>
+<p><img src="/images/claude/general/setup/webstorm/ws10.webp" alt="ws10"></p>
+<ul>
+<li>成功以 ACP 連上 Claude Code</li>
+</ul>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
-<li>安裝 Plugin 之前必須先安裝 Claude CLI</li>
-<li>Claude Code 尚未以 GUI 支援 WebStorm，目前僅提供 WebStorm 與 Cluade CLI 整合</li>
+<li>因為 AI Agent 很新，所以才會有這麼多方法使用 Claude Code</li>
+<li>安裝 Claude Code Plugin 之前必須先安裝 Claude Code</li>
+<li>Claude Code Plugin 尚未以 GUI 支援 WebStorm，目前僅提供 WebStorm 與 Cluade CLI 整合</li>
+<li>若以 DX 而論，AI Assistant + ACP 算最接近 Claude Code for VS Code 的使用方式</li>
 </ul>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://moksaweb.com/" target="_blank" rel="noopener">Moska</a>, <a href="https://moksaweb.com/claude-code-jetbrains-integration/" target="_blank" rel="noopener">Claude Code JetBrains Integration</a></p>
 
@@ -311,6 +425,8 @@ a:hover {
   
   <span class="post-tags-list mt-2">
     
+    
+    <a class="post-tags-list-item" href='/tags/WebStorm/'>#&nbsp;WebStorm</a>
     
     <a class="post-tags-list-item" href='/tags/Claude/'>#&nbsp;Claude</a>
     
