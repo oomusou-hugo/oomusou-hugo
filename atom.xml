@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-05-13T10:22:12.201Z</updated>
+  <updated>2026-05-13T22:49:56.783Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -17,13 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>VS Code 之 Workspace Setting</title>
+    <link href="https://hugoneo.ai/vscode/general/settings/workspace/"/>
+    <id>https://hugoneo.ai/vscode/general/settings/workspace/</id>
+    <published>2026-05-13T22:48:26.000Z</published>
+    <updated>2026-05-13T22:49:56.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>VS Code 的專案設定都存 <code>setting.json</code> 中，可直接修改，不必透過 GUI。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p><h2 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h2><p><img src="/images/vscode/general/settings/workspace/workspace01.webp" alt="global01"></p><ul><li>以 ⌘ ⇧ P 啟動 Command Palette </li><li>輸入 <code>open workspace settings (JSON)</code></li></ul><p><img src="/images/vscode/general/settings/workspace/workspace02.webp" alt="global02"></p><ul><li><code>settings.json</code> 位置在專案的 <code>.vscode</code> 目錄下</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;VS Code 的專案設定都存 &lt;code&gt;setting.json&lt;/code&gt; 中，可直接修改，不必透過 GUI。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
+    
+  </entry>
+  
+  <entry>
     <title>儲存專案所使用的 Extension</title>
     <link href="https://hugoneo.ai/vscode/feature/extension/recommend/"/>
     <id>https://hugoneo.ai/vscode/feature/extension/recommend/</id>
     <published>2026-05-13T10:20:30.000Z</published>
-    <updated>2026-05-13T10:22:12.201Z</updated>
+    <updated>2026-05-13T22:33:33.470Z</updated>
     
-    <content type="html"><![CDATA[<p>VS Code 可將專案所使用到的 Extension 存到 <code>.vscode</code> 目錄下的 <code>extensions.json</code> 內，讓用戶可快速得知此專案用到哪些 Extension 以便安裝。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.1</p><p><strong>.vscode&#x2F;extensions.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"recommendations"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"budparr.language-hugo-vscode"</span><span class="token punctuation">,</span>    <span class="token string">"lruihao.hugo-partials-refs"</span><span class="token punctuation">,</span>    <span class="token string">"esbenp.prettier-vscode"</span><span class="token punctuation">,</span>    <span class="token string">"tamasfe.even-better-toml"</span><span class="token punctuation">,</span>    <span class="token string">"editorconfig.editorconfig"</span>  <span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><code>extensions.json</code> 必須放在 <code>.vscode</code> 目錄下，此為 Workspace 等級設定</li></ul><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><strong>.gitignore</strong></p><pre class="line-numbers highlight language-git"><code class="language-git">.vscode/*!.vscode/settings.json!.vscode/extensions.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>排除 <code>.vscode</code> 不進 Git，但 <code>settings.json</code> 與 <code>extensions.json</code> 要進 Git</li></ul><h2 id="Recommended-Extensions"><a href="#Recommended-Extensions" class="headerlink" title="Recommended Extensions"></a>Recommended Extensions</h2><ul><li>開啟專案時，VS Code 右下角會跳出通知詢問 <code>是否安裝推薦的 Extensions</code>，點  <code>Install All</code> 即可</li></ul><h2 id="Extensions-View"><a href="#Extensions-View" class="headerlink" title="Extensions View"></a>Extensions View</h2><ul><li>開啟 Extensions View（<code>Ctrl+Shift+X</code>）</li><li>搜尋框輸入 <code>@recommended</code></li><li>會列出 <code>extensions.json</code> 內的所有推薦，逐一點 Install</li></ul><h2 id="Command-Pallete"><a href="#Command-Pallete" class="headerlink" title="Command Pallete"></a>Command Pallete</h2><ul><li>開啟 Command Palette (<code>Ctrl+Shift+P</code>)</li><li>輸入 <code>Extensions: Show Recommended Extensions</code></li><li>在 Extensions View 顯示推薦 Extension</li></ul><h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><pre class="line-numbers highlight language-bash"><code class="language-bash"><span class="token function">cat</span> .vscode/extensions.json \  <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'"'</span> \  <span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token string">'//'</span> \  <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">'s/.*"\(.*\)".*/\1/'</span> \  <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'\.'</span> \  <span class="token operator">|</span> <span class="token function">xargs</span> -I <span class="token punctuation">{</span><span class="token punctuation">}</span> code --install-extension <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>一次安裝所有 Extension</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>VS Code 是萬用程式碼編輯器，依賴不同的 Extension 就可處理不同類型專案，因此建議將所有用到的 Extension 都記錄在 <code>.vscode/extensions.json</code>，並存入 Git，這樣接手的人就可馬上設定好開發環境</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>VS Code 可將專案所使用到的 Extension 存到 <code>.vscode</code> 目錄下的 <code>extensions.json</code> 內，讓用戶可快速得知此專案用到哪些 Extension 以便安裝。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.1</p><p><strong>.vscode&#x2F;extensions.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"recommendations"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"budparr.language-hugo-vscode"</span><span class="token punctuation">,</span>    <span class="token string">"lruihao.hugo-partials-refs"</span><span class="token punctuation">,</span>    <span class="token string">"esbenp.prettier-vscode"</span><span class="token punctuation">,</span>    <span class="token string">"tamasfe.even-better-toml"</span><span class="token punctuation">,</span>    <span class="token string">"editorconfig.editorconfig"</span>  <span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><code>extensions.json</code> 必須放在 <code>.vscode</code> 目錄下，此為 Workspace 等級設定</li></ul><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><strong>.gitignore</strong></p><pre class="line-numbers highlight language-git"><code class="language-git">.vscode/*!.vscode/settings.json!.vscode/extensions.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>排除 <code>.vscode</code> 不進 Git，但 <code>settings.json</code> 與 <code>extensions.json</code> 要進 Git</li></ul><h2 id="Recommended-Extensions"><a href="#Recommended-Extensions" class="headerlink" title="Recommended Extensions"></a>Recommended Extensions</h2><ul><li>開啟專案時，VS Code 右下角會跳出通知詢問 <code>是否安裝推薦的 Extensions</code>，點  <code>Install All</code> 即可安裝 Extension</li></ul><h2 id="Extensions-View"><a href="#Extensions-View" class="headerlink" title="Extensions View"></a>Extensions View</h2><ul><li>開啟 Extensions View（⌘⇧X）</li><li>搜尋框輸入 <code>@recommended</code></li><li>會列出 <code>extensions.json</code> 內的所有推薦的 Extension，逐一點 Install 安裝</li></ul><h2 id="Command-Pallete"><a href="#Command-Pallete" class="headerlink" title="Command Pallete"></a>Command Pallete</h2><ul><li>開啟 Command Palette (⌘⇧P)</li><li>輸入 <code>Extensions: Show Recommended Extensions</code></li><li>在 Extensions View 顯示推薦 Extension</li></ul><h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><pre class="line-numbers highlight language-bash"><code class="language-bash"><span class="token function">cat</span> .vscode/extensions.json \  <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'"'</span> \  <span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token string">'//'</span> \  <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">'s/.*"\(.*\)".*/\1/'</span> \  <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'\.'</span> \  <span class="token operator">|</span> <span class="token function">xargs</span> -I <span class="token punctuation">{</span><span class="token punctuation">}</span> code --install-extension <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>一次安裝所有 Extension</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>VS Code 是萬用程式碼編輯器，依賴不同的 Extension 就可處理不同類型專案，因此建議將所有用到的 Extension 都記錄在 <code>.vscode/extensions.json</code>，並存入 Git，這樣接手的人就可馬上設定好開發環境</li></ul>]]></content>
     
     
     <summary type="html">&lt;p&gt;VS Code 可將專案所使用到的 Extension 存到 &lt;code&gt;.vscode&lt;/code&gt; 目錄下的 &lt;code&gt;extensions.json&lt;/code&gt; 內，讓用戶可快速得知此專案用到哪些 Extension 以便安裝。&lt;/p&gt;</summary>
@@ -76,13 +95,13 @@
   </entry>
   
   <entry>
-    <title>VS Code 之 Global Setting</title>
-    <link href="https://hugoneo.ai/vscode/general/settings/global/"/>
-    <id>https://hugoneo.ai/vscode/general/settings/global/</id>
+    <title>VS Code 之 User Setting</title>
+    <link href="https://hugoneo.ai/vscode/general/settings/user/"/>
+    <id>https://hugoneo.ai/vscode/general/settings/user/</id>
     <published>2026-05-12T08:42:39.000Z</published>
-    <updated>2026-05-12T08:45:19.913Z</updated>
+    <updated>2026-05-13T22:46:15.802Z</updated>
     
-    <content type="html"><![CDATA[<p>VS Code 的全域設定都存 <code>setting.json</code> 中，可直接修改，不必透過 GUI。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p><h2 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h2><p><img src="/images/vscode/general/settings/global/global01.webp" alt="global01"></p><ul><li>以 ⌘ ⇧ P 啟動 Command Palette </li><li>輸入 <code>open user settings</code></li></ul><p><img src="/images/vscode/general/settings/global/global02.webp" alt="global02"></p><ul><li><code>settings.json</code> 位置在 <code>~/Library/Application Support/Code/User</code> 目錄下</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>VS Code 的全域設定都存 <code>setting.json</code> 中，可直接修改，不必透過 GUI。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p><h2 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h2><p><img src="/images/vscode/general/settings/user/user01.webp" alt="user01"></p><ul><li>以 ⌘ ⇧ P 啟動 Command Palette </li><li>輸入 <code>open user settings (JSON)</code></li></ul><p><img src="/images/vscode/general/settings/user/user02.webp" alt="user02"></p><ul><li><code>settings.json</code> 位置在 <code>~/Library/Application Support/Code/User</code> 目錄下</li></ul>]]></content>
     
     
     <summary type="html">&lt;p&gt;VS Code 的全域設定都存 &lt;code&gt;setting.json&lt;/code&gt; 中，可直接修改，不必透過 GUI。&lt;/p&gt;</summary>
@@ -383,25 +402,6 @@
     
     
     <summary type="html">&lt;p&gt;Hugo 內建的 Web Server 只能用在 &lt;code&gt;開發階段&lt;/code&gt;，無法用在編譯後的 HTML&amp;#x2F;JavaScript&amp;#x2F;CSS，需要透過其他 Web Server。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>disableFastRender 全站渲染</title>
-    <link href="https://hugoneo.ai/hugo/cli/disablefastrender/"/>
-    <id>https://hugoneo.ai/hugo/cli/disablefastrender/</id>
-    <published>2025-08-19T11:16:26.000Z</published>
-    <updated>2025-08-19T11:17:13.843Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>hugo server</code> 預設會以 FastRender  ，只渲染 <code>有修改</code> 部分，但這只適合 Content Creator，並不適用於 Theme Creator。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Hugo 0.148.2</p><h2 id="Disable-Fast-Render"><a href="#Disable-Fast-Render" class="headerlink" title="Disable Fast Render"></a>Disable Fast Render</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ hugo server --disableFastRender<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>disableFastRender</code>：<code>hugo server</code> 將不只渲染有修改部分，任何修改都將引起全站渲染</li></ul><h2 id="Hugo-for-Development"><a href="#Hugo-for-Development" class="headerlink" title="Hugo for Development"></a>Hugo for Development</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ hugo server --disableFastRender --renderToMemory<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>開發模式建議參數：</p><ul><li><code>disableFastRender</code>：有修改將整個網站重新渲染，避免開發階段有些變更無法立即顯示</li><li><code>renderToMemory</code>：將 HTML&#x2F;CSS&#x2F;JavaScript 渲染到記憶體</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>若是使用其他人所建立的 Theme，自己只是建立 Markdown 的 Content Creator，則適合使用 Fast Render</li><li>若是自己建立 HTML&#x2F;CSS&#x2F;JavaScript 的 Theme Creator，則不適合使用 Fast Render，因為會發現有些改變並不會立即渲染</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;code&gt;hugo server&lt;/code&gt; 預設會以 FastRender  ，只渲染 &lt;code&gt;有修改&lt;/code&gt; 部分，但這只適合 Content Creator，並不適用於 Theme Creator。&lt;/p&gt;</summary>
     
     
     
