@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-05-13T22:49:56.783Z</updated>
+  <updated>2026-05-14T15:49:40.776Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>VS Code 之 Workspace Setting</title>
+    <title>將 User Setting 同步到雲端</title>
+    <link href="https://hugoneo.ai/vscode/general/settings/sync/"/>
+    <id>https://hugoneo.ai/vscode/general/settings/sync/</id>
+    <published>2026-05-14T15:45:38.000Z</published>
+    <updated>2026-05-14T15:49:40.776Z</updated>
+    
+    <content type="html"><![CDATA[<p>VS Code 不僅可將設定以 <code>settings.json</code> 保存，還可使用 Settings Sync 將設定存到雲端，讓其他電腦也使用相同的設定。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.120</p><h2 id="Sync-Configure"><a href="#Sync-Configure" class="headerlink" title="Sync Configure"></a>Sync Configure</h2><p><img src="/images/vscode/general/settings/sync/sync01.webp" alt="sync01"></p><pre class="line-numbers highlight language-shell"><code class="language-shell">Settings Sync: Configure<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>設定哪些項目要同步</li></ul><p><img src="/images/vscode/general/settings/sync/sync02.webp" alt="sync02"></p><ul><li>預設將所有項目全選同步到雲端</li></ul><p><img src="/images/vscode/general/settings/sync/sync03.webp" alt="sync03"></p><ul><li>要同步的帳戶</li></ul><h2 id="Sync-Now"><a href="#Sync-Now" class="headerlink" title="Sync Now"></a>Sync Now</h2><p><img src="/images/vscode/general/settings/sync/sync04.webp" alt="sync04"></p><pre class="line-numbers highlight language-shell"><code class="language-shell">Settings Sync: Sync Now<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>目前電腦若有任何設定修改，可使用 Sync Now 將目前設定同步到雲端</li><li>其他電腦也可使用 Sync Now 將目前雲端設定同步下載</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>這算 VS Code 劃時代的進步，尤其若你有多台 Mac，可快速在每台 Mac 設定出相同的 VS Code 開發環境</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;VS Code 不僅可將設定以 &lt;code&gt;settings.json&lt;/code&gt; 保存，還可使用 Settings Sync 將設定存到雲端，讓其他電腦也使用相同的設定。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>專案設定的 Workspace Setting</title>
     <link href="https://hugoneo.ai/vscode/general/settings/workspace/"/>
     <id>https://hugoneo.ai/vscode/general/settings/workspace/</id>
     <published>2026-05-13T22:48:26.000Z</published>
-    <updated>2026-05-13T22:49:56.783Z</updated>
+    <updated>2026-05-14T14:30:18.452Z</updated>
     
     <content type="html"><![CDATA[<p>VS Code 的專案設定都存 <code>setting.json</code> 中，可直接修改，不必透過 GUI。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p><h2 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h2><p><img src="/images/vscode/general/settings/workspace/workspace01.webp" alt="global01"></p><ul><li>以 ⌘ ⇧ P 啟動 Command Palette </li><li>輸入 <code>open workspace settings (JSON)</code></li></ul><p><img src="/images/vscode/general/settings/workspace/workspace02.webp" alt="global02"></p><ul><li><code>settings.json</code> 位置在專案的 <code>.vscode</code> 目錄下</li></ul>]]></content>
     
@@ -88,18 +107,18 @@
     
     
     
-    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
-    
     <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
+    
+    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
     
   </entry>
   
   <entry>
-    <title>VS Code 之 User Setting</title>
+    <title>全域設定的 User Setting</title>
     <link href="https://hugoneo.ai/vscode/general/settings/user/"/>
     <id>https://hugoneo.ai/vscode/general/settings/user/</id>
     <published>2026-05-12T08:42:39.000Z</published>
-    <updated>2026-05-13T22:46:15.802Z</updated>
+    <updated>2026-05-14T14:28:53.236Z</updated>
     
     <content type="html"><![CDATA[<p>VS Code 的全域設定都存 <code>setting.json</code> 中，可直接修改，不必透過 GUI。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p><h2 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h2><p><img src="/images/vscode/general/settings/user/user01.webp" alt="user01"></p><ul><li>以 ⌘ ⇧ P 啟動 Command Palette </li><li>輸入 <code>open user settings (JSON)</code></li></ul><p><img src="/images/vscode/general/settings/user/user02.webp" alt="user02"></p><ul><li><code>settings.json</code> 位置在 <code>~/Library/Application Support/Code/User</code> 目錄下</li></ul>]]></content>
     
@@ -388,25 +407,6 @@
     <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
     <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>顯示 Hugo 編譯過的網站</title>
-    <link href="https://hugoneo.ai/hugo/cli/serve/"/>
-    <id>https://hugoneo.ai/hugo/cli/serve/</id>
-    <published>2025-08-19T11:19:31.000Z</published>
-    <updated>2025-08-19T11:19:54.368Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hugo 內建的 Web Server 只能用在 <code>開發階段</code>，無法用在編譯後的 HTML&#x2F;JavaScript&#x2F;CSS，需要透過其他 Web Server。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Hugo 0.148.2</p><h2 id="NPM-Script"><a href="#NPM-Script" class="headerlink" title="NPM Script"></a>NPM Script</h2><p><strong>package.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"hugo-theme"</span><span class="token punctuation">,</span>  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span>  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"hugo server --disableFastRender"</span><span class="token punctuation">,</span>    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hugo --cleanDestinationDir --minify"</span><span class="token punctuation">,</span>    <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span><span class="token punctuation">,</span>    <span class="token property">"stylelint"</span><span class="token operator">:</span> <span class="token string">"npx stylelint '**/*.{css}' --fix"</span><span class="token punctuation">,</span>    <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"npx serve public"</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>第 9 行</p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"npx serve public"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>npx</code>：一次性執行 <code>serve</code>，不必手動安裝到 global</li><li><code>serve public</code>：使用 <code>serve</code> web server 執行 <code>public</code> 目錄下的 HTML&#x2F;CSS&#x2F;JavaScript</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li><code>npx</code> 讓我們不用事先安裝一些套件到 global，要用時會自動下載</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Hugo 內建的 Web Server 只能用在 &lt;code&gt;開發階段&lt;/code&gt;，無法用在編譯後的 HTML&amp;#x2F;JavaScript&amp;#x2F;CSS，需要透過其他 Web Server。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
