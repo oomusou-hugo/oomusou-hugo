@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-12T13:31:26.000Z",
-    "dateModified": "2026-05-17T06:46:22.770Z",
+    "dateModified": "2026-05-17T22:35:00.931Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -551,7 +551,7 @@ node_modules
   <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hugo --cleanDestinationDir --minify"</span><span class="token punctuation">,</span>
   <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"cd public &amp;&amp; python3 -m http.server"</span><span class="token punctuation">,</span>
   <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>dev</code>：<code>開發時期</code> 執行 <code>hugo server</code> 啟動內建 Web Server</li>
@@ -565,9 +565,9 @@ node_modules
 </ul>
 <p><img src="/images/vscode/lib/hugo/hugo07.webp" alt="hugo07"></p>
 <ul>
-<li>Open Editors：可顯示已開啟的 Editor，方便快速切換</li>
-<li>Outline：可顯示包含 Go Template 的 HTML 的 Outline</li>
-<li>NPM Scripts：可顯示 <code>package.json</code> 內的 NPM Script 方便執行</li>
+<li><code>Open Editors</code>：可顯示已開啟的 Editor，方便快速切換</li>
+<li><code>Outline</code>：可顯示包含 Go Template 的 HTML 的 Outline</li>
+<li><code>NPM Scripts</code>：可顯示 <code>package.json</code> 內的 NPM Script 方便執行</li>
 </ul>
 <h2 id="Exclusive-Directories"><a href="#Exclusive-Directories" class="headerlink" title="Exclusive Directories"></a>Exclusive Directories</h2><p><img src="/images/vscode/lib/hugo/hugo12.webp" alt="hugo12"></p>
 <p><strong>settings.json</strong></p>
@@ -579,13 +579,16 @@ node_modules
   <span class="token property">".vscode"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
   <span class="token property">".git"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">".gitignore"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".prettierrc"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".prettierignore"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">".DS_Store"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">".hugo_build.lock"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">".editorconfig"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"package.json"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
   <span class="token property">"package-lock.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"run.sh"</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>在 Workspace Setting 設定在 Explorer 不顯示的目錄與檔案：<ul>
 <li><code>node_modules</code>：NPM 套件存放目錄</li>
@@ -595,11 +598,14 @@ node_modules
 <li><code>.vscode</code>：VS Code 設定檔目錄</li>
 <li><code>.git</code>：Git 版本控制目錄</li>
 <li><code>.gitignore</code>：Git 忽略規則檔</li>
+<li><code>.prettierrc</code>：Prettier 設定檔</li>
+<li><code>.prettierignore</code>：Prettier 忽略檔</li>
 <li><code>.DS_Store</code>：macOS 資源檔</li>
 <li><code>.hugo_build.lock</code>：<code>hugo build</code> 所建立 lock 檔</li>
 <li><code>.editorconfig</code>：Editor 格式統一設定檔</li>
 <li><code>package.json</code>：NPM 設定檔</li>
 <li><code>package-lock.json</code>：NPM 依賴版本鎖定檔</li>
+<li><code>run.sh</code>：Hugo shell Script</li>
 </ul>
 </li>
 </ul>
@@ -655,15 +661,17 @@ node_modules
     <span class="token property">".vscode"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
     <span class="token property">".git"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">".gitignore"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".prettierrc"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".prettierignore"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">".DS_Store"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">".hugo_build.lock"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">".editorconfig"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"package.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"package.json"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
     <span class="token property">"package-lock.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"Thumbs.db"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token property">"run.sh"</span><span class="token operator">:</span> <span class="token boolean">true</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>完整適用於 Hugo 專案的 Workspace Setting</li>
 </ul>
