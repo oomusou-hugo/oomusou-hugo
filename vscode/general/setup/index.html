@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-12T06:08:20.000Z",
-    "dateModified": "2026-05-12T06:13:10.256Z",
+    "dateModified": "2026-05-16T00:30:26.001Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -289,34 +289,31 @@ a:hover {
             <p>本文記錄我的 VS Code 基本設定。</p>
 <a id="more"></a>
 
-<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p>
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.120.0</p>
 <h2 id="VS-Code"><a href="#VS-Code" class="headerlink" title="VS Code"></a>VS Code</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install --cask visual-studio-code
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>使用 Homebrew 安裝 VS Code</li>
 </ul>
-<h2 id="User-Settings"><a href="#User-Settings" class="headerlink" title="User Settings"></a>User Settings</h2><p><strong>settings.json</strong></p>
+<h2 id="User-Setting"><a href="#User-Setting" class="headerlink" title="User Setting"></a>User Setting</h2><p><strong>settings.json</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
   // Window
-  <span class="token property">"window.zoomLevel"</span><span class="token operator">:</span> <span class="token number">1.6</span><span class="token punctuation">,</span>
   <span class="token property">"window.commandCenter"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"window.zoomLevel"</span><span class="token operator">:</span> <span class="token number">1.6</span><span class="token punctuation">,</span>
 
-  // Workbench
-  <span class="token property">"workbench.colorTheme"</span><span class="token operator">:</span> <span class="token string">"Dark Modern"</span><span class="token punctuation">,</span>
-  <span class="token property">"workbench.sideBar.location"</span><span class="token operator">:</span> <span class="token string">"right"</span><span class="token punctuation">,</span>
-  <span class="token property">"workbench.editor.labelFormat"</span><span class="token operator">:</span> <span class="token string">"short"</span><span class="token punctuation">,</span>
-  <span class="token property">"workbench.editor.untitled.labelFormat"</span><span class="token operator">:</span> <span class="token string">"name"</span><span class="token punctuation">,</span>
+  // workbench
   <span class="token property">"workbench.activityBar.location"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.browser.showInTitleBar"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.colorTheme"</span><span class="token operator">:</span> <span class="token string">"Dark Modern"</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.editor.editorActionsLocation"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.editor.labelFormat"</span><span class="token operator">:</span> <span class="token string">"short"</span><span class="token punctuation">,</span>
   <span class="token property">"workbench.editor.showTabs"</span><span class="token operator">:</span> <span class="token string">"none"</span><span class="token punctuation">,</span>
-  <span class="token property">"workbench.statusBar.visible"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-  <span class="token property">"workbench.tree.enableStickyScroll"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.editor.untitled.labelFormat"</span><span class="token operator">:</span> <span class="token string">"name"</span><span class="token punctuation">,</span>
   <span class="token property">"workbench.layoutControl.enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
   <span class="token property">"workbench.secondarySideBar.defaultVisibility"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
-  <span class="token property">"workbench.colorCustomizations"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"statusBar.background"</span><span class="token operator">:</span> <span class="token string">"#303030"</span><span class="token punctuation">,</span>
-    <span class="token property">"statusBar.noFolderBackground"</span><span class="token operator">:</span> <span class="token string">"#303030"</span><span class="token punctuation">,</span>
-    <span class="token property">"focusBorder"</span><span class="token operator">:</span> <span class="token string">"#303030"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.sideBar.location"</span><span class="token operator">:</span> <span class="token string">"right"</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.statusBar.visible"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.tree.enableStickyScroll"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
 
   // Editor
   <span class="token property">"editor.fontSize"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
@@ -325,7 +322,7 @@ a:hover {
   <span class="token property">"editor.fontLigatures"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"editor.lineHeight"</span><span class="token operator">:</span> <span class="token number">1.8</span><span class="token punctuation">,</span>
   <span class="token property">"editor.tabSize"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-  <span class="token property">"editor.minimap.enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"editor.minimap.enabled"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"editor.stickyScroll.enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
   <span class="token property">"editor.renderWhitespace"</span><span class="token operator">:</span> <span class="token string">"all"</span><span class="token punctuation">,</span>
   <span class="token property">"editor.renderControlCharacters"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
@@ -338,109 +335,88 @@ a:hover {
   <span class="token property">"editor.linkedEditing"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"editor.cursorBlinking"</span><span class="token operator">:</span> <span class="token string">"smooth"</span><span class="token punctuation">,</span>
 
-  // Explorer
-  <span class="token property">"files.exclude"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"**/.idea"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"**/.vscode"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"**/.git"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"**/.DS_Store"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"**/Thumbs.db"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"**/node_modules"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"**/public"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"**/resources"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"*.lock"</span><span class="token operator">:</span> <span class="token boolean">true</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-
   // Git
-  <span class="token property">"git.openRepositoryInParentFolders"</span><span class="token operator">:</span> <span class="token string">"never"</span>
+  <span class="token property">"git.openRepositoryInParentFolders"</span><span class="token operator">:</span> <span class="token string">"never"</span><span class="token punctuation">,</span>
+
+  // GitHub Copilot
+  <span class="token property">"github.copilot.chat.agent.autoFix"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>全部 VS Code 客製化設定</li>
+<li>完整 VS Code 的 User Setting</li>
 </ul>
 <blockquote>
 <p>位於 <code>~/Library/Application Support/Code/User/settings.json</code></p>
 </blockquote>
-<h2 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"window.zoomLevel"</span><span class="token operator">:</span> <span class="token number">1.6</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>調整整體 UI 的縮放層級（不是字體大小），1.6 表示放大 160%。適合高解析螢幕或眼睛疲勞時使用</li>
-</ul>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"window.commandCenter"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<h2 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"window.commandCenter"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>關閉標題列上的 <code>Command Center</code> 輸入框</li>
 </ul>
-<h2 id="Workbench"><a href="#Workbench" class="headerlink" title="Workbench"></a>Workbench</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.colorTheme"</span><span class="token operator">:</span> <span class="token string">"Dark Modern"</span><span class="token punctuation">,</span>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"window.zoomLevel"</span><span class="token operator">:</span> <span class="token number">1.6</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>使用內建的 Dark Modern 主題</li>
+<li>調整整體 UI 的縮放層級（不是字體大小），1.6 表示放大 160%。適合高解析螢幕或眼睛疲勞時使用</li>
 </ul>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.sideBar.location"</span><span class="token operator">:</span> <span class="token string">"right"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>將側邊欄（如 Explorer）移至右側</li>
-</ul>
-<blockquote>
-<p>預設是左側</p>
-</blockquote>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.editor.labelFormat"</span><span class="token operator">:</span> <span class="token string">"short"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>Tab 上顯示簡短檔名</li>
-</ul>
-<blockquote>
-<p>只顯示檔名，不含路徑</p>
-</blockquote>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.editor.untitled.labelFormat"</span><span class="token operator">:</span> <span class="token string">"name"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>對未命名檔案（Untitled）只顯示名稱，不顯示路徑或編號</li>
-</ul>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.activityBar.location"</span><span class="token operator">:</span> <span class="token string">"hidden"</span>
+<h2 id="Workbench"><a href="#Workbench" class="headerlink" title="Workbench"></a>Workbench</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.activityBar.location"</span><span class="token operator">:</span> <span class="token string">"hidden"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>隱藏 Activity Bar</li>
 </ul>
-<blockquote>
-<p>左邊欄的圖示欄，如資源管理器、Git、擴充功能等</p>
-</blockquote>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.browser.showInTitleBar"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Integrated Browser 不顯示在 Title Bar</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.colorTheme"</span><span class="token operator">:</span> <span class="token string">"Dark Modern"</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>使用內建的 Dark Modern 主題</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.editor.editorActionsLocation"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>隱藏 Editor Actions</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.editor.labelFormat"</span><span class="token operator">:</span> <span class="token string">"short"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Tab 上顯示簡短檔名，不含路徑</li>
+</ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.editor.showTabs"</span><span class="token operator">:</span> <span class="token string">"none"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>隱藏分頁列 (每次只會顯示單一檔案的標題)</li>
+<li>隱藏 Tab</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.editor.untitled.labelFormat"</span><span class="token operator">:</span> <span class="token string">"name"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>對未命名檔案 <code>Untitled</code> 只顯示名稱，不顯示路徑或編號</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.layoutControl.enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>隱藏 VS Code 右上角 Layout Control</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.secondarySideBar.defaultVisibility"</span><span class="token operator">:</span> <span class="token string">"hidden"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>藏次 Second Side Bar</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.sideBar.location"</span><span class="token operator">:</span> <span class="token string">"right"</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>將 Primary Side Bar 移至右側</li>
 </ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.statusBar.visible"</span><span class="token operator">:</span> <span class="token boolean">false</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>隱藏 VS Code 視窗底部的 Status Bar</li>
+<li>隱藏 Status Bar</li>
 </ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.tree.enableStickyScroll"</span><span class="token operator">:</span> <span class="token boolean">false</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>Explorer 不使用 sticky scroll</li>
-</ul>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.layoutControl.enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>隱藏 VS Code 右上角的版面配置控制器 (Layout Control)</li>
-</ul>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.secondarySideBar.defaultVisibility"</span><span class="token operator">:</span> <span class="token string">"hidden"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>藏次側邊欄 (需手動開啟)</li>
-</ul>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"workbench.colorCustomizations"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">"statusBar.background"</span><span class="token operator">:</span> <span class="token string">"#303030"</span><span class="token punctuation">,</span>
-  <span class="token property">"statusBar.noFolderBackground"</span><span class="token operator">:</span> <span class="token string">"#303030"</span><span class="token punctuation">,</span>
-  <span class="token property">"focusBorder"</span><span class="token operator">:</span> <span class="token string">"#303030"</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>自訂工作區顏色：</p>
-<ul>
-<li><code>statusBar.background</code>：開啟資料夾時底部狀態列的背景色</li>
-<li><code>statusBar.noFolderBackground</code>：未開資料夾時底部狀態列的背景色</li>
-<li><code>focusBorder</code>：焦點（選取）元件的外框顏色，例如表單欄位邊框</li>
 </ul>
 <h2 id="Editor"><a href="#Editor" class="headerlink" title="Editor"></a>Editor</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.fontSize"</span><span class="token operator">:</span> <span class="token number">15</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -452,25 +428,16 @@ a:hover {
 <ul>
 <li>編輯器字體粗細為 500</li>
 </ul>
-<blockquote>
-<p>略粗於正常 400，但不如 bold</p>
-</blockquote>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.fontFamily"</span><span class="token operator">:</span> <span class="token string">"Fira Code"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>使用 Fira Code 字型</li>
 </ul>
-<blockquote>
-<p>支援程式語言常用連字，如 !&#x3D;&#x3D; → ≠</p>
-</blockquote>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.fontLigatures"</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>啟用字型連字</li>
 </ul>
-<blockquote>
-<p>如 &#x3D;&gt;、&#x3D;&#x3D;&#x3D; 顯示為合併符號</p>
-</blockquote>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.lineHeight"</span><span class="token operator">:</span> <span class="token number">1.8</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
@@ -481,37 +448,37 @@ a:hover {
 <ul>
 <li>Tab 縮排寬度為 2 個空白字元</li>
 </ul>
-<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.minimap.enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.minimap.enabled"</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>關閉 minimap</li>
+<li>顯示 minimap</li>
 </ul>
-<blockquote>
-<p>右側的小型預覽地圖</p>
-</blockquote>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.stickyScroll.enabled"</span><span class="token operator">:</span> <span class="token boolean">false</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>編輯器不使用 sticky scroll</li>
+<li>Editor 不使用 sticky scroll</li>
 </ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.renderWhitespace"</span><span class="token operator">:</span> <span class="token string">"all"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>讓 VS Code 在編輯器中顯示所有空白字元，包含：</p>
 <ul>
-<li>空格 (space)：顯示小點</li>
+<li>讓 VS Code 在編輯器中顯示所有空白字元，包含：<ul>
+<li>Space：顯示小點</li>
 <li>Tab 字元：顯示箭頭 →</li>
 <li>行尾多餘空白：顯示小點</li>
 <li>單詞間的空格：顯示小點</li>
 </ul>
+</li>
+</ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.renderControlCharacters"</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>設定控制 VS Code 是否在編輯器中顯示控制字元 (Control Characters)：</p>
 <ul>
-<li>控制字元指的是不可見字元，例如：</li>
+<li>設定控制 VS Code 是否在編輯器中顯示 Control Characters：<ul>
 <li>NULL (\0)</li>
 <li>換頁符 (Form Feed \f)</li>
 <li>換行符號以外的控制碼</li>
 <li>其他非列印 ASCII 碼</li>
+</ul>
+</li>
 </ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.scrollbar.horizontal"</span><span class="token operator">:</span> <span class="token string">"hidden"</span>
 <span class="token property">"editor.scrollbar.vertical"</span><span class="token operator">:</span> <span class="token string">"hidden"</span>
@@ -524,25 +491,16 @@ a:hover {
 <ul>
 <li>關閉函式參數提示</li>
 </ul>
-<blockquote>
-<p>當輸入函式時不會自動跳出參數資訊</p>
-</blockquote>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.accessibilitySupport"</span><span class="token operator">:</span> <span class="token string">"off"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>關閉無障礙輔助功能支援</li>
 </ul>
-<blockquote>
-<p>例如讀屏功能，可微幅提升效能</p>
-</blockquote>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.tabCompletion"</span><span class="token operator">:</span> <span class="token string">"on"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>啟用 tab 鍵補全功能</li>
 </ul>
-<blockquote>
-<p>在輸入時按下 Tab 可補全片段或建議</p>
-</blockquote>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.acceptSuggestionOnEnter"</span><span class="token operator">:</span> <span class="token string">"off"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
@@ -558,21 +516,6 @@ a:hover {
 <ul>
 <li>設定游標為 <code>平滑淡入淡出</code> 閃爍</li>
 </ul>
-<h2 id="Explorer"><a href="#Explorer" class="headerlink" title="Explorer"></a>Explorer</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"files.exclude"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">"**/.idea"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"**/.vscode"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"**/.git"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"**/.DS_Store"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"**/Thumbs.db"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"**/node_modules"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"**/public"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"**/resources"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"*.lock"</span><span class="token operator">:</span> <span class="token boolean">true</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>設定 Explorer <code>不顯示</code> 的 <code>目錄</code> 與 <code>檔案</code></li>
-</ul>
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"git.openRepositoryInParentFolders"</span><span class="token operator">:</span> <span class="token string">"never"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
@@ -581,6 +524,11 @@ a:hover {
 <blockquote>
 <p>這可避免誤開大型 monorepo</p>
 </blockquote>
+<h2 id="GitHub-Copilot"><a href="#GitHub-Copilot" class="headerlink" title="GitHub Copilot"></a>GitHub Copilot</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"github.copilot.chat.agent.autoFix"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>GitHub Copilot 在 Agent 模式下自動修護</li>
+</ul>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>VS Code 可設定的地方非常多，且都可以 JSON 格式保存</li>
 </ul>

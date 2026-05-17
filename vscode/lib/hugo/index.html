@@ -51,9 +51,9 @@
 
 <meta name="format-detection" content="telephone=no">
 <!-- Description -->
-<meta name="description" content="VS Code 目前並沒有原生支援 Hugo，須另外安裝 Hugo Language and Syntax Support、Hugo Partials Refs、Even Better TOML 與 Prettier 協助。">
+<meta name="description" content="VS Code 目前並沒有原生支援 Hugo，須另外安裝一些 Extension 協助。">
 <!-- Keywords -->
-<meta name="keywords" content=", Hugo, VS Code">
+<meta name="keywords" content=", VS Code, Hugo">
 <!-- Disable Fucking Bloody Baidu Tranformation -->
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -171,14 +171,14 @@ a:hover {
 <meta property="og:url" content="https://hugoneo.ai/vscode/lib/hugo/">
 <meta property="og:image"
 	content="https://hugoneo.ai/apple-touch-icon.png">
-<meta property="og:description" content="VS Code 目前並沒有原生支援 Hugo，須另外安裝 Hugo Language and Syntax Support、Hugo Partials Refs、Even Better TOML 與 Prettier 協助。">
+<meta property="og:description" content="VS Code 目前並沒有原生支援 Hugo，須另外安裝一些 Extension 協助。">
 <meta name="twitter:card" content="summary">
 
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2026-05-12T13:31:26.000Z">
 <meta property="article:modified_time" content="2026-05-12T13:31:26.000Z">
 <meta property="article:author" content="Sam Xiao">
-<meta property="og:article:tag" content=", Hugo, VS Code">
+<meta property="og:article:tag" content=", VS Code, Hugo">
 
 
   <!-- ### Analytics ### -->
@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-12T13:31:26.000Z",
-    "dateModified": "2026-05-12T23:49:44.019Z",
+    "dateModified": "2026-05-16T01:16:16.757Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -236,8 +236,8 @@ a:hover {
         "query-input": "required name=search_term_string"
     },
     
-    "keywords": ", Hugo, VS Code",
-    "description": "VS Code 目前並沒有原生支援 Hugo，須另外安裝 Hugo Language and Syntax Support、Hugo Partials Refs、Even Better TOML 與 Prettier 協助。"
+    "keywords": ", VS Code, Hugo",
+    "description": "VS Code 目前並沒有原生支援 Hugo，須另外安裝一些 Extension 協助。"
 }
 </script>
 
@@ -286,10 +286,10 @@ a:hover {
         </div>
         <div class="card-body">
           <article id="post-content">
-            <p>VS Code 目前並沒有原生支援 Hugo，須另外安裝 Hugo Language and Syntax Support、Hugo Partials Refs、Even Better TOML 與 Prettier 協助。</p>
+            <p>VS Code 目前並沒有原生支援 Hugo，須另外安裝一些 Extension 協助。</p>
 <a id="more"></a>
 
-<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p>
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.120</p>
 <h2 id="Hugo-Language-and-Syntax-Support"><a href="#Hugo-Language-and-Syntax-Support" class="headerlink" title="Hugo Language and Syntax Support"></a>Hugo Language and Syntax Support</h2><p><img src="/images/vscode/lib/hugo/hugo01.webp" alt="hugo01"></p>
 <ul>
 <li>支援 Go Template</li>
@@ -513,20 +513,56 @@ node_modules
 <span class="token comment" spellcheck="true"># macOS</span>
 .DS_Store
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>將 <code>.gitignore</code> 建立在 Hugo 專案的 <code>根目錄</code> 下。</p>
 <ul>
-<li><code>public</code> : 編譯過的 HTML&#x2F;CSS&#x2F;JavaScript</li>
+<li>將 <code>.gitignore</code> 建立在 Hugo 專案的 <code>根目錄</code> 下，排除以下檔案進 Git：<ul>
+<li><code>public</code> : Hugo 編譯過的 HTML&#x2F;CSS&#x2F;JavaScript</li>
 <li><code>resources</code>：<code>hugo server</code> 時所建立的暫存目錄</li>
-<li><code>.hugo_build.lock</code> : Hugo build 所建立的 lock 檔</li>
-<li><code>.idea</code> : WebStorm 的暫存檔存放目錄</li>
-<li><code>.vscode</code>：VS Code 的暫存檔存放目錄</li>
-<li><code>!.vscode/settings.json</code>：VS Code workspace 的 user setting 要進 Git 為 <code>例外</code></li>
-<li><code>!.vscode/extensions.json</code>：VS Code workspace 的推薦 extension 要進 Git 為 <code>例外</code></li>
+<li><code>.hugo_build.lock</code> : <code>hugo build</code> 所建立 lock 檔</li>
+<li><code>.idea</code>：WebStorm 設定檔目錄</li>
+<li><code>.vscode</code>：VS Code 設定檔目錄</li>
+<li><code>!.vscode/settings.json</code>：VS Code 的 Workspace Setting 為 <code>例外</code></li>
+<li><code>!.vscode/extensions.json</code>：VS Code 的 Workspace Extension 為 <code>例外</code></li>
 <li><code>node_modules</code> : NPM 套件存放目錄</li>
-<li><code>.DS_Store</code> : macOS 的資源檔</li>
+<li><code>.DS_Store</code> : macOS 資源檔</li>
+</ul>
+</li>
+</ul>
+<h2 id="Exclusive-Directories"><a href="#Exclusive-Directories" class="headerlink" title="Exclusive Directories"></a>Exclusive Directories</h2><p><strong>settings.json</strong></p>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"files.exclude"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"node_modules"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"public"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"resources"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".idea"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".vscode"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">".git"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".gitignore"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".DS_Store"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".hugo_build.lock"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">".editorconfig"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"package.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"package-lock.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>設定在 Explorer 不顯示的目錄與檔案：<ul>
+<li><code>node_modules</code>：NPM 套件存放目錄</li>
+<li><code>public</code>：Hugo 編譯過的 HTML&#x2F;CSS&#x2F;JavaScript</li>
+<li><code>resources</code>：<code>hugo server</code> 時所建立的暫存目錄</li>
+<li><code>.idea</code>：WebStorm 設定檔目錄</li>
+<li><code>.vscode</code>：VS Code 設定檔目錄</li>
+<li><code>.git</code>：Git 版本控制目錄</li>
+<li><code>.gitignore</code>：Git 忽略規則檔</li>
+<li><code>.DS_Store</code>：macOS 資源檔</li>
+<li><code>.hugo_build.lock</code>：<code>hugo build</code> 所建立 lock 檔</li>
+<li><code>.editorconfig</code>：Editor 格式統一設定檔</li>
+<li><code>package.json</code>：NPM 設定檔</li>
+<li><code>package-lock.json</code>：NPM 依賴版本鎖定檔</li>
+</ul>
+</li>
 </ul>
 <h2 id="Workspace-Setting"><a href="#Workspace-Setting" class="headerlink" title="Workspace Setting"></a>Workspace Setting</h2><p><strong>.vscode&#x2F;settings.json</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
+  // Prettier
   <span class="token property">"editor.defaultFormatter"</span><span class="token operator">:</span> <span class="token string">"esbenp.prettier-vscode"</span><span class="token punctuation">,</span>
   <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"files.autoSave"</span><span class="token operator">:</span> <span class="token string">"afterDelay"</span><span class="token punctuation">,</span>
@@ -549,12 +585,28 @@ node_modules
     <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     <span class="token property">"editor.defaultFormatter"</span><span class="token operator">:</span> <span class="token string">"esbenp.prettier-vscode"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"[json]"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"editor.defaultFormatter"</span><span class="token operator">:</span> <span class="token string">"esbenp.prettier-vscode"</span>
+
+  // Exclusive Directories
+  <span class="token property">"files.exclude"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"node_modules"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"public"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"resources"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".idea"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".vscode"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">".git"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".gitignore"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".DS_Store"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".hugo_build.lock"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">".editorconfig"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"package.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"package-lock.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"Thumbs.db"</span><span class="token operator">:</span> <span class="token boolean">true</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>完整適用於 Hugo 專案的 Workspace Setting</li>
+</ul>
 <p><strong>.vscode&#x2F;extensions.json</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"recommendations"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -566,19 +618,18 @@ node_modules
   <span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>建議安裝 extension：</p>
 <ul>
+<li>完整適用於 Hugo 專案的 Extension Setting：<ul>
 <li><code>budparr.language-hugo-vscode</code>：Hugo Language and Syntax Support</li>
 <li><code>esbenp.prettier-vscode</code>：Prettier - Code Formatter</li>
 <li><code>stylelint.vscode-stylelint</code>：Styling</li>
 <li><code>tamasfe.even-better-toml</code>：Even Better TOML</li>
 <li><code>editorconfig.editorconfig</code>：EditorConfig</li>
 </ul>
+</li>
+</ul>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
-<li><code>Hugo Language and Syntax Support</code>：支援 Go Template</li>
-<li><code>Hugo Partials Refs</code>：支援在 HTML 跳轉到其他 Partial</li>
-<li><code>Prettier</code>：支援 HTML&#x2F;SCSS&#x2F;JavaScript&#x2F;TOML 格式</li>
-<li><code>Even Better TOML</code>：支援 TOML</li>
+<li>由於 VS Code 強烈依賴 Node.js 生態系的 Prettier，因此必須安裝 Node.js</li>
 </ul>
 
           </article>
@@ -588,9 +639,9 @@ node_modules
   <span class="post-tags-list mt-2">
     
     
-    <a class="post-tags-list-item" href='/tags/Hugo/'>#&nbsp;Hugo</a>
-    
     <a class="post-tags-list-item" href='/tags/VS-Code/'>#&nbsp;VS Code</a>
+    
+    <a class="post-tags-list-item" href='/tags/Hugo/'>#&nbsp;Hugo</a>
     
   </span>
   

@@ -30,7 +30,7 @@
 <meta name="viewport"
   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <!-- Title -->
-<title>儲存專案所使用的 Extension | 次世代 Hugo</title>
+<title>專案所使用的 Extension | 次世代 Hugo</title>
 <!-- favicon -->
 <!-- Favicons -->
 
@@ -165,10 +165,10 @@ a:hover {
 <!-- Open Search -->
 
   <!-- ### The Open Graph & Twitter Card Protocol ### -->
-  <meta property="og:title" content="儲存專案所使用的 Extension | 次世代 Hugo">
+  <meta property="og:title" content="專案所使用的 Extension | 次世代 Hugo">
 <meta property="og:site_name" content="次世代 Hugo">
 
-<meta property="og:url" content="https://hugoneo.ai/vscode/feature/extension/recommend/">
+<meta property="og:url" content="https://hugoneo.ai/vscode/feature/extension/">
 <meta property="og:image"
 	content="https://hugoneo.ai/apple-touch-icon.png">
 <meta property="og:description" content="VS Code 可將專案所使用到的 Extension 存到 .vscode 目錄下的 extensions.json 內，讓用戶可快速得知此專案用到哪些 Extension 以便安裝。">
@@ -189,21 +189,21 @@ a:hover {
 
 
   <!-- ### Canonical link ### -->
-  <link rel="canonical" href="https://hugoneo.ai/vscode/feature/extension/recommend/">
+  <link rel="canonical" href="https://hugoneo.ai/vscode/feature/extension/">
   <!-- ### Structured Data ### -->
   
 
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
-    "url": "https://hugoneo.ai/vscode/feature/extension/recommend/",
+    "url": "https://hugoneo.ai/vscode/feature/extension/",
     "@type": "BlogPosting",
     "logo": "https://hugoneo.ai/apple-touch-icon.png",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://hugoneo.ai/vscode/feature/extension/recommend/"
+        "@id": "https://hugoneo.ai/vscode/feature/extension/"
     },
-    "headline": "儲存專案所使用的 Extension | 次世代 Hugo",
+    "headline": "專案所使用的 Extension | 次世代 Hugo",
     
     "image": {
         "@type": "ImageObject",
@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-13T10:20:30.000Z",
-    "dateModified": "2026-05-13T22:33:33.470Z",
+    "dateModified": "2026-05-17T00:34:00.761Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -274,7 +274,7 @@ a:hover {
       <div class="card-inner-cell">
         <div class="card-header">
           
-<h1 class="card-title h3 mb-2">儲存專案所使用的 Extension</h1>
+<h1 class="card-title h3 mb-2">專案所使用的 Extension</h1>
 
 
 <div class="post-header-info">
@@ -289,7 +289,7 @@ a:hover {
             <p>VS Code 可將專案所使用到的 Extension 存到 <code>.vscode</code> 目錄下的 <code>extensions.json</code> 內，讓用戶可快速得知此專案用到哪些 Extension 以便安裝。</p>
 <a id="more"></a>
 
-<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.1</p>
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.120</p>
 <p><strong>.vscode&#x2F;extensions.json</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
   <span class="token property">"recommendations"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -303,6 +303,7 @@ a:hover {
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>extensions.json</code> 必須放在 <code>.vscode</code> 目錄下，此為 Workspace 等級設定</li>
+<li><code>recommendations</code>：將套件名稱寫在此</li>
 </ul>
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><strong>.gitignore</strong></p>
 <pre class="line-numbers highlight language-git"><code class="language-git">.vscode/*
@@ -310,18 +311,19 @@ a:hover {
 !.vscode/extensions.json
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>排除 <code>.vscode</code> 不進 Git，但 <code>settings.json</code> 與 <code>extensions.json</code> 要進 Git</li>
+<li>排除 <code>.vscode</code> 不進 Git</li>
+<li>但 <code>settings.json</code> 與 <code>extensions.json</code> 要進 Git</li>
 </ul>
 <h2 id="Recommended-Extensions"><a href="#Recommended-Extensions" class="headerlink" title="Recommended Extensions"></a>Recommended Extensions</h2><ul>
-<li>開啟專案時，VS Code 右下角會跳出通知詢問 <code>是否安裝推薦的 Extensions</code>，點  <code>Install All</code> 即可安裝 Extension</li>
+<li>第一次開啟專案時，VS Code 右下角會跳出通知詢問 <code>是否安裝推薦的 Extensions</code>，點  <code>Install All</code> 即可安裝 Extension</li>
 </ul>
 <h2 id="Extensions-View"><a href="#Extensions-View" class="headerlink" title="Extensions View"></a>Extensions View</h2><ul>
-<li>開啟 Extensions View（⌘⇧X）</li>
+<li>開啟 Extensions View</li>
 <li>搜尋框輸入 <code>@recommended</code></li>
 <li>會列出 <code>extensions.json</code> 內的所有推薦的 Extension，逐一點 Install 安裝</li>
 </ul>
 <h2 id="Command-Pallete"><a href="#Command-Pallete" class="headerlink" title="Command Pallete"></a>Command Pallete</h2><ul>
-<li>開啟 Command Palette (⌘⇧P)</li>
+<li>開啟 Command Palette</li>
 <li>輸入 <code>Extensions: Show Recommended Extensions</code></li>
 <li>在 Extensions View 顯示推薦 Extension</li>
 </ul>
