@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-12T13:31:26.000Z",
-    "dateModified": "2026-05-16T01:16:16.757Z",
+    "dateModified": "2026-05-17T06:46:22.770Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -527,7 +527,50 @@ node_modules
 </ul>
 </li>
 </ul>
-<h2 id="Exclusive-Directories"><a href="#Exclusive-Directories" class="headerlink" title="Exclusive Directories"></a>Exclusive Directories</h2><p><strong>settings.json</strong></p>
+<h2 id="NPM-Script"><a href="#NPM-Script" class="headerlink" title="NPM Script"></a>NPM Script</h2><p><strong>package.json</strong></p>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"hugo server --disableFastRender"</span><span class="token punctuation">,</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hugo --cleanDestinationDir --minify"</span><span class="token punctuation">,</span>
+    <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"cd public &amp;&amp; python3 -m http.server"</span><span class="token punctuation">,</span>
+    <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"devDependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"^3.8.3"</span><span class="token punctuation">,</span>
+    <span class="token property">"prettier-plugin-go-template"</span><span class="token operator">:</span> <span class="token string">"^0.0.15"</span><span class="token punctuation">,</span>
+    <span class="token property">"prettier-plugin-toml"</span><span class="token operator">:</span> <span class="token string">"^2.0.6"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>儲存 NPM Script 與 Prettier 的 dependency</li>
+</ul>
+<p><strong>Line 2</strong></p>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"hugo server --disableFastRender"</span><span class="token punctuation">,</span>
+  <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hugo --cleanDestinationDir --minify"</span><span class="token punctuation">,</span>
+  <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"cd public &amp;&amp; python3 -m http.server"</span><span class="token punctuation">,</span>
+  <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>dev</code>：<code>開發時期</code> 執行 <code>hugo server</code> 啟動內建 Web Server</li>
+<li><code>build</code>：<code>生產時期</code> 執行 <code>hugo</code> 將 Markdown <code>編譯</code> 成 HTML&#x2F;CSS&#x2F;JavaScript</li>
+<li><code>server</code>：使用 Python 內建 Web Server 顯示 <code>編譯</code> 過個 HTML&#x2F;CSS&#x2F;JavaScript</li>
+<li><code>prettier</code>：使用 Prettier 美化所有檔案</li>
+</ul>
+<h2 id="Explorer"><a href="#Explorer" class="headerlink" title="Explorer"></a>Explorer</h2><p><img src="/images/vscode/lib/hugo/hugo06.webp" alt="hugo06"></p>
+<ul>
+<li>在 Explorer 按右鍵，選擇 <code>Open Editors</code>、<code>Outline</code> 與 <code>NPM Scripts</code></li>
+</ul>
+<p><img src="/images/vscode/lib/hugo/hugo07.webp" alt="hugo07"></p>
+<ul>
+<li>Open Editors：可顯示已開啟的 Editor，方便快速切換</li>
+<li>Outline：可顯示包含 Go Template 的 HTML 的 Outline</li>
+<li>NPM Scripts：可顯示 <code>package.json</code> 內的 NPM Script 方便執行</li>
+</ul>
+<h2 id="Exclusive-Directories"><a href="#Exclusive-Directories" class="headerlink" title="Exclusive Directories"></a>Exclusive Directories</h2><p><img src="/images/vscode/lib/hugo/hugo12.webp" alt="hugo12"></p>
+<p><strong>settings.json</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"files.exclude"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
   <span class="token property">"node_modules"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"public"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
@@ -539,12 +582,12 @@ node_modules
   <span class="token property">".DS_Store"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">".hugo_build.lock"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">".editorconfig"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"package.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"package.json"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
   <span class="token property">"package-lock.json"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>設定在 Explorer 不顯示的目錄與檔案：<ul>
+<li>在 Workspace Setting 設定在 Explorer 不顯示的目錄與檔案：<ul>
 <li><code>node_modules</code>：NPM 套件存放目錄</li>
 <li><code>public</code>：Hugo 編譯過的 HTML&#x2F;CSS&#x2F;JavaScript</li>
 <li><code>resources</code>：<code>hugo server</code> 時所建立的暫存目錄</li>
@@ -559,6 +602,23 @@ node_modules
 <li><code>package-lock.json</code>：NPM 依賴版本鎖定檔</li>
 </ul>
 </li>
+</ul>
+<h2 id="Integrated-Browser"><a href="#Integrated-Browser" class="headerlink" title="Integrated Browser"></a>Integrated Browser</h2><p><img src="/images/vscode/lib/hugo/hugo11.webp" alt="hugo11"></p>
+<ul>
+<li>在 NPM Script 內執行 <code>dev</code> 啟動 Hugo 內建的 Web Server</li>
+</ul>
+<p><img src="/images/vscode/lib/hugo/hugo08.webp" alt="hugo08"></p>
+<ul>
+<li>先使用 ⌘ \ 將目前 Split Screen 成兩個 Editor</li>
+</ul>
+<p><img src="/images/vscode/lib/hugo/hugo09.webp" alt="hugo09"></p>
+<ul>
+<li>在左側 Editor 按 ⌘ ⇧ B 啟動 Integrated Browser</li>
+</ul>
+<p><img src="/images/vscode/lib/hugo/hugo10.webp" alt="hugo10"></p>
+<ul>
+<li>在網址列輸入 <code>http://localhost:1313</code></li>
+<li>VS Code 已經內建 Chromium，可直接在 VS Code 內邊開發邊看到結果</li>
 </ul>
 <h2 id="Workspace-Setting"><a href="#Workspace-Setting" class="headerlink" title="Workspace Setting"></a>Workspace Setting</h2><p><strong>.vscode&#x2F;settings.json</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
@@ -630,6 +690,8 @@ node_modules
 </ul>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>由於 VS Code 強烈依賴 Node.js 生態系的 Prettier，因此必須安裝 Node.js</li>
+<li>VS Code 的 Outline 竟然能解析出含有 Go Template 的 HTML，在 WebStorm 是不行的</li>
+<li>由於 VS Code 內建 Chromium，可直接在 VS Code 邊開發 Hugo Layout 邊看到 HTML 結果，非常方便</li>
 </ul>
 
           </article>

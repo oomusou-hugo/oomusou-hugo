@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-12T06:08:20.000Z",
-    "dateModified": "2026-05-16T00:30:26.001Z",
+    "dateModified": "2026-05-17T05:31:33.414Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -302,7 +302,7 @@ a:hover {
   <span class="token property">"window.zoomLevel"</span><span class="token operator">:</span> <span class="token number">1.6</span><span class="token punctuation">,</span>
 
   // workbench
-  <span class="token property">"workbench.activityBar.location"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
+  <span class="token property">"workbench.activityBar.location"</span><span class="token operator">:</span> <span class="token string">"bottom"</span><span class="token punctuation">,</span>
   <span class="token property">"workbench.browser.showInTitleBar"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
   <span class="token property">"workbench.colorTheme"</span><span class="token operator">:</span> <span class="token string">"Dark Modern"</span><span class="token punctuation">,</span>
   <span class="token property">"workbench.editor.editorActionsLocation"</span><span class="token operator">:</span> <span class="token string">"hidden"</span><span class="token punctuation">,</span>
@@ -335,13 +335,21 @@ a:hover {
   <span class="token property">"editor.linkedEditing"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"editor.cursorBlinking"</span><span class="token operator">:</span> <span class="token string">"smooth"</span><span class="token punctuation">,</span>
 
+  // Terminal
+  <span class="token property">"terminal.integrated.fontFamily"</span><span class="token operator">:</span> <span class="token string">"Menlo"</span><span class="token punctuation">,</span>
+  <span class="token property">"terminal.integrated.fontSize"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+
   // Git
   <span class="token property">"git.openRepositoryInParentFolders"</span><span class="token operator">:</span> <span class="token string">"never"</span><span class="token punctuation">,</span>
 
   // GitHub Copilot
   <span class="token property">"github.copilot.chat.agent.autoFix"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+  // Chat
+  <span class="token property">"chat.fontSize"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+  <span class="token property">"chat.editor.fontSize"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>完整 VS Code 的 User Setting</li>
 </ul>
@@ -421,7 +429,7 @@ a:hover {
 <h2 id="Editor"><a href="#Editor" class="headerlink" title="Editor"></a>Editor</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.fontSize"</span><span class="token operator">:</span> <span class="token number">15</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>編輯器文字大小設定為 15px</li>
+<li>Editor 文字大小設定為 15px</li>
 </ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.fontWeight"</span><span class="token operator">:</span> <span class="token string">"500"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -431,7 +439,7 @@ a:hover {
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.fontFamily"</span><span class="token operator">:</span> <span class="token string">"Fira Code"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>使用 Fira Code 字型</li>
+<li>Editor 使用 Fira Code 字型</li>
 </ul>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"editor.fontLigatures"</span><span class="token operator">:</span> <span class="token boolean">true</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -516,6 +524,16 @@ a:hover {
 <ul>
 <li>設定游標為 <code>平滑淡入淡出</code> 閃爍</li>
 </ul>
+<h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"terminal.integrated.fontFamily"</span><span class="token operator">:</span> <span class="token string">"Menlo"</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Terminal 使用 Menlo 字型</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"terminal.integrated.fontSize"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Terminal 文字大小設定為 15px</li>
+</ul>
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"git.openRepositoryInParentFolders"</span><span class="token operator">:</span> <span class="token string">"never"</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
@@ -529,8 +547,53 @@ a:hover {
 <ul>
 <li>GitHub Copilot 在 Agent 模式下自動修護</li>
 </ul>
+<h2 id="Chat"><a href="#Chat" class="headerlink" title="Chat"></a>Chat</h2><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"chat.fontSize"</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Chat 文字大小設定為 16px</li>
+</ul>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"chat.editor.fontSize"</span><span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>Chat 的 Editor 文字大小設定為 16px</li>
+</ul>
+<h2 id="Keyboard-Shortcuts"><a href="#Keyboard-Shortcuts" class="headerlink" title="Keyboard Shortcuts"></a>Keyboard Shortcuts</h2><p><strong>keybinds.json</strong></p>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"cmd+shift+b"</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"-workbench.action.tasks.build"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"cmd+shift+b"</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"simpleBrowser.show"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>完整 VS Code 的 User Keyboard Shortcuts</li>
+</ul>
+<blockquote>
+<p>位於 <code>~/Library/Application Support/Code/User/keybindings.json</code></p>
+</blockquote>
+<pre class="line-numbers highlight language-shell"><code class="language-shell">{
+  "key": "cmd+shift+b",
+  "command": "-workbench.action.tasks.build",
+},
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>將原本 ⌘ ⇧ B 的定義刪除</li>
+</ul>
+<pre class="line-numbers highlight language-shell"><code class="language-shell">{
+  "key": "cmd+shift+b",
+  "command": "simpleBrowser.show",
+},
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>將原本 ⌘ ⇧ B 的定義到 VS Code 內建 Browser</li>
+</ul>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>VS Code 可設定的地方非常多，且都可以 JSON 格式保存</li>
+<li>Keyboard Shortcut 需另外設定到 <code>keybindings.json</code></li>
 </ul>
 
           </article>
