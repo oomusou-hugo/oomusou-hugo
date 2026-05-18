@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-05-17T14:39:56.346Z</updated>
+  <updated>2026-05-18T10:14:58.323Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>將 ZIP 檔案匯入設定</title>
+    <link href="https://hugoneo.ai/webstorm/general/settings/import/"/>
+    <id>https://hugoneo.ai/webstorm/general/settings/import/</id>
+    <published>2026-05-18T10:13:25.000Z</published>
+    <updated>2026-05-18T10:14:58.323Z</updated>
+    
+    <content type="html"><![CDATA[<p>將 WebStorm 設定匯出成 ZIP 檔之後，可再其他電腦加以匯入，不必再由 GUI 慢慢設定。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2026.1.2</p><h2 id="Import-Settings"><a href="#Import-Settings" class="headerlink" title="Import Settings"></a>Import Settings</h2><p><img src="/images/webstorm/general/settings/import/import01.webp" alt="export01"></p><p><em><strong>File -&gt; Manage IDE Settings -&gt; Export Settings</strong></em></p><p><img src="/images/webstorm/general/settings/import/import02.webp" alt="import02"></p><ul><li>選擇要匯入的 ZIP 檔</li></ul><p><img src="/images/webstorm/general/settings/import/import03.webp" alt="export02"></p><ul><li>可選擇匯出部分，或 <code>Select All</code> 全部匯出</li><li>可選擇匯出位置</li></ul><p><img src="/images/webstorm/general/settings/import/import04.webp" alt="export03"></p><ul><li>匯入成功，重新啟動 WebStorm 套用新設定</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>WebStorm 所匯出的其實是多個 XML 檔，最後再以 ZIP 壓縮成一個檔一次匯入</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;將 WebStorm 設定匯出成 ZIP 檔之後，可再其他電腦加以匯入，不必再由 GUI 慢慢設定。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>將設定匯出成 ZIP 檔案</title>
+    <link href="https://hugoneo.ai/webstorm/general/settings/export/"/>
+    <id>https://hugoneo.ai/webstorm/general/settings/export/</id>
+    <published>2026-05-18T09:35:43.000Z</published>
+    <updated>2026-05-18T09:40:04.403Z</updated>
+    
+    <content type="html"><![CDATA[<p>WebStorm 雖然沒有如 VS Code 那樣以 JSON 儲存設定檔，而是以 GUI 方式設定，但仍可將設定匯出成 ZIP 檔。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2026.1.2</p><h2 id="Export-Settings"><a href="#Export-Settings" class="headerlink" title="Export Settings"></a>Export Settings</h2><p><img src="/images/webstorm/general/settings/export/export01.webp" alt="export01"></p><p><em><strong>File -&gt; Manage IDE Settings -&gt; Export Settings</strong></em></p><p><img src="/images/webstorm/general/settings/export/export02.webp" alt="export02"></p><ul><li>可選擇匯出部分，或 <code>Select All</code> 全部匯出</li><li>可選擇匯出位置</li></ul><p><img src="/images/webstorm/general/settings/export/export03.webp" alt="export03"></p><ul><li>匯出成功</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>WebStorm 所匯出的其實是多個 XML 檔，最後再以 ZIP 壓縮成一個檔</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;WebStorm 雖然沒有如 VS Code 那樣以 JSON 儲存設定檔，而是以 GUI 方式設定，但仍可將設定匯出成 ZIP 檔。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
+    
+  </entry>
   
   <entry>
     <title>常用 Shortcut</title>
@@ -367,44 +405,6 @@
     <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
     <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Excluded 隱藏檔案目錄與停止索引</title>
-    <link href="https://hugoneo.ai/webstorm/project/exclude/"/>
-    <id>https://hugoneo.ai/webstorm/project/exclude/</id>
-    <published>2026-04-17T16:13:27.000Z</published>
-    <updated>2026-04-26T15:13:10.558Z</updated>
-    
-    <content type="html"><![CDATA[<p>實務上很多目錄與檔案是由工具所建立與使用，我們並不會參與編輯，或者該檔案太多，會花費很多時間建立索引，可將這些檔案或目錄設定為 Excluded，將可隱藏並停止建立索引。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>WebStorm 2026.1</p><h2 id="Excluded"><a href="#Excluded" class="headerlink" title="Excluded"></a>Excluded</h2><p><img src="/images/webstorm/project/exclude/exclude06.webp" alt="exclude06"></p><ul><li>選擇檔案或目錄，右鍵 Mark Directory As -&gt; Excluded 設定為 Excluded</li></ul><h2 id="Hugo"><a href="#Hugo" class="headerlink" title="Hugo"></a>Hugo</h2><p><img src="/images/webstorm/project/exclude/exclude01.webp" alt="excluded01"></p><ul><li><code>.idea</code>：WebStorm 所用，不必顯示</li><li><code>.vscode</code>：VS Code 所有，不必顯示</li><li><code>node_modules</code>：NPM 套件所用，不必顯示</li><li><code>public</code>：<code>hugo build</code> 所產生的 HTML&#x2F;CSS&#x2F;JavaScript 放在此目錄，不必顯示</li><li><code>resources</code>：<code>hugo server</code> 將 asset 放在此目錄，不必顯示</li><li><code>hugo_build.lock</code>：<code>hugo build</code> 執行時所產生的 <code>lock</code> 檔，不必顯示</li><li><code>bun.lock</code>：<code>bun</code> 執行時所產生 <code>.lock</code> 檔，不必顯示</li></ul><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p><img src="/images/webstorm/project/exclude/exclude05.webp" alt="exclude05"></p><ul><li><code>.deploy_git</code>：<code>hexo deploy</code> 所使用目錄，不必索引與顯示</li><li><code>.idea</code>：WebStorm 所用，不必顯示</li><li><code>node_modules</code>：NPM 套件所用，不必顯示</li><li><code>public</code>：<code>hexo generate</code> 所產生的 HTML&#x2F;CSS&#x2F;JavaScript 放在此目錄，不必索引與顯示</li><li><code>sources</code>：Markdown 與圖片所用，不必索引與顯示</li></ul><h2 id="Appearance"><a href="#Appearance" class="headerlink" title="Appearance"></a>Appearance</h2><p><img src="/images/webstorm/project/exclude/exclude02.webp" alt="excluded02"></p><p><em><strong>Current Project -&gt; Appearance</strong></em></p><ul><li><code>Excluded Files：Off</code>：Project 不顯示 Excluded 的目錄與檔案</li></ul><h2 id="Directories"><a href="#Directories" class="headerlink" title="Directories"></a>Directories</h2><p><img src="/images/webstorm/project/exclude/exclude03.webp" alt="excluded03"></p><p><em><strong>Settings -&gt; Directories</strong></em></p><ul><li><code>Excluded</code>：將 <code>node_modules</code>、<code>public</code>、<code>resources</code> 加入</li><li><code>Exclude files</code>：<code>.vscode;*.lock</code></li></ul><p><img src="/images/webstorm/project/exclude/exclude04.webp" alt="exclude04"></p><ul><li>僅顯示能編輯的 <code>目錄</code> 與 <code>檔案</code>，讓整個專案看起來更清爽</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>本文以 Hugo 專案為例，其他 Framework 專案可自行設定要隱藏的目錄與檔案</li><li>也以 Hexo 專案為例，將 Markdown 等目錄排除，可大幅縮短建立索引時間</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;實務上很多目錄與檔案是由工具所建立與使用，我們並不會參與編輯，或者該檔案太多，會花費很多時間建立索引，可將這些檔案或目錄設定為 Excluded，將可隱藏並停止建立索引。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>將 Theme 架構轉移成 Themeless 架構</title>
-    <link href="https://hugoneo.ai/hugo/themeless/transfer/"/>
-    <id>https://hugoneo.ai/hugo/themeless/transfer/</id>
-    <published>2025-12-13T02:54:24.000Z</published>
-    <updated>2026-02-08T08:26:49.569Z</updated>
-    
-    <content type="html"><![CDATA[<p>原本使用 Theme 開發，或想將別人開發的 Theme 改成 Themeless 架構，只需做少許的改變即可。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Hugo 0.152.2</p><h2 id="Directories"><a href="#Directories" class="headerlink" title="Directories"></a>Directories</h2><p>將原本主題下的以下目錄直接轉移到專案根目錄。</p><ul><li><code>layouts</code>：最重要的核心，HTML Template</li><li><code>static</code>：外部 CSS、 外部 JS, 外部圖片等靜態檔案</li><li><code>assets</code>：使用 Hugo Pipes 處理 CSS、SCSS 或 JavaScript</li><li><code>archetypes</code>：Content Template</li><li><code>i18n</code>：多語言設定檔</li><li><code>data</code>：自訂資料檔</li></ul><h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p><strong>hugo.toml</strong></p><pre class="line-numbers highlight language-toml"><code class="language-toml">baseURL = 'https://example.org/'languageCode = 'en-us'title = 'My Site'[params.css]files = [  "css/vars.css",  "css/reset.css",  "css/baseof.css",  "css/home.css",  "css/single.css",  "css/list.css",  "css/_partials/header.css",  "css/_partials/footer.css",  "css/page/about.css",]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>Line 1</strong></p><pre class="line-numbers highlight language-toml"><code class="language-toml">baseURL = 'https://example.org/'languageCode = 'en-us'title = 'My Site'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>將原本 <code>theme</code> 那一行刪除，因為已經不需要設定主題了</li></ul><p><strong>Line 4</strong></p><pre class="line-numbers highlight language-toml"><code class="language-toml">[params.css]files = [  "css/vars.css",  "css/reset.css",  "css/baseof.css",  "css/home.css",  "css/single.css",  "css/list.css",  "css/_partials/header.css",  "css/_partials/footer.css",  "css/page/about.css",]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>將原本主題內 <code>hugo.toml</code> 或 <code>theme.toml</code> 或 <code>config.toml</code> 的 <code>params</code> 部分搬到專案自己的 <code>hugo.toml</code></li></ul><h2 id="Remove-Theme"><a href="#Remove-Theme" class="headerlink" title="Remove Theme"></a>Remove Theme</h2><ul><li>檔案與設定都搬過來後，可直接刪除 <code>themes</code> 目錄</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>若只是一個人開發，其實 Themeless 架構是最舒服的，不會有 layout override 問題，也不會有專案與主題都有 configuration 問題，適合需要 <code>長期維護</code>與 <code>高度客製化</code> 網站</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;原本使用 Theme 開發，或想將別人開發的 Theme 改成 Themeless 架構，只需做少許的改變即可。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
   </entry>
   
