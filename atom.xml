@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-06-15T14:22:05.042Z</updated>
+  <updated>2026-06-15T22:58:02.510Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自動補全日文例句與單字解釋</title>
+    <link href="https://hugoneo.ai/codex/feature/nihonngo/"/>
+    <id>https://hugoneo.ai/codex/feature/nihonngo/</id>
+    <published>2026-06-15T22:56:35.000Z</published>
+    <updated>2026-06-15T22:58:02.510Z</updated>
+    
+    <content type="html"><![CDATA[<p>在日文學習時，最花時間的是 <code>尋找例句</code> 與 <code>單字解釋</code>，透過 Codex 搭配 <code>AGENTS.md</code>，可自動幫我們 <code>建立例句</code> 與 <code>單字解釋</code>，剩下大量時間。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex CLI 0.139.0</p><h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><p><strong>AGENTS.md</strong></p><pre class="line-numbers highlight language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span> 補全</span><span class="token list punctuation">*</span> 將 <span class="token code keyword">`意味`</span> 下補全 <span class="token list punctuation">*</span> 將 <span class="token code keyword">`難度`</span> 下補全<span class="token list punctuation">*</span> 將 <span class="token code keyword">`情境`</span> 下補全<span class="token list punctuation">*</span> 將 <span class="token code keyword">`単語`</span> 下補全 (若存在)<span class="token list punctuation">*</span> 將 <span class="token code keyword">`接続`</span> 下補全 (若存在)<span class="token list punctuation">*</span> 將 <span class="token code keyword">`例文`</span> 下補全 (若存在)<span class="token list punctuation">*</span> 將 <span class="token code keyword">`動詞`</span> 下加上例句，並單字解釋 (若存在)<span class="token list punctuation">*</span> 將 <span class="token code keyword">`い形容詞`</span> 下加上例句，並單字解釋 (若存在)<span class="token list punctuation">*</span> 將 <span class="token code keyword">`な形容詞`</span> 下加上例句，並單字解釋 (若存在)<span class="token list punctuation">*</span> 將 <span class="token code keyword">`名詞`</span> 下加上例句，並單字解釋 (若存在)<span class="token list punctuation">*</span> 將 <span class="token code keyword">`まとめ`</span> 下補全 (若存在)<span class="token list punctuation">*</span> 同一個意思的例句只要一句即可<span class="token list punctuation">*</span> 不需要 <span class="token code keyword">`發布`</span> 到 Hexo<span class="token list punctuation">*</span> 最後刪除最後一行的空白行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>可自行建立文件大綱，剩下部分由 Codex 自動補全</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>在 Codex 內輸入 <code>補全 xxx.md</code>，Codex 會自動根據 <code>AGENTS.md</code> 規格補全 Markdown</li><li>可自行根據需求逐步修改 <code>AGENTS.md</code></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在日文學習時，最花時間的是 &lt;code&gt;尋找例句&lt;/code&gt; 與 &lt;code&gt;單字解釋&lt;/code&gt;，透過 Codex 搭配 &lt;code&gt;AGENTS.md&lt;/code&gt;，可自動幫我們 &lt;code&gt;建立例句&lt;/code&gt; 與 &lt;code&gt;單字解釋&lt;/code&gt;，剩下大量時間。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更新 Codex CLI</title>
+    <link href="https://hugoneo.ai/codex/general/update/"/>
+    <id>https://hugoneo.ai/codex/general/update/</id>
+    <published>2026-06-15T22:35:03.000Z</published>
+    <updated>2026-06-15T22:36:08.522Z</updated>
+    
+    <content type="html"><![CDATA[<p>雖然使用 Homebrew 安裝 Codex CLI，但 Codex CLI 有提供參數可自動透過 Homebrew 更新 Codex。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex CLI 0.139.0</p><h2 id="Upgrade-Hugo"><a href="#Upgrade-Hugo" class="headerlink" title="Upgrade Hugo"></a>Upgrade Hugo</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ codex update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>Codex CLI 會呼叫 Homebrew 更新 Codex CLI 到最新版</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;雖然使用 Homebrew 安裝 Codex CLI，但 Codex CLI 有提供參數可自動透過 Homebrew 更新 Codex。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
+    
+  </entry>
   
   <entry>
     <title>設定 effort 加速處理速度</title>
@@ -128,9 +166,9 @@
     
     
     
-    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
-    
     <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
+    
+    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
     
   </entry>
   
@@ -359,50 +397,6 @@
     
     
     <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cmux 執行 Claude Code 錯誤</title>
-    <link href="https://hugoneo.ai/claude/issues/cmux/native/"/>
-    <id>https://hugoneo.ai/claude/issues/cmux/native/</id>
-    <published>2026-05-10T15:39:38.000Z</published>
-    <updated>2026-05-10T15:43:51.825Z</updated>
-    
-    <content type="html"><![CDATA[<p>iTerm2 直下 <code>claude</code> 沒有錯誤，但在 cmux 執行卻有錯誤。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>cmux 0.64.3</p><h2 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h2><p><img src="/images/claude/issues/cmux/native/native01.webp" alt="native01"></p><ul><li>執行 <code>claude</code> 抱怨 <code>installMethod</code> 是 <code>native</code>，但在 <code>~/.local/bin</code> 卻找不到 <code>claude</code></li></ul><p><img src="/images/claude/issues/cmux/native/native02.webp" alt="native02"></p><ul><li>Claude Code 建議你將 <code>~/.local/bin</code> 加入 PATH，但這卻是錯誤的建議，且加了也沒用，因為 <code>~./.local/bin</code> 下根本沒有 <code>cluade</code>，Homebrew 並不是將 <code>claude</code> 安裝在此目錄下</li></ul><p><em><strong>~&#x2F;.claude.json</strong></em></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"numStartups"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>  <span class="token property">"installMethod"</span><span class="token operator">:</span> <span class="token string">"homebrew"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><ul><li>將 <code>installMethod</code> 從 <code>native</code> 改成 <code>homebrew</code>，如此 Claude Code 就不會去 <code>~/.local/bin</code> 找 <code>claude</code></li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>正常使用 cmux 與 Cluade Code 不會出現這個問題，至少我其他兩台 MacBook 都沒問題，推測是安裝了 ACP Adapter 後，對根目錄的 <code>.claude.json</code> 加了 <code>&quot;installMethod&quot;: &quot;native&quot;</code> 後，導致 Claude Code 會因為是 <code>native</code> 而去檢查 <code>.local/bin</code>，進而導致建議你將此目錄加入 <code>path</code>，但事實上這也是錯誤的建議</li><li>將 <code>installMethod</code> 改成 <code>homebrew</code> 後，經實測 WebStorm + ACP 使用 Claude Code 並不會受影響</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;iTerm2 直下 &lt;code&gt;claude&lt;/code&gt; 沒有錯誤，但在 cmux 執行卻有錯誤。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Claude" scheme="https://hugoneo.ai/tags/Claude/"/>
-    
-    <category term="cmux" scheme="https://hugoneo.ai/tags/cmux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub Pages 使用 Cloudflare Domain</title>
-    <link href="https://hugoneo.ai/cloudflare/github-pages/"/>
-    <id>https://hugoneo.ai/cloudflare/github-pages/</id>
-    <published>2026-05-10T02:19:41.000Z</published>
-    <updated>2026-05-10T02:48:08.131Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hexo 同時使用 GitHub Pages 與 Claudflare Domain。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Hugo 0.154</p><h2 id="Cloudflare-DNS"><a href="#Cloudflare-DNS" class="headerlink" title="Cloudflare DNS"></a>Cloudflare DNS</h2><p><img src="/images/cloudflare/github-pages/github01.webp" alt="cloudflare01"></p><p>首先，你需要告訴 Cloudflare 將網域指向 GitHub 的伺服器。</p><ul><li>登入 Cloudflare，選擇你的網域</li><li>點擊左側選單的 <em><strong>DNS -&gt; Records</strong></em></li><li>新增 A 紀錄 (Apex Domain)：如果你想直接用 <code>example.com</code>（不含 www），請新增 4 筆 A 紀錄，名稱填寫 <code>@</code>，內容分別填入 GitHub 的官方 IP：<ul><li><code>185.199.108.153</code></li><li><code>185.199.109.153</code></li><li><code>185.199.110.153</code></li><li><code>185.199.111.153</code></li></ul></li><li>新增 CNAME 紀錄 (www)：如果你想用 <code>www.example.com</code>，新增一筆 CNAME，名稱填 <code>www</code>，內容填入你的 GitHub 使用者網址 (例如 <code>oomusou-hugo.github.io</code>)</li><li><code>Proxy Status</code>：<code>DNS only</code></li></ul><blockquote><p>GitHub Pages <code>不能</code> 選擇 <code>橘色的 Proxied</code></p></blockquote><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p><img src="/images/cloudflare/github-pages/github03.webp" alt="cloudflare03"></p><p>由於 Hexo 每次 <code>hexo d</code> 都會覆蓋掉 GitHub 上的檔案，如果你只在 GitHub 網頁版設定 Custom Domain，下次部署時就會消失。</p><ul><li>建立 CNAME 檔案<ul><li>在你的本地 Hexo 資料夾中，進入 <code>source</code> 目錄，新增一個檔名為 <code>CNAME</code> 的檔案 (無副檔名)</li><li>寫入網域</li><li>檔案內容只需要寫入你的網域，例如：<code>hugoneo.ai</code></li></ul></li></ul><p><img src="/images/cloudflare/github-pages/github04.webp" alt="cloudflare04"></p><ul><li>修改 <code>_config.yml</code><ul><li>打開 Hexo 根目錄的 <code>_config.yml</code>，修改 url 欄位 <code>url: https://hugoneo.ai</code></li></ul></li><li>部署<ul><li>執行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li></ul></li></ul><h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><p><img src="/images/cloudflare/github-pages/github02.webp" alt="cloudflare02"></p><p>最後，去 GitHub 確認設定是否生效。</p><ul><li>進入該專案的 <em><strong>Settings -&gt; Pages</strong></em></li><li>檢查 <code>Custom domain</code> 是否正確顯示你的網域</li><li><code>Enforce HTTPS</code>：稍等一下就可打勾</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Hexo 同時使用 GitHub Pages 與 Claudflare Domain。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="GitHub Pages" scheme="https://hugoneo.ai/tags/GitHub-Pages/"/>
-    
-    <category term="Cloudflare" scheme="https://hugoneo.ai/tags/Cloudflare/"/>
-    
-    <category term="Hexo" scheme="https://hugoneo.ai/tags/Hexo/"/>
     
   </entry>
   
