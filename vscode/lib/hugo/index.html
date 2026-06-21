@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-05-23T01:36:29.000Z",
-    "dateModified": "2026-05-24T02:51:54.851Z",
+    "dateModified": "2026-06-21T06:02:18.200Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -289,7 +289,7 @@ a:hover {
             <p>VS Code 目前並沒有原生支援 Hugo，須另外安裝一些 Extension 協助。</p>
 <a id="more"></a>
 
-<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.120</p>
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.125.1</p>
 <h2 id="Hugo-Language-and-Syntax-Support"><a href="#Hugo-Language-and-Syntax-Support" class="headerlink" title="Hugo Language and Syntax Support"></a>Hugo Language and Syntax Support</h2><p><img src="/images/vscode/lib/hugo/hugo01.webp" alt="hugo01"></p>
 <ul>
 <li>支援 Go Template</li>
@@ -309,12 +309,10 @@ a:hover {
 </ul>
 <h3 id="Node-js-端"><a href="#Node-js-端" class="headerlink" title="Node.js 端"></a>Node.js 端</h3><pre class="line-numbers highlight language-shell"><code class="language-shell">$ npm install -D prettier 
 $ npm install -D prettier-plugin-go-template
-$ npm install -D prettier-plugin-toml
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li><code>prettier</code>：美化 HTML&#x2F;CSS&#x2F;JavaScript</li>
 <li><code>prettier-plugin-go-template</code>：Prettier plugin：美化 Go Template</li>
-<li><code>prettier-plugin-toml</code>：Prettier plugin：美化 TOML</li>
 </ul>
 <p><strong>.prettierrc</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>
@@ -324,8 +322,7 @@ $ npm install -D prettier-plugin-toml
   <span class="token property">"singleQuote"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
   <span class="token property">"arrowParens"</span><span class="token operator">:</span> <span class="token string">"avoid"</span><span class="token punctuation">,</span>
   <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token string">"prettier-plugin-go-template"</span><span class="token punctuation">,</span>
-    <span class="token string">"prettier-plugin-toml"</span>
+    <span class="token string">"prettier-plugin-go-template"</span>
   <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token property">"overrides"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
     <span class="token punctuation">{</span>
@@ -338,7 +335,7 @@ $ npm install -D prettier-plugin-toml
     <span class="token punctuation">}</span>
   <span class="token punctuation">]</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>Prettier 設定檔 <code>.prettierrc</code></li>
 </ul>
@@ -358,14 +355,12 @@ $ npm install -D prettier-plugin-toml
 </ul>
 <p><strong>Line 7</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-  <span class="token string">"prettier-plugin-go-template"</span><span class="token punctuation">,</span>
-  <span class="token string">"prettier-plugin-toml"</span>
+  <span class="token string">"prettier-plugin-go-template"</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>plugins</code>：設定 Prettier plugin<ul>
 <li><code>prettier-plugin-go-template</code>：美化 Go template</li>
-<li><code>prettier-plugin-toml</code>：美化 TOML</li>
 </ul>
 </li>
 </ul>
@@ -423,7 +418,7 @@ public
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"[toml]"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"editor.defaultFormatter"</span><span class="token operator">:</span> <span class="token string">"esbenp.prettier-vscode"</span>
+    <span class="token property">"editor.defaultFormatter"</span><span class="token operator">:</span> <span class="token string">"tamasfe.even-better-toml"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"[json]"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
@@ -463,13 +458,22 @@ public
 <ul>
 <li>指定檔案關聯，讓 <code>*.gohtml</code> 視為 HTML</li>
 </ul>
+<p><strong>Line 21</strong></p>
+<pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"[toml]"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"editor.defaultFormatter"</span><span class="token operator">:</span> <span class="token string">"tamasfe.even-better-toml"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>TOML 使用 Enen Better TOML 格式化，而不是用 Prettier</li>
+</ul>
 <p><strong>package.json</strong></p>
 <pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span>
+  <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js}'"</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li><code>prettier</code>：一次處理專案內所有 HTML&#x2F;CSS&#x2F;JavaScript&#x2F;TOML</li>
+<li><code>prettier</code>：一次處理專案內所有 HTML&#x2F;CSS&#x2F;JavaScript</li>
 </ul>
 <h2 id="EditorConfig"><a href="#EditorConfig" class="headerlink" title="EditorConfig"></a>EditorConfig</h2><p><img src="/images/vscode/lib/hugo/hugo05.webp" alt="hugo05"></p>
 <ul>
@@ -533,7 +537,7 @@ node_modules
     <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"hugo server --disableFastRender"</span><span class="token punctuation">,</span>
     <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hugo --cleanDestinationDir --minify"</span><span class="token punctuation">,</span>
     <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"python3 -m http.server --directory public"</span><span class="token punctuation">,</span>
-    <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span>
+    <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js}'"</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token property">"devDependencies"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"^3.8.3"</span><span class="token punctuation">,</span>
@@ -550,7 +554,7 @@ node_modules
   <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"hugo server --disableFastRender"</span><span class="token punctuation">,</span>
   <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hugo --cleanDestinationDir --minify"</span><span class="token punctuation">,</span>
   <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"python3 -m http.server --directory public"</span><span class="token punctuation">,</span>
-  <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span>
+  <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js}'"</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
