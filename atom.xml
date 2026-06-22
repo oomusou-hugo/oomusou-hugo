@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-06-21T02:59:13.740Z</updated>
+  <updated>2026-06-22T23:52:39.450Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>禁止 Codex 寫入 Log</title>
+    <link href="https://hugoneo.ai/codex/log/block/"/>
+    <id>https://hugoneo.ai/codex/log/block/</id>
+    <published>2026-06-22T23:52:00.000Z</published>
+    <updated>2026-06-22T23:52:39.450Z</updated>
+    
+    <content type="html"><![CDATA[<p>為了避免 Codex 持續寫入 Log 傷害 SSD，可直接下指令加以禁止。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex CLI 0.141</p><h2 id="Block-Insert-Log"><a href="#Block-Insert-Log" class="headerlink" title="Block Insert Log"></a>Block Insert Log</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ sqlite3 ~/.codex/logs_2.sqlite \ 'CREATE TRIGGER IF NOT EXISTSblock_log_inserts BEFORE INSERT ON logs BEGIN SELECT RAISE(IGNORE);END;`<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>禁止 Codex 將 Log 寫入 SQLite</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;為了避免 Codex 持續寫入 Log 傷害 SSD，可直接下指令加以禁止。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刪除 Codex 的 Log</title>
+    <link href="https://hugoneo.ai/codex/log/delete/"/>
+    <id>https://hugoneo.ai/codex/log/delete/</id>
+    <published>2026-06-22T23:47:44.000Z</published>
+    <updated>2026-06-22T23:48:33.427Z</updated>
+    
+    <content type="html"><![CDATA[<p>若發現 Codex 所建立的 Log 檔案太大，可自行加以刪除。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex CLI 0.141</p><h2 id="Delete-Log"><a href="#Delete-Log" class="headerlink" title="Delete Log"></a>Delete Log</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ pkill -f codex$ ps aux | grep codex$ rm -f ~/.codex/logs_2.sqlite*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>強制停止執行中的 Codex</li><li>查詢 Codex 是否成功刪除</li><li>將 SQLite 檔案刪除</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>SQLite 檔案將在下次 Codex 執行時重新建立</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;若發現 Codex 所建立的 Log 檔案太大，可自行加以刪除。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>查詢 Codex 的 Log 量</title>
+    <link href="https://hugoneo.ai/codex/log/size/"/>
+    <id>https://hugoneo.ai/codex/log/size/</id>
+    <published>2026-06-22T23:41:12.000Z</published>
+    <updated>2026-06-22T23:42:27.380Z</updated>
+    
+    <content type="html"><![CDATA[<p>Codex 會將 Log 儲存在 SQLite，可透過指令查詢 Log 使用量。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex CLI 0.141</p><h2 id="File-Size"><a href="#File-Size" class="headerlink" title="File Size"></a>File Size</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ ls -lh ~/.codex/logs_2.sqlite*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>直接看 Log 檔案大小</li></ul><h2 id="Log-Count"><a href="#Log-Count" class="headerlink" title="Log Count"></a>Log Count</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ sqlite3 ~/.codex/logs_2.sqlite \'SELECT COUNT(*) FROM logs;'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>查看資料庫內有多少筆 Log</li></ul><h2 id="Estimated-Size"><a href="#Estimated-Size" class="headerlink" title="Estimated Size"></a>Estimated Size</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ sqlite3 ~/.codex/logs_2.sqlite \'SELECT  COUNT(*) AS rows,  SUM(estimated_bytes) AS bytesFROM logs;'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>估算 Log 內容實際大小</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Codex 會將 Log 儲存在 SQLite，可透過指令查詢 Log 使用量。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
+    
+  </entry>
   
   <entry>
     <title>網站變數簡介</title>
@@ -342,63 +399,6 @@
     
     
     <category term="VSCode" scheme="https://hugoneo.ai/tags/VSCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>將 User Setting 同步到雲端</title>
-    <link href="https://hugoneo.ai/vscode/general/settings/sync/"/>
-    <id>https://hugoneo.ai/vscode/general/settings/sync/</id>
-    <published>2026-05-14T15:45:38.000Z</published>
-    <updated>2026-05-14T15:49:40.776Z</updated>
-    
-    <content type="html"><![CDATA[<p>VS Code 不僅可將設定以 <code>settings.json</code> 保存，還可使用 Settings Sync 將設定存到雲端，讓其他電腦也使用相同的設定。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.120</p><h2 id="Sync-Configure"><a href="#Sync-Configure" class="headerlink" title="Sync Configure"></a>Sync Configure</h2><p><img src="/images/vscode/general/settings/sync/sync01.webp" alt="sync01"></p><pre class="line-numbers highlight language-shell"><code class="language-shell">Settings Sync: Configure<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>設定哪些項目要同步</li></ul><p><img src="/images/vscode/general/settings/sync/sync02.webp" alt="sync02"></p><ul><li>預設將所有項目全選同步到雲端</li></ul><p><img src="/images/vscode/general/settings/sync/sync03.webp" alt="sync03"></p><ul><li>要同步的帳戶</li></ul><h2 id="Sync-Now"><a href="#Sync-Now" class="headerlink" title="Sync Now"></a>Sync Now</h2><p><img src="/images/vscode/general/settings/sync/sync04.webp" alt="sync04"></p><pre class="line-numbers highlight language-shell"><code class="language-shell">Settings Sync: Sync Now<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>目前電腦若有任何設定修改，可使用 Sync Now 將目前設定同步到雲端</li><li>其他電腦也可使用 Sync Now 將目前雲端設定同步下載</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>這算 VS Code 劃時代的進步，尤其若你有多台 Mac，可快速在每台 Mac 設定出相同的 VS Code 開發環境</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;VS Code 不僅可將設定以 &lt;code&gt;settings.json&lt;/code&gt; 保存，還可使用 Settings Sync 將設定存到雲端，讓其他電腦也使用相同的設定。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>專案設定的 Workspace Setting</title>
-    <link href="https://hugoneo.ai/vscode/general/settings/workspace/"/>
-    <id>https://hugoneo.ai/vscode/general/settings/workspace/</id>
-    <published>2026-05-13T22:48:26.000Z</published>
-    <updated>2026-05-14T14:30:18.452Z</updated>
-    
-    <content type="html"><![CDATA[<p>VS Code 的專案設定都存 <code>setting.json</code> 中，可直接修改，不必透過 GUI。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.119.0</p><h2 id="settings-json"><a href="#settings-json" class="headerlink" title="settings.json"></a>settings.json</h2><p><img src="/images/vscode/general/settings/workspace/workspace01.webp" alt="global01"></p><ul><li>以 ⌘ ⇧ P 啟動 Command Palette </li><li>輸入 <code>open workspace settings (JSON)</code></li></ul><p><img src="/images/vscode/general/settings/workspace/workspace02.webp" alt="global02"></p><ul><li><code>settings.json</code> 位置在專案的 <code>.vscode</code> 目錄下</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;VS Code 的專案設定都存 &lt;code&gt;setting.json&lt;/code&gt; 中，可直接修改，不必透過 GUI。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>專案所使用的 Extension</title>
-    <link href="https://hugoneo.ai/vscode/feature/extension/"/>
-    <id>https://hugoneo.ai/vscode/feature/extension/</id>
-    <published>2026-05-13T10:20:30.000Z</published>
-    <updated>2026-05-17T02:44:56.769Z</updated>
-    
-    <content type="html"><![CDATA[<p>VS Code 可將專案所使用到的 Extension 存到 <code>.vscode</code> 目錄下的 <code>extensions.json</code> 內，讓用戶可快速得知此專案用到哪些 Extension 以便安裝。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>VS Code 1.120</p><p><strong>.vscode&#x2F;extensions.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"recommendations"</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token string">"budparr.language-hugo-vscode"</span><span class="token punctuation">,</span>    <span class="token string">"lruihao.hugo-partials-refs"</span><span class="token punctuation">,</span>    <span class="token string">"esbenp.prettier-vscode"</span><span class="token punctuation">,</span>    <span class="token string">"tamasfe.even-better-toml"</span><span class="token punctuation">,</span>    <span class="token string">"editorconfig.editorconfig"</span>  <span class="token punctuation">]</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><code>extensions.json</code> 必須放在 <code>.vscode</code> 目錄下，此為 Workspace 等級設定</li><li><code>recommendations</code>：將套件名稱寫在此</li></ul><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><strong>.gitignore</strong></p><pre class="line-numbers highlight language-git"><code class="language-git">.vscode/*!.vscode/settings.json!.vscode/extensions.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>排除 <code>.vscode</code> 不進 Git</li><li>但 <code>settings.json</code> 與 <code>extensions.json</code> 要進 Git</li></ul><h2 id="Recommended-Extensions"><a href="#Recommended-Extensions" class="headerlink" title="Recommended Extensions"></a>Recommended Extensions</h2><ul><li>第一次開啟專案時，VS Code 右下角會跳出通知詢問 <code>是否安裝推薦的 Extensions</code>，點  <code>Install All</code> 即可安裝 Extension</li></ul><h2 id="Extensions-View"><a href="#Extensions-View" class="headerlink" title="Extensions View"></a>Extensions View</h2><ul><li>開啟 Extensions View</li><li>搜尋框輸入 <code>@recommended</code></li><li>會列出 <code>extensions.json</code> 內的所有推薦的 Extension，逐一點 Install 安裝</li></ul><h2 id="Command-Palette"><a href="#Command-Palette" class="headerlink" title="Command Palette"></a>Command Palette</h2><ul><li>開啟 Command Palette</li><li>輸入 <code>Extensions: Show Recommended Extensions</code></li><li>在 Extensions View 顯示推薦 Extension</li></ul><h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><pre class="line-numbers highlight language-bash"><code class="language-bash"><span class="token function">cat</span> .vscode/extensions.json \  <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'"'</span> \  <span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token string">'//'</span> \  <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">'s/.*"\(.*\)".*/\1/'</span> \  <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'\.'</span> \  <span class="token operator">|</span> <span class="token function">xargs</span> -I <span class="token punctuation">{</span><span class="token punctuation">}</span> code --install-extension <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>一次安裝所有 Extension</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>VS Code 是萬用程式碼編輯器，依賴不同的 Extension 就可處理不同類型專案，因此建議將所有用到的 Extension 都記錄在 <code>.vscode/extensions.json</code>，並存入 Git，這樣接手的人就可馬上設定好開發環境</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;VS Code 可將專案所使用到的 Extension 存到 &lt;code&gt;.vscode&lt;/code&gt; 目錄下的 &lt;code&gt;extensions.json&lt;/code&gt; 內，讓用戶可快速得知此專案用到哪些 Extension 以便安裝。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
     
   </entry>
   
