@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html 
+>
+  <head>
+  <meta charset="utf-8">
+  <!-- ### DNS Prefetch ### -->
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+<!-- busuanzi -->
+
+<!-- comment -->
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+  <!-- ### Preload ### -->
+  
+
+  <!-- ### Meta & Title & Info ### -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<!-- Title -->
+<title>使用 /status 取得目前 Session 狀態 | 次世代 Hugo</title>
+<!-- favicon -->
+<!-- Favicons -->
+
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff2601">
+<!-- Android Chrome Color -->
+
+<meta name="format-detection" content="telephone=no">
+<!-- Description -->
+<meta name="description" content="Codex 可使用 /status 取得目前 Session 狀態。">
+<!-- Keywords -->
+<meta name="keywords" content=", Codex">
+<!-- Disable Fucking Bloody Baidu Tranformation -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!-- ### Import File ### -->
+  
+    <!-- spectre.css -->
+
+<link rel="stylesheet" href="/lib/spectre/spectre.min.css">
+
+<style>
+body {
+  background-color: #f8f9fa
+}
+
+a,
+a:visited {
+  color: #0070ff
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #0070ff;
+  opacity: .75;
+}
+
+.avatar {
+  background: #444
+}
+
+.navbar-link,
+.navbar-link:visited,
+.timeline .timeline-item .timeline-icon.icon-lg {
+  color: #0070ff
+}
+
+.navbar-link:hover {
+  color: #0070ff;
+  opacity: .8;
+}
+
+#search-input .btn,
+#disqus_click_btn,
+#disqus-switch-to-direct,
+#disqus-loadmore-button {
+  background: #727e96;
+  border-color: #727e96;
+  color: #fff;
+}
+
+#post-toc a.post-toc-link,
+#post-toc a.post-toc-link:visited,
+.share-menu.menu .menu-item > a {
+  color: #727e96
+}
+
+.share-menu.menu .menu-item > a:hover,
+.share-menu.menu .menu-item > a:focus,
+.share-menu.menu .menu-item > a:visited {
+  color: #50596c;
+  background: #f8f9fa;
+  opacity: .85;
+}
+</style>
+
+<!-- style.css -->
+
+<link rel="stylesheet" href="/css/style.min.css">
+
+
+<!-- prism.css -->
+
+    <!-- prism.line_number -->
+    
+        
+            <link rel="stylesheet" href="/lib/prism/prism-line-numbers.min.css">
+        
+    
+    <!-- prism.theme -->
+    
+        <link rel="stylesheet" href="/lib/prism/prism-darcula.min.css">
+    
+
+
+
+
+  
+  <!-- ### Site Verification ### -->
+  
+
+  <!-- ### RSS ### -->
+  
+
+<link rel="alternate" type="application/atom+xml" href="/atom.xml">
+
+
+  <!-- ### WebApp ### -->
+  <meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="次世代 Hugo">
+<meta name="msapplication-starturl" content="https://hugoneo.ai">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="次世代 Hugo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Manifest Import -->
+
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Search -->
+
+  <!-- ### The Open Graph & Twitter Card Protocol ### -->
+  <meta property="og:title" content="使用 /status 取得目前 Session 狀態 | 次世代 Hugo">
+<meta property="og:site_name" content="次世代 Hugo">
+
+<meta property="og:url" content="https://hugoneo.ai/codex/command/status/">
+<meta property="og:image"
+	content="https://hugoneo.ai/apple-touch-icon.png">
+<meta property="og:description" content="Codex 可使用 /status 取得目前 Session 狀態。">
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-07-01T00:05:05.000Z">
+<meta property="article:modified_time" content="2026-07-01T00:05:05.000Z">
+<meta property="article:author" content="Sam Xiao">
+<meta property="og:article:tag" content=", Codex">
+
+
+  <!-- ### Analytics ### -->
+  
+
+
+
+
+
+  <!-- ### Canonical link ### -->
+  <link rel="canonical" href="https://hugoneo.ai/codex/command/status/">
+  <!-- ### Structured Data ### -->
+  
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "https://hugoneo.ai/codex/command/status/",
+    "@type": "BlogPosting",
+    "logo": "https://hugoneo.ai/apple-touch-icon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hugoneo.ai/codex/command/status/"
+    },
+    "headline": "使用 /status 取得目前 Session 狀態 | 次世代 Hugo",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://hugoneo.ai/apple-touch-icon.png"
+    },
+    
+    "datePublished": "2026-07-01T00:05:05.000Z",
+    "dateModified": "2026-07-04T12:26:30.368Z",
+    "author": {
+        "@type": "Person",
+        "name": "Sam Xiao",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://hugoneo.ai/img/default_avatar.png"
+        },
+        "description": "智能を研ぎ、創造を編む"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "次世代 Hugo",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://hugoneo.ai/apple-touch-icon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://hugoneo.ai/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": ", Codex",
+    "description": "Codex 可使用 /status 取得目前 Session 狀態。"
+}
+</script>
+
+  <!-- ### Custom Head ### -->
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+  <header>
+  <h1 class="header-title text-center">
+    <a href="/">
+      次世代 Hugo
+    </a>
+  </h1>
+  <div class="text-center header-slogan">
+    智能を研ぎ、創造を編む
+  </div>
+  <nav class="navbar-section text-center">
+  <div class="columns">
+    <div class="column col-1"></div>
+    <div class="column col-10 col-sm-12 align-content-center">
+      <a href="/" class="navbar-link">ホーム</a>
+      <a href="/series/" class="navbar-link">シリーズ</a>
+      <a href="/tags/" class="navbar-link">タグ</a>
+      <a href="/search" class="navbar-link">検索</a>
+    </div>
+  </div>
+</nav>
+</header>
+  
+<!-- ## Post ## -->
+<div class="post-container">
+  <div id="post-card" class="card">
+    <div class="card-item-container">
+      <div class="card-inner-cell">
+        <div class="card-header">
+          
+<h1 class="card-title h3 mb-2">使用 /status 取得目前 Session 狀態</h1>
+
+
+<div class="post-header-info">
+	<img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif"
+		alt="Sam Xiao's Avatar">
+	<span>2026-07-01</span>
+</div>
+
+        </div>
+        <div class="card-body">
+          <article id="post-content">
+            <p>Codex 可使用 <code>/status</code> 取得目前 Session 狀態。</p>
+<a id="more"></a>
+
+<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex 0.142.4</p>
+<h2 id="Status"><a href="#Status" class="headerlink" title="Status"></a>Status</h2><p><img src="/images/codex/command/status/status01.webp" alt="status01"></p>
+<ul>
+<li><code>Model</code>：目前使用的模型與 Reasoning 等級</li>
+<li><code>Directory</code>：目前工作目錄</li>
+<li><code>Permissions</code>：目前的檔案存取權限，也就是這個 Session 可以讀寫哪些目錄<ul>
+<li><code>Read Only</code>：只能讀，不能修改任何檔案</li>
+<li><code>Workspace</code>：只能修改目前 workspace 內的檔案</li>
+<li><code>Custom</code>：使用自訂的可存取目錄 (你現在就是這個)</li>
+<li><code>Danger Full Access</code>：幾乎整台電腦都可以讀寫 (風險最高)</li>
+</ul>
+</li>
+<li><code>Agents.md</code>：目前所找到的 <code>Agents.md</code> 路徑</li>
+<li><code>Account</code>：目前登入帳戶</li>
+<li><code>Collaboration mode</code>：目前採用的協作模式，在這個 Session 中，和你互動、執行工作的方式</li>
+<li><code>Session</code>：目前 Session 的唯一識別碼 (Session ID)</li>
+<li><code>5h Limit</code>：5小時使用額度</li>
+<li><code>Weekly Limit</code>：一週使用額度<ul>
+<li><code>Left</code>：還剩下多少額度</li>
+<li><code>Resets</code>：下次重置時間</li>
+</ul>
+</li>
+</ul>
+<h2 id="情境"><a href="#情境" class="headerlink" title="情境"></a>情境</h2><ul>
+<li>不確定目前是不是 <code>gpt-5.5</code></li>
+<li>忘記 Approval 是 Auto 還是 On-request</li>
+<li>想確認 Sandbox 是否為 <code>workspace-write</code></li>
+<li>懷疑 Context 快滿了</li>
+<li>想知道目前 Session 已經用了多少 Token</li>
+</ul>
+
+          </article>
+          <p class="post-footer-info mb-0 pt-2">
+  
+  
+  <span class="post-tags-list mt-2">
+    
+    
+    <a class="post-tags-list-item" href='/tags/Codex/'>#&nbsp;Codex</a>
+    
+  </span>
+  
+</p>
+        </div>
+        <div class="post-nav px-2 bg-gray">
+	<ul class="pagination">
+		<!-- Prev Nav -->
+		
+		<li class="page-item page-prev">
+			<a href="/codex/command/statusline/">
+				<div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+				<div class="page-item-subtitle">使用 /statusline 即時顯示剩餘額度</div>
+			</a>
+		</li>
+		
+		<!-- Next Nav -->
+		
+		<li class="page-item page-next">
+			<a href="/codex/log/block/">
+				<div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+				<div class="page-item-subtitle">禁止 Codex 寫入 Log</div>
+			</a>
+		</li>
+		
+	</ul>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="text-center">
+  <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span data-year></span>
+    <a href="mailto:oomusou@gmail.com" class="footer-copyright-a" href="https://hugoneo.ai">次世代 Hugo</a>
+  </p>
+</footer>
+
+  <!-- ### Footer JS Import ### -->
+<script>
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+  };
+
+  /* Copyright */
+  var copyrightNow = new Date().getFullYear();
+  var copyrightContent = document.querySelector('span[data-year]')
+  copyrightSince = 2015;
+  copyrightContent.textContent = copyrightSince + ' - ' + copyrightNow;
+</script>
+<!-- vanilla-lazyload -->
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+
+
+
+
+<!-- gallery.js -->
+
+<!-- Comment -->
+
+<!-- ### Custom Footer ### -->
+
+  </body>
+</html>
