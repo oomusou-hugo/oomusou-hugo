@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-06-14T14:31:45.000Z",
-    "dateModified": "2026-07-04T12:14:13.932Z",
+    "dateModified": "2026-07-05T08:49:58.204Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -297,7 +297,7 @@ $ python3 -m pip install -U openai-whisper
 <li>安裝 ffmpeg</li>
 <li>安裝 openai-whisper</li>
 </ul>
-<h2 id="安裝-Model"><a href="#安裝-Model" class="headerlink" title="安裝 Model"></a>安裝 Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ mkdir -p /Users/oomusou/whisper_models
+<h2 id="Install-Whisper-Model"><a href="#Install-Whisper-Model" class="headerlink" title="Install Whisper Model"></a>Install Whisper Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ mkdir -p /Users/oomusou/whisper_models
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>建立 model 的目錄：<code>whisper_models</code></li>
@@ -315,7 +315,12 @@ PY
 <pre class="line-numbers highlight language-shell"><code class="language-shell">$ ls -lh /Users/oomusou/whisper_models
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>應顯示 <code>small.pt</code></li>
+<li>應顯示 <code>medium.pt</code></li>
+</ul>
+<h2 id="Put-Whisper-Model-to-Cache"><a href="#Put-Whisper-Model-to-Cache" class="headerlink" title="Put Whisper Model to Cache"></a>Put Whisper Model to Cache</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">> Ｗhisper Model 目前放在 /Users/oomusou/whisper_models 下，將 medium.pt 放到 Cache 下方便 Codex 調用
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>在 Codex 下將 Whisper Model 放到 Cache 下方便Codex 調用</li>
 </ul>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>之後可直接在 Codex CLI 下直接使用 ffmpeg 與 whisper 產生 mp4 的逐字稿</li>

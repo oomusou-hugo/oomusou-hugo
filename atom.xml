@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-07-04T13:35:48.194Z</updated>
+  <updated>2026-07-06T11:10:15.580Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MLX LM 初體驗</title>
+    <link href="https://hugoneo.ai/mlx-lm/general/setup/"/>
+    <id>https://hugoneo.ai/mlx-lm/general/setup/</id>
+    <published>2026-07-06T11:05:14.000Z</published>
+    <updated>2026-07-06T11:10:15.580Z</updated>
+    
+    <content type="html"><![CDATA[<p>MLX LM 為 Apple 親手打造的 LMX 生態裡專門處理大型語言模型推論的工具，可發揮 Apple Silicon 的威力。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Python 3.12<br>MLX LM 0.31.3</p><h2 id="Python-3-12"><a href="#Python-3-12" class="headerlink" title="Python 3.12"></a>Python 3.12</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install python@3.12<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Python 3.12</li></ul><blockquote><p>不能安裝 Python 最新版，MLX-LM 尚未支援<br>也不能使用 macOS 內建 Python，版本又太舊</p></blockquote><h2 id="jq"><a href="#jq" class="headerlink" title="jq"></a>jq</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install jq<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>jq 是一個命令列 JSON 處理工具，可以把 JSON 當成資料來查詢、篩選、修改、格式化，方便獲得易讀結果</li></ul><h2 id="venv"><a href="#venv" class="headerlink" title="venv"></a>venv</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ rm -rf ~/venvs/mlx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>刪除之前安裝過的 venvs 環境</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ /opt/homebrew/bin/python3.12 -m venv ~/venvs/mlx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用剛剛用 Homebrew 安裝的 Python 安裝 <code>venv</code>，並建立工作目錄在 <code>~/venvs/mlx</code></li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ source ~/venvs/mlx/bin/activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>啟動 venv 虛擬環境</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ python --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>可發現 venv 是跑在 Python 3.12.13，而不是 macOS 內建 Python 3.9.6，如此已達成 MLX LM 要求 Python 3.12 的要求</li></ul><h2 id="MLX-LM"><a href="#MLX-LM" class="headerlink" title="MLX LM"></a>MLX LM</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip install -U mlx-lm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 pip 安裝 MLX LM</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip show mlx-lm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>MLX LM 安裝成功</li></ul><p><img src="/images/mlx-lm/general/setup/mlx01.webp" alt="mlx01"></p><h2 id="Transformers"><a href="#Transformers" class="headerlink" title="Transformers"></a>Transformers</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip install "transformers<5.13" --force-reinstall<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>將低 Transformers 版本</li></ul><blockquote><p>因為 MLX LM 尚未支援 Transformers 最新版本</p></blockquote><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip show transformers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>Transformers 降版成功</li></ul><p><img src="/images/mlx-lm/general/setup/mlx02.webp" alt="mlx02"></p><h2 id="Load-Model"><a href="#Load-Model" class="headerlink" title="Load Model"></a>Load Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ mlx_lm.server --model mlx-community/Qwen3-8B-4bit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>mlx_lm.server</code>： 載入 model<ul><li><code>--model</code>：指定所使用 model</li></ul></li></ul><h2 id="Test-Model"><a href="#Test-Model" class="headerlink" title="Test Model"></a>Test Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ curl -s http://127.0.0.1:8080/v1/chat/completions \ -H "Content-Type: application/json" \ -d '{  "model":"mlx-community/Qwen3-8B-4bit",  "messages":[{"role":"user","content":"請翻譯：今日はいい天気です"}] }' | jq -r '.choices[0].message.content'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>使用 crul 測試 model 是否成功執行</li></ul><p><img src="/images/mlx-lm/general/setup/mlx03.webp" alt="mlx03"></p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li><code>Qwen3-8B-4bit</code> 可在 M2 24GB 正常執行，雖然速度不算快</li><li><code>Qwen3-8B-4bit</code> 可在 M4 Max 128GB 正常執行，速度快很多</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;MLX LM 為 Apple 親手打造的 LMX 生態裡專門處理大型語言模型推論的工具，可發揮 Apple Silicon 的威力。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="MLX LM" scheme="https://hugoneo.ai/tags/MLX-LM/"/>
+    
+  </entry>
   
   <entry>
     <title>根據專案自動安裝 Plugin</title>
@@ -255,9 +274,9 @@
     <link href="https://hugoneo.ai/codex/feature/whisper/"/>
     <id>https://hugoneo.ai/codex/feature/whisper/</id>
     <published>2026-06-14T14:31:45.000Z</published>
-    <updated>2026-07-04T12:14:13.932Z</updated>
+    <updated>2026-07-05T08:49:58.204Z</updated>
     
-    <content type="html"><![CDATA[<p>Codex 可對 MP4 直接產生日文逐字搞，且包含中文翻譯與單字解釋。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex 0.139.0</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install ffmpeg$ python3 -m pip install -U openai-whisper<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>安裝 ffmpeg</li><li>安裝 openai-whisper</li></ul><h2 id="安裝-Model"><a href="#安裝-Model" class="headerlink" title="安裝 Model"></a>安裝 Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ mkdir -p /Users/oomusou/whisper_models<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>建立 model 的目錄：<code>whisper_models</code></li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">python3 - <<'PY'import whispermodel_dir = "/Users/oomusou/whisper_models"whisper.load_model("medium", download_root=model_dir)print("medium model downloaded to", model_dir)PY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>下載 model</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ ls -lh /Users/oomusou/whisper_models<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>應顯示 <code>small.pt</code></li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>之後可直接在 Codex CLI 下直接使用 ffmpeg 與 whisper 產生 mp4 的逐字稿</li><li>Model 可挑 <code>small</code> 或 <code>medium</code>，基本上 <code>small</code> 就已經可用，<code>medium</code> 會更精確些</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>Codex 可對 MP4 直接產生日文逐字搞，且包含中文翻譯與單字解釋。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex 0.139.0</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install ffmpeg$ python3 -m pip install -U openai-whisper<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>安裝 ffmpeg</li><li>安裝 openai-whisper</li></ul><h2 id="Install-Whisper-Model"><a href="#Install-Whisper-Model" class="headerlink" title="Install Whisper Model"></a>Install Whisper Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ mkdir -p /Users/oomusou/whisper_models<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>建立 model 的目錄：<code>whisper_models</code></li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">python3 - <<'PY'import whispermodel_dir = "/Users/oomusou/whisper_models"whisper.load_model("medium", download_root=model_dir)print("medium model downloaded to", model_dir)PY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>下載 model</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ ls -lh /Users/oomusou/whisper_models<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>應顯示 <code>medium.pt</code></li></ul><h2 id="Put-Whisper-Model-to-Cache"><a href="#Put-Whisper-Model-to-Cache" class="headerlink" title="Put Whisper Model to Cache"></a>Put Whisper Model to Cache</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">> Ｗhisper Model 目前放在 /Users/oomusou/whisper_models 下，將 medium.pt 放到 Cache 下方便 Codex 調用<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>在 Codex 下將 Whisper Model 放到 Cache 下方便Codex 調用</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>之後可直接在 Codex CLI 下直接使用 ffmpeg 與 whisper 產生 mp4 的逐字稿</li><li>Model 可挑 <code>small</code> 或 <code>medium</code>，基本上 <code>small</code> 就已經可用，<code>medium</code> 會更精確些</li></ul>]]></content>
     
     
     <summary type="html">&lt;p&gt;Codex 可對 MP4 直接產生日文逐字搞，且包含中文翻譯與單字解釋。&lt;/p&gt;</summary>
@@ -388,25 +407,6 @@
     
     
     <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>將設定同步到雲端</title>
-    <link href="https://hugoneo.ai/webstorm/general/settings/sync/"/>
-    <id>https://hugoneo.ai/webstorm/general/settings/sync/</id>
-    <published>2026-05-18T22:46:27.000Z</published>
-    <updated>2026-06-28T09:27:48.468Z</updated>
-    
-    <content type="html"><![CDATA[<p>設定除了可以匯出成 ZIP 外，更方便的方法是直接同步到雲端，讓其他電腦可以簡單套用。</p><a id="more"></a><h2 id="Backup-and-Sync"><a href="#Backup-and-Sync" class="headerlink" title="Backup and Sync"></a>Backup and Sync</h2><p><img src="/images/webstorm/general/settings/sync/sync01.webp" alt="sync01"></p><p><em><strong>File -&gt; Manage IDE Settings -&gt; Backup and Sync</strong></em></p><p><img src="/images/webstorm/general/settings/sync/sync02.webp" alt="sync02"></p><ul><li>可將設定同步到雲端，亦可從雲端下載設定</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;設定除了可以匯出成 ZIP 外，更方便的方法是直接同步到雲端，讓其他電腦可以簡單套用。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="WebStorm" scheme="https://hugoneo.ai/tags/WebStorm/"/>
     
   </entry>
   
