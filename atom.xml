@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-07-06T11:10:15.580Z</updated>
+  <updated>2026-07-10T00:50:27.472Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -17,16 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>管理 MLX LM 的 Model</title>
+    <link href="https://hugoneo.ai/mlx-lm/general/manage/"/>
+    <id>https://hugoneo.ai/mlx-lm/general/manage/</id>
+    <published>2026-07-10T00:49:12.000Z</published>
+    <updated>2026-07-10T00:50:27.472Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文討論 MLX LM 最基本的管裡：<code>新增 Model</code>、<code>Model 清單</code> 與 <code>刪除 Model</code>。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>MLX LM 0.31.3</p><h2 id="Add-Model"><a href="#Add-Model" class="headerlink" title="Add Model"></a>Add Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ mlx_lm.server --model mlx-community/Qwen3-8B-4bit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>MLX LM 不必另外下載 model，直接啟動 model 即可，若發現 model 不存在，會自動下載到 cache</li></ul><h2 id="List-Model"><a href="#List-Model" class="headerlink" title="List Model"></a>List Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ hf cache ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Hugging Face CLI 列出在 cache 中有哪些 model</li></ul><h2 id="Delete-Model"><a href="#Delete-Model" class="headerlink" title="Delete Model"></a>Delete Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ hf cache rm model/mlx-community/Qwen3-14B-6bit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Hugging Face CLI 刪除 model，<code>rm</code> 後接 model id，注意前面必須加上 <code>model/</code></li></ul><blockquote><p>model id 可由 <code>curl http://127.0.0.1:8080/v1/models</code> 取得</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;本文討論 MLX LM 最基本的管裡：&lt;code&gt;新增 Model&lt;/code&gt;、&lt;code&gt;Model 清單&lt;/code&gt; 與 &lt;code&gt;刪除 Model&lt;/code&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="MLX LM" scheme="https://hugoneo.ai/tags/MLX-LM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Opencode 初體驗</title>
+    <link href="https://hugoneo.ai/opencode/general/setup/"/>
+    <id>https://hugoneo.ai/opencode/general/setup/</id>
+    <published>2026-07-10T00:16:16.000Z</published>
+    <updated>2026-07-10T00:23:26.335Z</updated>
+    
+    <content type="html"><![CDATA[<p>Opencode 為免費的 Agent，可直接連接到 MLX LM 上的 Model。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Opencode 1.17.18<br>MLX LM 0.31.3<br>Qwen3-8B-4bit</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install anomalyco/tap/opencode<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Opencode</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ opencode --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>確認安裝成功</li></ul><h2 id="MLX-LM"><a href="#MLX-LM" class="headerlink" title="MLX LM"></a>MLX LM</h2><p><strong>opencode.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"$schema"</span><span class="token operator">:</span> <span class="token string">"https://opencode.ai/config.json"</span><span class="token punctuation">,</span>  <span class="token property">"provider"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"mlx"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"npm"</span><span class="token operator">:</span> <span class="token string">"@ai-sdk/openai-compatible"</span><span class="token punctuation">,</span>      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"MLX-LM"</span><span class="token punctuation">,</span>      <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"baseURL"</span><span class="token operator">:</span> <span class="token string">"http://127.0.0.1:8080/v1"</span>      <span class="token punctuation">}</span><span class="token punctuation">,</span>      <span class="token property">"models"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"mlx-community/Qwen3-8B-4bit"</span><span class="token operator">:</span> <span class="token punctuation">{</span>          <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Qwen3-8B-4bit"</span>        <span class="token punctuation">}</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token property">"model"</span><span class="token operator">:</span> <span class="token string">"mlx/mlx-community/Qwen3-8B-4bit"</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>在工作目錄下建立 <code>opencode.json</code>，連接到 MLX LM 的 Qwen3-8B-4bit</li></ul><h2 id="Opencode"><a href="#Opencode" class="headerlink" title="Opencode"></a>Opencode</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ opencode<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>在工作目錄下輸入 <code>opencode</code> 執行 Opencode，會自動根據 <code>opencode.json</code> 內容連接到 MLX LM</li></ul><h2 id="Prompt"><a href="#Prompt" class="headerlink" title="Prompt"></a>Prompt</h2><p><img src="/images/opencode/general/setup/setup01.webp" alt="setup01"></p><ul><li>順利以 Opencode 連上 MLX LM 的 Qwen3-8B-4bit</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Opencode 為免費的 Agent，可直接連接到 MLX LM 上的 Model。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Opencode" scheme="https://hugoneo.ai/tags/Opencode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MLX LM 初體驗</title>
     <link href="https://hugoneo.ai/mlx-lm/general/setup/"/>
     <id>https://hugoneo.ai/mlx-lm/general/setup/</id>
     <published>2026-07-06T11:05:14.000Z</published>
-    <updated>2026-07-06T11:10:15.580Z</updated>
+    <updated>2026-07-10T00:18:45.134Z</updated>
     
-    <content type="html"><![CDATA[<p>MLX LM 為 Apple 親手打造的 LMX 生態裡專門處理大型語言模型推論的工具，可發揮 Apple Silicon 的威力。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Python 3.12<br>MLX LM 0.31.3</p><h2 id="Python-3-12"><a href="#Python-3-12" class="headerlink" title="Python 3.12"></a>Python 3.12</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install python@3.12<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Python 3.12</li></ul><blockquote><p>不能安裝 Python 最新版，MLX-LM 尚未支援<br>也不能使用 macOS 內建 Python，版本又太舊</p></blockquote><h2 id="jq"><a href="#jq" class="headerlink" title="jq"></a>jq</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install jq<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>jq 是一個命令列 JSON 處理工具，可以把 JSON 當成資料來查詢、篩選、修改、格式化，方便獲得易讀結果</li></ul><h2 id="venv"><a href="#venv" class="headerlink" title="venv"></a>venv</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ rm -rf ~/venvs/mlx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>刪除之前安裝過的 venvs 環境</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ /opt/homebrew/bin/python3.12 -m venv ~/venvs/mlx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用剛剛用 Homebrew 安裝的 Python 安裝 <code>venv</code>，並建立工作目錄在 <code>~/venvs/mlx</code></li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ source ~/venvs/mlx/bin/activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>啟動 venv 虛擬環境</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ python --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>可發現 venv 是跑在 Python 3.12.13，而不是 macOS 內建 Python 3.9.6，如此已達成 MLX LM 要求 Python 3.12 的要求</li></ul><h2 id="MLX-LM"><a href="#MLX-LM" class="headerlink" title="MLX LM"></a>MLX LM</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip install -U mlx-lm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 pip 安裝 MLX LM</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip show mlx-lm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>MLX LM 安裝成功</li></ul><p><img src="/images/mlx-lm/general/setup/mlx01.webp" alt="mlx01"></p><h2 id="Transformers"><a href="#Transformers" class="headerlink" title="Transformers"></a>Transformers</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip install "transformers<5.13" --force-reinstall<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>將低 Transformers 版本</li></ul><blockquote><p>因為 MLX LM 尚未支援 Transformers 最新版本</p></blockquote><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip show transformers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>Transformers 降版成功</li></ul><p><img src="/images/mlx-lm/general/setup/mlx02.webp" alt="mlx02"></p><h2 id="Load-Model"><a href="#Load-Model" class="headerlink" title="Load Model"></a>Load Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ mlx_lm.server --model mlx-community/Qwen3-8B-4bit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>mlx_lm.server</code>： 載入 model<ul><li><code>--model</code>：指定所使用 model</li></ul></li></ul><h2 id="Test-Model"><a href="#Test-Model" class="headerlink" title="Test Model"></a>Test Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ curl -s http://127.0.0.1:8080/v1/chat/completions \ -H "Content-Type: application/json" \ -d '{  "model":"mlx-community/Qwen3-8B-4bit",  "messages":[{"role":"user","content":"請翻譯：今日はいい天気です"}] }' | jq -r '.choices[0].message.content'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>使用 crul 測試 model 是否成功執行</li></ul><p><img src="/images/mlx-lm/general/setup/mlx03.webp" alt="mlx03"></p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li><code>Qwen3-8B-4bit</code> 可在 M2 24GB 正常執行，雖然速度不算快</li><li><code>Qwen3-8B-4bit</code> 可在 M4 Max 128GB 正常執行，速度快很多</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>MLX LM 為 Apple 親手打造的 MLX 生態裡專門處理大型語言模型推論的工具，可發揮 Apple Silicon 的威力。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Python 3.12<br>MLX LM 0.31.3</p><h2 id="Python-3-12"><a href="#Python-3-12" class="headerlink" title="Python 3.12"></a>Python 3.12</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install python@3.12<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Python 3.12</li></ul><blockquote><p>不能安裝 Python 最新版，MLX-LM 尚未支援<br>也不能使用 macOS 內建 Python，版本又太舊</p></blockquote><h2 id="jq"><a href="#jq" class="headerlink" title="jq"></a>jq</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install jq<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>jq 是一個命令列 JSON 處理工具，可以把 JSON 當成資料來查詢、篩選、修改、格式化，方便獲得易讀結果</li></ul><h2 id="venv"><a href="#venv" class="headerlink" title="venv"></a>venv</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ rm -rf ~/venvs/mlx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>刪除之前安裝過的 venvs 環境</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ /opt/homebrew/bin/python3.12 -m venv ~/venvs/mlx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用剛剛用 Homebrew 安裝的 Python 安裝 <code>venv</code>，並建立工作目錄在 <code>~/venvs/mlx</code></li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ source ~/venvs/mlx/bin/activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>啟動 venv 虛擬環境</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ python --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>可發現 venv 是跑在 Python 3.12.13，而不是 macOS 內建 Python 3.9.6，如此已達成 MLX LM 要求 Python 3.12 的要求</li></ul><h2 id="MLX-LM"><a href="#MLX-LM" class="headerlink" title="MLX LM"></a>MLX LM</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip install -U mlx-lm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 pip 安裝 MLX LM</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip show mlx-lm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>MLX LM 安裝成功</li></ul><p><img src="/images/mlx-lm/general/setup/mlx01.webp" alt="mlx01"></p><h2 id="Transformers"><a href="#Transformers" class="headerlink" title="Transformers"></a>Transformers</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip install "transformers<5.13" --force-reinstall<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>將低 Transformers 版本</li></ul><blockquote><p>因為 MLX LM 尚未支援 Transformers 最新版本</p></blockquote><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ pip show transformers<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>Transformers 降版成功</li></ul><p><img src="/images/mlx-lm/general/setup/mlx02.webp" alt="mlx02"></p><h2 id="Load-Model"><a href="#Load-Model" class="headerlink" title="Load Model"></a>Load Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">(mlx)$ mlx_lm.server --model mlx-community/Qwen3-8B-4bit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>mlx_lm.server</code>： 載入 model<ul><li><code>--model</code>：指定所使用 model</li></ul></li></ul><h2 id="Test-Model"><a href="#Test-Model" class="headerlink" title="Test Model"></a>Test Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ curl -s http://127.0.0.1:8080/v1/chat/completions \ -H "Content-Type: application/json" \ -d '{  "model":"mlx-community/Qwen3-8B-4bit",  "messages":[{"role":"user","content":"請翻譯：今日はいい天気です"}] }' | jq -r '.choices[0].message.content'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>使用 crul 測試 model 是否成功執行</li></ul><p><img src="/images/mlx-lm/general/setup/mlx03.webp" alt="mlx03"></p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li><code>Qwen3-8B-4bit</code> 可在 M2 24GB 正常執行，雖然速度不算快</li><li><code>Qwen3-8B-4bit</code> 可在 M4 Max 128GB 正常執行，速度快很多</li></ul>]]></content>
     
     
-    <summary type="html">&lt;p&gt;MLX LM 為 Apple 親手打造的 LMX 生態裡專門處理大型語言模型推論的工具，可發揮 Apple Silicon 的威力。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;MLX LM 為 Apple 親手打造的 MLX 生態裡專門處理大型語言模型推論的工具，可發揮 Apple Silicon 的威力。&lt;/p&gt;</summary>
     
     
     
@@ -367,44 +405,6 @@
     
     
     <category term="VS Code" scheme="https://hugoneo.ai/tags/VS-Code/"/>
-    
-    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更新 Hugo</title>
-    <link href="https://hugoneo.ai/hugo/cli/upgrade/"/>
-    <id>https://hugoneo.ai/hugo/cli/upgrade/</id>
-    <published>2026-05-22T23:39:25.000Z</published>
-    <updated>2026-06-28T09:27:48.466Z</updated>
-    
-    <content type="html"><![CDATA[<p>可使用 Homebrew 簡單地更新 Hugo。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Hugo 0.161.1</p><h2 id="Upgrade-Hugo"><a href="#Upgrade-Hugo" class="headerlink" title="Upgrade Hugo"></a>Upgrade Hugo</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew upgrade hugo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 <code>brew upgrade</code> 更新 Hugo 到最新版</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;可使用 Homebrew 簡單地更新 Hugo。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>顯示 Hugo 編譯過的網站</title>
-    <link href="https://hugoneo.ai/hugo/cli/serve/"/>
-    <id>https://hugoneo.ai/hugo/cli/serve/</id>
-    <published>2026-05-22T23:33:37.000Z</published>
-    <updated>2026-06-28T09:27:48.466Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hugo 內建的 Web Server 只能用在 <code>開發階段</code>，無法用在編譯後的 HTML&#x2F;CSS&#x2F;JavaScript，需要透過其他 Web Server。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Hugo 0.161.1</p><h2 id="NPM-Script"><a href="#NPM-Script" class="headerlink" title="NPM Script"></a>NPM Script</h2><p><strong>package.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"hugo-theme"</span><span class="token punctuation">,</span>  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span>  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"hugo server --disableFastRender"</span><span class="token punctuation">,</span>    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"hugo --cleanDestinationDir --minify"</span><span class="token punctuation">,</span>    <span class="token property">"prettier"</span><span class="token operator">:</span> <span class="token string">"prettier --write '**/*.{html,css,js,toml}'"</span><span class="token punctuation">,</span>    <span class="token property">"stylelint"</span><span class="token operator">:</span> <span class="token string">"npx stylelint '**/*.{css}' --fix"</span><span class="token punctuation">,</span>    <span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"python3 -m http.server --directory public"</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>第 9 行</p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token property">"serve"</span><span class="token operator">:</span> <span class="token string">"python3 -m http.server --directory public"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>python3</code>：使用 macOS 內建的 Python 3</li><li><code>-m http.server</code>：使用 Python 內建的 <code>http.server</code> 模組啟動 Web Server</li><li><code>--directory public</code>：Web Server 執行 <code>public</code> 目錄下的 HTML&#x2F;CSS&#x2F;JavaScript</li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul><li>macOS 內建的 Python 已經內建 Web Server，不必再另外下載</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Hugo 內建的 Web Server 只能用在 &lt;code&gt;開發階段&lt;/code&gt;，無法用在編譯後的 HTML&amp;#x2F;CSS&amp;#x2F;JavaScript，需要透過其他 Web Server。&lt;/p&gt;</summary>
-    
-    
-    
     
     <category term="Hugo" scheme="https://hugoneo.ai/tags/Hugo/"/>
     
