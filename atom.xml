@@ -6,7 +6,7 @@
   <link href="https://hugoneo.ai/atom.xml" rel="self"/>
   
   <link href="https://hugoneo.ai/"/>
-  <updated>2026-07-11T09:30:05.120Z</updated>
+  <updated>2026-07-13T06:15:17.403Z</updated>
   <id>https://hugoneo.ai/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Opencode 連接 LM Studio 本地模型</title>
+    <link href="https://hugoneo.ai/opencode/feature/lmstudio/"/>
+    <id>https://hugoneo.ai/opencode/feature/lmstudio/</id>
+    <published>2026-07-13T06:14:17.000Z</published>
+    <updated>2026-07-13T06:15:17.403Z</updated>
+    
+    <content type="html"><![CDATA[<p>Opencode 也可以連接到 LM Studio 的本地模型。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Opencode 1.17.18<br>LM Studio 0.4.19<br>Qwen 3.6 27B</p><h2 id="Opencode"><a href="#Opencode" class="headerlink" title="Opencode"></a>Opencode</h2><p><strong>opencode.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"$schema"</span><span class="token operator">:</span> <span class="token string">"https://opencode.ai/config.json"</span><span class="token punctuation">,</span>  <span class="token property">"provider"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"lmstudio"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"npm"</span><span class="token operator">:</span> <span class="token string">"@ai-sdk/openai-compatible"</span><span class="token punctuation">,</span>      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"LM Studio"</span><span class="token punctuation">,</span>      <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"baseURL"</span><span class="token operator">:</span> <span class="token string">"http://localhost:1234/v1"</span><span class="token punctuation">,</span>        <span class="token property">"apiKey"</span><span class="token operator">:</span> <span class="token string">"lm-studio"</span><span class="token punctuation">,</span>        <span class="token property">"timeout"</span><span class="token operator">:</span> <span class="token number">600000</span><span class="token punctuation">,</span>        <span class="token property">"chunkTimeout"</span><span class="token operator">:</span> <span class="token number">120000</span>      <span class="token punctuation">}</span><span class="token punctuation">,</span>      <span class="token property">"models"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"qwen3.6-27b-mlx"</span><span class="token operator">:</span> <span class="token punctuation">{</span>          <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Qwen 3.6 27B MLX"</span>        <span class="token punctuation">}</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token property">"model"</span><span class="token operator">:</span> <span class="token string">"lmstudio/qwen3.6-27b-mlx"</span><span class="token punctuation">,</span>  <span class="token property">"small_model"</span><span class="token operator">:</span> <span class="token string">"lmstudio/qwen3.6-27b-mlx"</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>在工作目錄下建立 <code>opencode.json</code>，連接到 LM Studio 的 Qwen 3.6 27B</li></ul><h2 id="Prompt"><a href="#Prompt" class="headerlink" title="Prompt"></a>Prompt</h2><p><img src="/images/opencode/feature/lmstudio/lmstudio01.webp" alt="lmstudio01"></p><ul><li>順利以 Opencode 連上 LM Studio 的 Qwen 3.6 27B</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Opencode 也可以連接到 LM Studio 的本地模型。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="LM Studio" scheme="https://hugoneo.ai/tags/LM-Studio/"/>
+    
+    <category term="Opencode" scheme="https://hugoneo.ai/tags/Opencode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Codex 連接 LM Studio 本地模型</title>
+    <link href="https://hugoneo.ai/codex/feature/lmstudio/"/>
+    <id>https://hugoneo.ai/codex/feature/lmstudio/</id>
+    <published>2026-07-13T00:08:22.000Z</published>
+    <updated>2026-07-13T00:09:24.969Z</updated>
+    
+    <content type="html"><![CDATA[<p>Codex 除了能使用 ChatGPT 外，亦可使用 LM Studio 的本地模型。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex 0.144.1<br>LM Studio 0.4.19</p><h2 id="Profile"><a href="#Profile" class="headerlink" title="Profile"></a>Profile</h2><p><strong>qwen36-27b.config.toml</strong></p><pre class="line-numbers highlight language-toml"><code class="language-toml">model = "qwen3.6-27b-mlx"model_provider = "qwen36_27b"model_context_window = 262144model_auto_compact_token_limit = 120000model_reasoning_effort = "minimal"model_reasoning_summary = "none"[model_providers.qwen36_27b]name = "qwen36_27b"base_url = "http://127.0.0.1:1234/v1"wire_api = "responses"env_key = "LM_STUDIO_API_KEY"stream_idle_timeout_ms = 300000[tui.model_availability_nux]"gpt-5.5" = 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>在 <code>.codex</code> 目錄下新增 model 的設定檔，命名規則為 model名稱 + <code>.config.toml</code></li><li><code>model</code>：model 實際名稱</li><li><code>model_provider</code>：所使用的 model provider，要與下方 <code>model_providers.qwen36_27b</code> 的 <code>名稱相對應</code></li></ul><p><img src="/images/codex/feature/lmstudio/lmstudio01.webp" alt="lmstudio01"></p><ul><li><code>model_context_window</code>： 要與 LM Studio 所設定的 context length 一樣，否則會無法啟動</li></ul><h2 id="Startup"><a href="#Startup" class="headerlink" title="Startup"></a>Startup</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ codex --profile qwen36-27b<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>profile</code>：以 profile 啟動 <code>qwen36-27b.config.toml</code> 的設定</li></ul><h2 id="ZSH-Config"><a href="#ZSH-Config" class="headerlink" title="ZSH Config"></a>ZSH Config</h2><p><strong>.zshrc</strong></p><pre class="line-numbers highlight language-shell"><code class="language-shell">export LM_STUDIO_API_KEY=dummyalias codex3627b="codex --profile qwen36-27b"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>設定 <code>LM_STUDIO_API_KEY</code>，因為 Codex 需要</li><li>建立 alias 方便啟動</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Codex 除了能使用 ChatGPT 外，亦可使用 LM Studio 的本地模型。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
+    
+    <category term="LM Studio" scheme="https://hugoneo.ai/tags/LM-Studio/"/>
+    
+  </entry>
   
   <entry>
     <title>設定 Model 的 System Prompt</title>
@@ -135,9 +177,9 @@
     <link href="https://hugoneo.ai/opencode/general/setup/"/>
     <id>https://hugoneo.ai/opencode/general/setup/</id>
     <published>2026-07-10T00:16:16.000Z</published>
-    <updated>2026-07-10T00:23:26.335Z</updated>
+    <updated>2026-07-13T06:11:59.884Z</updated>
     
-    <content type="html"><![CDATA[<p>Opencode 為免費的 Agent，可直接連接到 MLX LM 上的 Model。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Opencode 1.17.18<br>MLX LM 0.31.3<br>Qwen3-8B-4bit</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install anomalyco/tap/opencode<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Opencode</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ opencode --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>確認安裝成功</li></ul><h2 id="MLX-LM"><a href="#MLX-LM" class="headerlink" title="MLX LM"></a>MLX LM</h2><p><strong>opencode.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"$schema"</span><span class="token operator">:</span> <span class="token string">"https://opencode.ai/config.json"</span><span class="token punctuation">,</span>  <span class="token property">"provider"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"mlx"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"npm"</span><span class="token operator">:</span> <span class="token string">"@ai-sdk/openai-compatible"</span><span class="token punctuation">,</span>      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"MLX-LM"</span><span class="token punctuation">,</span>      <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"baseURL"</span><span class="token operator">:</span> <span class="token string">"http://127.0.0.1:8080/v1"</span>      <span class="token punctuation">}</span><span class="token punctuation">,</span>      <span class="token property">"models"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"mlx-community/Qwen3-8B-4bit"</span><span class="token operator">:</span> <span class="token punctuation">{</span>          <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Qwen3-8B-4bit"</span>        <span class="token punctuation">}</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token property">"model"</span><span class="token operator">:</span> <span class="token string">"mlx/mlx-community/Qwen3-8B-4bit"</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>在工作目錄下建立 <code>opencode.json</code>，連接到 MLX LM 的 Qwen3-8B-4bit</li></ul><h2 id="Opencode"><a href="#Opencode" class="headerlink" title="Opencode"></a>Opencode</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ opencode<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>在工作目錄下輸入 <code>opencode</code> 執行 Opencode，會自動根據 <code>opencode.json</code> 內容連接到 MLX LM</li></ul><h2 id="Prompt"><a href="#Prompt" class="headerlink" title="Prompt"></a>Prompt</h2><p><img src="/images/opencode/general/setup/setup01.webp" alt="setup01"></p><ul><li>順利以 Opencode 連上 MLX LM 的 Qwen3-8B-4bit</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>Opencode 為免費的 Agent，可直接連接到 MLX LM 上的 Model。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Opencode 1.17.18<br>MLX LM 0.31.3<br>Qwen3 8B 4bit</p><h2 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ brew install anomalyco/tap/opencode<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>使用 Homebrew 安裝 Opencode</li></ul><pre class="line-numbers highlight language-shell"><code class="language-shell">$ opencode --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>確認安裝成功</li></ul><h2 id="MLX-LM"><a href="#MLX-LM" class="headerlink" title="MLX LM"></a>MLX LM</h2><p><strong>opencode.json</strong></p><pre class="line-numbers highlight language-json"><code class="language-json"><span class="token punctuation">{</span>  <span class="token property">"$schema"</span><span class="token operator">:</span> <span class="token string">"https://opencode.ai/config.json"</span><span class="token punctuation">,</span>  <span class="token property">"provider"</span><span class="token operator">:</span> <span class="token punctuation">{</span>    <span class="token property">"mlx"</span><span class="token operator">:</span> <span class="token punctuation">{</span>      <span class="token property">"npm"</span><span class="token operator">:</span> <span class="token string">"@ai-sdk/openai-compatible"</span><span class="token punctuation">,</span>      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"MLX-LM"</span><span class="token punctuation">,</span>      <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"baseURL"</span><span class="token operator">:</span> <span class="token string">"http://127.0.0.1:8080/v1"</span>      <span class="token punctuation">}</span><span class="token punctuation">,</span>      <span class="token property">"models"</span><span class="token operator">:</span> <span class="token punctuation">{</span>        <span class="token property">"mlx-community/Qwen3-8B-4bit"</span><span class="token operator">:</span> <span class="token punctuation">{</span>          <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Qwen3-8B-4bit"</span>        <span class="token punctuation">}</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span>  <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token property">"model"</span><span class="token operator">:</span> <span class="token string">"mlx/mlx-community/Qwen3-8B-4bit"</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>在工作目錄下建立 <code>opencode.json</code>，連接到 MLX LM 的 Qwen3 8B 4bit</li></ul><h2 id="Opencode"><a href="#Opencode" class="headerlink" title="Opencode"></a>Opencode</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ opencode<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>在工作目錄下輸入 <code>opencode</code> 執行 Opencode，會自動根據 <code>opencode.json</code> 內容連接到 MLX LM</li></ul><h2 id="Prompt"><a href="#Prompt" class="headerlink" title="Prompt"></a>Prompt</h2><p><img src="/images/opencode/general/setup/setup01.webp" alt="setup01"></p><ul><li>順利以 Opencode 連上 MLX LM 的 Qwen3 8B 4bit</li></ul>]]></content>
     
     
     <summary type="html">&lt;p&gt;Opencode 為免費的 Agent，可直接連接到 MLX LM 上的 Model。&lt;/p&gt;</summary>
@@ -359,46 +401,6 @@
     <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
     
     <category term="日本語" scheme="https://hugoneo.ai/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>更新 Codex</title>
-    <link href="https://hugoneo.ai/codex/general/update/"/>
-    <id>https://hugoneo.ai/codex/general/update/</id>
-    <published>2026-06-15T22:35:03.000Z</published>
-    <updated>2026-07-04T12:33:18.743Z</updated>
-    
-    <content type="html"><![CDATA[<p>雖然使用 Homebrew 安裝 Codex，但 Codex 本身有提供參數可自動透過 Homebrew 更新。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex 0.139.0</p><h2 id="Update-Hugo"><a href="#Update-Hugo" class="headerlink" title="Update Hugo"></a>Update Hugo</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ codex update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li>Codex 會呼叫 Homebrew 更新 Codex 到最新版</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;雖然使用 Homebrew 安裝 Codex，但 Codex 本身有提供參數可自動透過 Homebrew 更新。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
-    
-    <category term="Homebrew" scheme="https://hugoneo.ai/tags/Homebrew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>設定 effort 加速處理速度</title>
-    <link href="https://hugoneo.ai/codex/general/effort/"/>
-    <id>https://hugoneo.ai/codex/general/effort/</id>
-    <published>2026-06-15T14:21:00.000Z</published>
-    <updated>2026-07-04T12:11:59.008Z</updated>
-    
-    <content type="html"><![CDATA[<p>若只是用 Codex 處理 <code>日文</code>，沒用到 <code>推理</code>，可將 <code>model_reasoning_effort</code> 設定為 <code>medium</code> 加速處理速度。</p><a id="more"></a><h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><p>Codex 0.139.0</p><h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><p><strong>~&#x2F;.codex&#x2F;config.toml</strong></p><pre class="line-numbers highlight language-toml"><code class="language-toml">model_reasoning_effort = "medium"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ul><li><code>model_reasoning_effort</code>：預設為 <code>high</code>，若 Codex 主要在處理日文，並沒有用到 <code>推理</code>，設定 <code>medium</code> 即可，可 <code>加快</code> 處理速度</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;若只是用 Codex 處理 &lt;code&gt;日文&lt;/code&gt;，沒用到 &lt;code&gt;推理&lt;/code&gt;，可將 &lt;code&gt;model_reasoning_effort&lt;/code&gt; 設定為 &lt;code&gt;medium&lt;/code&gt; 加速處理速度。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Codex" scheme="https://hugoneo.ai/tags/Codex/"/>
     
   </entry>
   

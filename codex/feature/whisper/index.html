@@ -211,7 +211,7 @@ a:hover {
     },
     
     "datePublished": "2026-06-14T14:31:45.000Z",
-    "dateModified": "2026-07-05T08:49:58.204Z",
+    "dateModified": "2026-07-12T23:46:44.868Z",
     "author": {
         "@type": "Person",
         "name": "Sam Xiao",
@@ -297,7 +297,7 @@ $ python3 -m pip install -U openai-whisper
 <li>安裝 ffmpeg</li>
 <li>安裝 openai-whisper</li>
 </ul>
-<h2 id="Install-Whisper-Model"><a href="#Install-Whisper-Model" class="headerlink" title="Install Whisper Model"></a>Install Whisper Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ mkdir -p /Users/oomusou/whisper_models
+<h2 id="Whisper-Model"><a href="#Whisper-Model" class="headerlink" title="Whisper Model"></a>Whisper Model</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">$ mkdir -p /Users/oomusou/whisper_models
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>建立 model 的目錄：<code>whisper_models</code></li>
@@ -317,10 +317,18 @@ PY
 <ul>
 <li>應顯示 <code>medium.pt</code></li>
 </ul>
-<h2 id="Put-Whisper-Model-to-Cache"><a href="#Put-Whisper-Model-to-Cache" class="headerlink" title="Put Whisper Model to Cache"></a>Put Whisper Model to Cache</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">> Ｗhisper Model 目前放在 /Users/oomusou/whisper_models 下，將 medium.pt 放到 Cache 下方便 Codex 調用
+<h2 id="Model-to-Cache"><a href="#Model-to-Cache" class="headerlink" title="Model to Cache"></a>Model to Cache</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">> Ｗhisper Model 目前放在 /Users/oomusou/whisper_models 下，將 medium.pt 放到 Cache 下方便 Codex 調用
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
 <li>在 Codex 下將 Whisper Model 放到 Cache 下方便Codex 調用</li>
+</ul>
+<h2 id="Prompt"><a href="#Prompt" class="headerlink" title="Prompt"></a>Prompt</h2><pre class="line-numbers highlight language-shell"><code class="language-shell">1. new.mp4 的逐字稿為 lecture40.md
+2. 幫我用 whisper 重新校正其正確性與斷句
+3. Ｗhisper Model 目前放在 /Users/oomusou/whisper_models
+4. 最後將每一句參考 fill skill 加上單字解釋
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>以上為基本的 prompt，告知 Whisper model 放在哪裡，要做哪些事情</li>
 </ul>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
 <li>之後可直接在 Codex CLI 下直接使用 ffmpeg 與 whisper 產生 mp4 的逐字稿</li>
